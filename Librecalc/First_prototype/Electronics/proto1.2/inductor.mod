@@ -1,0 +1,36 @@
+PCBNEW-LibModule-V1  mar. 04 mars 2014 19:40:06 CET
+# encoding utf-8
+Units mm
+$INDEX
+inductor22
+$EndINDEX
+$MODULE inductor22
+Po 0 0 0 15 53161DE9 00000000 ~~
+Li inductor22
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0 1.524 1.524 0 0.3048 N V 21 N "inductor22"
+T1 0 0 1.524 1.524 0 0.3048 N V 21 N "VAL**"
+DC 0 0 2.5 -1.75 0.381 21
+DS 3.75 4.25 -3.75 4.25 0.381 21
+DS -3.75 4.25 -3.75 -0.5 0.381 21
+DS -3.75 -0.25 -3.75 -4.25 0.381 21
+DS -3.75 -4.25 3.75 -4.25 0.381 21
+DS 3.75 -4.25 3.75 4.25 0.381 21
+$PAD
+Sh "1" R 4.1 3.2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -2.75
+$EndPAD
+$PAD
+Sh "2" R 4.1 3.2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 2.75
+$EndPAD
+$EndMODULE inductor22
+$EndLIBRARY
