@@ -1,0 +1,630 @@
+EESchema Schematic File Version 2  date sam. 28 déc. 2013 11:33:22 CET
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:opendous
+LIBS:calculator-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 2 2
+Title "Alimentation"
+Date "28 dec 2013"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PWR_FLAG #FLG025
+U 1 1 52BD53DF
+P 5250 3850
+F 0 "#FLG025" H 5250 3945 30  0001 C CNN
+F 1 "PWR_FLAG" H 5250 4030 30  0000 C CNN
+	1    5250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3850 5250 3900
+Wire Wire Line
+	5250 3900 4900 3900
+Connection ~ 5050 3050
+Wire Wire Line
+	5050 2900 5050 3050
+Connection ~ 2650 5100
+Wire Wire Line
+	5500 3450 5500 3600
+Connection ~ 5100 3050
+Wire Wire Line
+	6250 1400 6300 1400
+Wire Wire Line
+	6300 1200 6350 1200
+Wire Wire Line
+	7200 1100 7200 1200
+Wire Wire Line
+	7200 1200 6850 1200
+Wire Wire Line
+	5400 1450 5400 1200
+Connection ~ 4750 1400
+Wire Wire Line
+	4850 1400 4600 1400
+Wire Wire Line
+	4750 1850 5250 1850
+Connection ~ 2600 5100
+Connection ~ 2600 5500
+Connection ~ 2300 5500
+Connection ~ 2300 5100
+Connection ~ 2750 4500
+Wire Wire Line
+	3150 4500 1850 4500
+Connection ~ 2150 4500
+Connection ~ 2750 4100
+Wire Wire Line
+	3150 4100 1850 4100
+Connection ~ 2150 4100
+Wire Wire Line
+	1850 4100 1850 4050
+Wire Wire Line
+	1600 5500 3700 5500
+Wire Wire Line
+	3700 5500 3700 5100
+Wire Wire Line
+	2650 5100 1500 5100
+Connection ~ 2000 5500
+Connection ~ 1600 5500
+Connection ~ 2000 5100
+Connection ~ 1600 5100
+Wire Wire Line
+	1500 5100 1500 5000
+Connection ~ 3050 3700
+Connection ~ 2650 3700
+Connection ~ 2250 3700
+Wire Wire Line
+	2250 3700 3050 3700
+Wire Wire Line
+	2650 3850 2650 3700
+Wire Wire Line
+	2600 3000 2600 2850
+Connection ~ 2200 2450
+Connection ~ 3000 2450
+Connection ~ 2600 2450
+Wire Wire Line
+	3000 2450 2200 2450
+Wire Wire Line
+	3500 1150 3100 1150
+Connection ~ 3500 1150
+Connection ~ 2700 1500
+Wire Wire Line
+	3500 1550 2700 1550
+Wire Wire Line
+	2700 1550 2700 1400
+Connection ~ 2150 1500
+Wire Wire Line
+	2700 1500 1300 1500
+Wire Wire Line
+	1750 1050 1750 1100
+Wire Wire Line
+	1300 1250 1300 1700
+Wire Wire Line
+	1450 1050 1300 1050
+Connection ~ 1300 1500
+Connection ~ 1750 1500
+Wire Wire Line
+	1750 1100 2300 1100
+Connection ~ 2150 1100
+Connection ~ 3100 1550
+Wire Wire Line
+	3100 1150 3100 950 
+Connection ~ 3100 1100
+Wire Wire Line
+	1900 2350 2200 2350
+Wire Wire Line
+	2200 2350 2200 2450
+Wire Wire Line
+	2200 2850 3000 2850
+Connection ~ 2200 2850
+Connection ~ 2600 2850
+Connection ~ 3000 2850
+Wire Wire Line
+	2050 3300 3050 3300
+Connection ~ 2250 3300
+Connection ~ 2650 3300
+Connection ~ 3050 3300
+Wire Wire Line
+	3150 5100 3300 5100
+Wire Wire Line
+	2500 5800 2500 5500
+Connection ~ 2500 5500
+Connection ~ 2500 4100
+Connection ~ 2500 4500
+Wire Wire Line
+	4750 1400 4750 1450
+Wire Wire Line
+	5250 1850 5250 2200
+Wire Wire Line
+	5400 1950 5250 1950
+Connection ~ 5250 1950
+Connection ~ 5400 1400
+Wire Wire Line
+	5400 1200 6000 1200
+Wire Wire Line
+	5950 1400 5350 1400
+Wire Wire Line
+	5900 3050 4900 3050
+Connection ~ 5500 3050
+Wire Wire Line
+	5900 3450 5100 3450
+Connection ~ 5500 3450
+Connection ~ 5900 3050
+Connection ~ 5900 3450
+Connection ~ 5100 3450
+Wire Wire Line
+	900  1800 900  1650
+Wire Wire Line
+	1300 1050 1300 950 
+Text GLabel 4900 3900 0    60   Input ~ 0
+VDD_BATT
+$Comp
+L PWR_FLAG #FLG026
+U 1 1 52BD529D
+P 5050 2900
+F 0 "#FLG026" H 5050 2995 30  0001 C CNN
+F 1 "PWR_FLAG" H 5050 3080 30  0000 C CNN
+	1    5050 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG027
+U 1 1 52BD500D
+P 1300 950
+F 0 "#FLG027" H 1300 1045 30  0001 C CNN
+F 1 "PWR_FLAG" H 1300 1130 30  0000 C CNN
+	1    1300 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR028
+U 1 1 52BD4FE8
+P 900 1800
+F 0 "#PWR028" H 900 1800 30  0001 C CNN
+F 1 "GND" H 900 1730 30  0001 C CNN
+	1    900  1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG029
+U 1 1 52BD4FD8
+P 900 1650
+F 0 "#FLG029" H 900 1745 30  0001 C CNN
+F 1 "PWR_FLAG" H 900 1830 30  0000 C CNN
+	1    900  1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR030
+U 1 1 52BD42C1
+P 5500 3600
+F 0 "#PWR030" H 5500 3600 30  0001 C CNN
+F 1 "GND" H 5500 3530 30  0001 C CNN
+	1    5500 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C28
+U 1 1 52BD4287
+P 5900 3250
+F 0 "C28" H 5950 3350 50  0000 L CNN
+F 1 "1uF" H 5950 3150 50  0000 L CNN
+	1    5900 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C26
+U 1 1 52BD4286
+P 5100 3250
+F 0 "C26" H 5150 3350 50  0000 L CNN
+F 1 "100nF" H 5150 3150 50  0000 L CNN
+	1    5100 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C27
+U 1 1 52BD4285
+P 5500 3250
+F 0 "C27" H 5550 3350 50  0000 L CNN
+F 1 "33uF" H 5550 3150 50  0000 L CNN
+	1    5500 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 4900 3050 0    60   Input ~ 0
+VDD4P2
+$Comp
+L SWITCH_PUSHBUTTON SW1
+U 1 1 52BCD2C0
+P 6100 1400
+F 0 "SW1" H 6100 1350 30  0000 C CNN
+F 1 "SWITCH_PUSHBUTTON" H 6100 1475 25  0000 C CNN
+	1    6100 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWITCH_PUSHBUTTON SW2
+U 1 1 52BCD2B1
+P 6150 1200
+F 0 "SW2" H 6150 1150 30  0000 C CNN
+F 1 "SWITCH_PUSHBUTTON" H 6150 1275 25  0000 C CNN
+	1    6150 1200
+	1    0    0    -1  
+$EndComp
+Text GLabel 6300 1400 2    60   Input ~ 0
+VDD_XTAL
+$Comp
+L +3.3V #PWR031
+U 1 1 52BCD27B
+P 7200 1100
+F 0 "#PWR031" H 7200 1060 30  0001 C CNN
+F 1 "+3.3V" H 7200 1210 30  0000 C CNN
+	1    7200 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R16
+U 1 1 52BCD269
+P 6600 1200
+F 0 "R16" V 6680 1200 50  0000 C CNN
+F 1 "10k" V 6600 1200 50  0000 C CNN
+	1    6600 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R15
+U 1 1 52BCD231
+P 5400 1700
+F 0 "R15" V 5480 1700 50  0000 C CNN
+F 1 "100k" V 5400 1700 50  0000 C CNN
+	1    5400 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R14
+U 1 1 52BCD1F9
+P 5100 1400
+F 0 "R14" V 5180 1400 50  0000 C CNN
+F 1 "1K" V 5100 1400 50  0000 C CNN
+	1    5100 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR032
+U 1 1 52BCD1C9
+P 5250 2200
+F 0 "#PWR032" H 5250 2200 30  0001 C CNN
+F 1 "GND" H 5250 2130 30  0001 C CNN
+	1    5250 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C25
+U 1 1 52BCD1B6
+P 4750 1650
+F 0 "C25" H 4800 1750 50  0000 L CNN
+F 1 "100nF" H 4800 1550 50  0000 L CNN
+	1    4750 1650
+	1    0    0    -1  
+$EndComp
+Text GLabel 4600 1400 0    60   Input ~ 0
+PSWITCH
+$Comp
+L C C24
+U 1 1 52BCCFFC
+P 2600 5300
+F 0 "C24" H 2650 5400 50  0000 L CNN
+F 1 "1uF" H 2650 5200 50  0000 L CNN
+	1    2600 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C22
+U 1 1 52BCCF1C
+P 3150 4300
+F 0 "C22" H 3200 4400 50  0000 L CNN
+F 1 "1uF" H 3200 4200 50  0000 L CNN
+	1    3150 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C18
+U 1 1 52BCCEC4
+P 2750 4300
+F 0 "C18" H 2800 4400 50  0000 L CNN
+F 1 "100nF" H 2800 4200 50  0000 L CNN
+	1    2750 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C15
+U 1 1 52BCCEC0
+P 2500 4300
+F 0 "C15" H 2550 4400 50  0000 L CNN
+F 1 "100nF" H 2550 4200 50  0000 L CNN
+	1    2500 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C11
+U 1 1 52BCCEBB
+P 2150 4300
+F 0 "C11" H 2200 4400 50  0000 L CNN
+F 1 "100nF" H 2200 4200 50  0000 L CNN
+	1    2150 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C8
+U 1 1 52BCCEB9
+P 1850 4300
+F 0 "C8" H 1900 4400 50  0000 L CNN
+F 1 "100nf" H 1900 4200 50  0000 L CNN
+	1    1850 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +2.5V #PWR033
+U 1 1 52BCCEAE
+P 1850 4050
+F 0 "#PWR033" H 1850 4000 20  0001 C CNN
+F 1 "+2.5V" H 1850 4150 30  0000 C CNN
+	1    1850 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR034
+U 1 1 52BCCE6F
+P 2500 5800
+F 0 "#PWR034" H 2500 5800 30  0001 C CNN
+F 1 "GND" H 2500 5730 30  0001 C CNN
+	1    2500 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R13
+U 1 1 52BCCE5A
+P 2900 5100
+F 0 "R13" V 2980 5100 50  0000 C CNN
+F 1 "100" V 2900 5100 50  0000 C CNN
+	1    2900 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D3
+U 1 1 52BCCE4B
+P 3500 5100
+F 0 "D3" H 3500 5200 50  0000 C CNN
+F 1 "LED" H 3500 5000 50  0000 C CNN
+	1    3500 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C9
+U 1 1 52BCCE32
+P 2000 5300
+F 0 "C9" H 2050 5400 50  0000 L CNN
+F 1 "33uF" H 2050 5200 50  0000 L CNN
+	1    2000 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C6
+U 1 1 52BCCE31
+P 1600 5300
+F 0 "C6" H 1650 5400 50  0000 L CNN
+F 1 "100nF" H 1650 5200 50  0000 L CNN
+	1    1600 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C14
+U 1 1 52BCCE30
+P 2300 5300
+F 0 "C14" H 2350 5400 50  0000 L CNN
+F 1 "10nF" H 2350 5200 50  0000 L CNN
+	1    2300 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR035
+U 1 1 52BCCE25
+P 1500 5000
+F 0 "#PWR035" H 1500 4960 30  0001 C CNN
+F 1 "+3.3V" H 1500 5110 30  0000 C CNN
+	1    1500 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C17
+U 1 1 52BCCC9E
+P 2650 3500
+F 0 "C17" H 2700 3600 50  0000 L CNN
+F 1 "33uF" H 2700 3400 50  0000 L CNN
+	1    2650 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C13
+U 1 1 52BCCC9D
+P 2250 3500
+F 0 "C13" H 2300 3600 50  0000 L CNN
+F 1 "100nF" H 2300 3400 50  0000 L CNN
+	1    2250 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C20
+U 1 1 52BCCC9C
+P 3050 3500
+F 0 "C20" H 3100 3600 50  0000 L CNN
+F 1 "10nF" H 3100 3400 50  0000 L CNN
+	1    3050 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR036
+U 1 1 52BCCC9B
+P 2650 3850
+F 0 "#PWR036" H 2650 3850 30  0001 C CNN
+F 1 "GND" H 2650 3780 30  0001 C CNN
+	1    2650 3850
+	1    0    0    -1  
+$EndComp
+Text GLabel 2050 3300 0    60   Input ~ 0
+VDDA
+$Comp
+L GND #PWR037
+U 1 1 52BCCC75
+P 2600 3000
+F 0 "#PWR037" H 2600 3000 30  0001 C CNN
+F 1 "GND" H 2600 2930 30  0001 C CNN
+	1    2600 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C19
+U 1 1 52BCCC26
+P 3000 2650
+F 0 "C19" H 3050 2750 50  0000 L CNN
+F 1 "10nF" H 3050 2550 50  0000 L CNN
+	1    3000 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C12
+U 1 1 52BCCC12
+P 2200 2650
+F 0 "C12" H 2250 2750 50  0000 L CNN
+F 1 "100nF" H 2250 2550 50  0000 L CNN
+	1    2200 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C16
+U 1 1 52BCCC11
+P 2600 2650
+F 0 "C16" H 2650 2750 50  0000 L CNN
+F 1 "33uF" H 2650 2550 50  0000 L CNN
+	1    2600 2650
+	1    0    0    -1  
+$EndComp
+Text GLabel 1900 2350 0    60   Input ~ 0
+VDDD
+$Comp
+L C C21
+U 1 1 52BCC80B
+P 3100 1350
+F 0 "C21" H 3150 1450 50  0000 L CNN
+F 1 "100nF" H 3150 1250 50  0000 L CNN
+	1    3100 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C23
+U 1 1 52BCC80A
+P 3500 1350
+F 0 "C23" H 3550 1450 50  0000 L CNN
+F 1 "25uF" H 3550 1250 50  0000 L CNN
+	1    3500 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR038
+U 1 1 52BCC7EC
+P 3100 950
+F 0 "#PWR038" H 3100 1040 20  0001 C CNN
+F 1 "+5V" H 3100 1040 30  0000 C CNN
+	1    3100 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM7805 U2
+U 1 1 52BCC70F
+P 2700 1150
+F 0 "U2" H 2850 954 60  0000 C CNN
+F 1 "L7805" H 2700 1350 60  0000 C CNN
+	1    2700 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C10
+U 1 1 52BCC60A
+P 2150 1300
+F 0 "C10" H 2200 1400 50  0000 L CNN
+F 1 "25uF" H 2200 1200 50  0000 L CNN
+	1    2150 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C7
+U 1 1 52BCC509
+P 1750 1300
+F 0 "C7" H 1800 1400 50  0000 L CNN
+F 1 "100nF" H 1800 1200 50  0000 L CNN
+	1    1750 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR039
+U 1 1 52BCC4E3
+P 1300 1700
+F 0 "#PWR039" H 1300 1700 30  0001 C CNN
+F 1 "GND" H 1300 1630 30  0001 C CNN
+	1    1300 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_SCHOTTKY D2
+U 1 1 52BCC4C4
+P 1600 1050
+F 0 "D2" V 1510 1000 35  0000 C CNN
+F 1 "D_SCHOTTKY" V 1700 975 30  0000 C CNN
+	1    1600 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P4
+U 1 1 52BCC44B
+P 950 1150
+F 0 "P4" V 900 1150 40  0000 C CNN
+F 1 "CONN_2" V 1000 1150 40  0000 C CNN
+	1    950  1150
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
