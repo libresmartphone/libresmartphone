@@ -1,0 +1,11 @@
+ + TH Pads on HDMI connector
+ + All components on one side
+ + New footprints on the tantalum capacitors
+ - C10 and C11 fuher apart
+ + Connect VCC with the uC
+ + Change pin for the PWM on the uC. (A0.0 not working)
+ + Change address of EEPROM by DNI-ing R22
+ + Hardcorde address to 0x50, all add pins low. 
+ + Change the connector to socket on the LCD display
+ + Add connector for programming EEPROM
+ + Ground the thermal pad on the buck regulator

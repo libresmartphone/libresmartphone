@@ -1,0 +1,9 @@
+[Unit]
+Description=Test and flash utility for Managa Screen
+
+[Service]
+ExecStart=/usr/bin/python /usr/src/manga-screen/test/flash.py
+
+[Install]
+WantedBy=basic.target
+

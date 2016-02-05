@@ -1,0 +1,7 @@
+Changelog from Rev A3 to A4
+---------------------------
+- Changed HDMI connector to Type D
+- Made a hole for the USB and HDMI connectors
+- Added an alternative digitizer connector
+- Made the I2C EEPROM powered from the HDMI connector
+

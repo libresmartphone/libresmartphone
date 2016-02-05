@@ -1,0 +1,5 @@
+Changelog from Rev A4 to A4A
+---------------------------
+- Missing +5V from HDMI connector
+- Wrong pins on the HDMI connector
+
