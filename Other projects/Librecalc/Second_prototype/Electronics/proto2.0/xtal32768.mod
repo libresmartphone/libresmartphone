@@ -1,0 +1,37 @@
+PCBNEW-LibModule-V1  mar. 07 oct. 2014 13:42:08 CEST
+# encoding utf-8
+Units mm
+$INDEX
+xtal32.768
+$EndINDEX
+$MODULE xtal32.768
+Po 0 0 0 15 5433D16B 00000000 ~~
+Li xtal32.768
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0 1 1 0 0.15 N V 21 N "xtal32.768"
+T1 0 0 1 1 0 0.15 N V 21 N "VAL**"
+$PAD
+Sh "0" R 6 2.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.775 0
+$EndPAD
+$PAD
+Sh "1" R 2.5 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.25 -1.27
+$EndPAD
+$PAD
+Sh "2" R 2.5 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.25 1.27
+$EndPAD
+$EndMODULE xtal32.768
+$EndLIBRARY

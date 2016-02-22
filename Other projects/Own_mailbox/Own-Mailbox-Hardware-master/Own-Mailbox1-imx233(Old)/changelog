@@ -1,0 +1,11 @@
+ *reroutage de la ram en la passant en dessous
+ *raprochement des condos de la imx
+ *Correction des erreurs su premier proto
+ *connecteur correct pour l'alim
+ *Ajout d'un interrupteur sur l'alimentation
+ *Ajout dun port mini Usb pour l'USB imx
+ *Passage de l'uart sur un connecteur USb pour la praticité
+ *Suppression de choses inutiles
+ *2 mode de boot laissés accecible via un seul jumper: USB et SD
+ *Reduction de la largeur de la carte
+ 

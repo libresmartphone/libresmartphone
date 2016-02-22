@@ -1,0 +1,100 @@
+PCBNEW-LibModule-V1  lun. 20 oct. 2014 21:19:40 CEST
+# encoding utf-8
+Units mm
+$INDEX
+FPC10
+$EndINDEX
+$MODULE FPC10
+Po 0 0 0 15 54455312 00000000 ~~
+Li FPC10
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0 1 1 0 0.15 N V 21 N "FPC10"
+T1 0 0 1 1 0 0.15 N V 21 N "VAL**"
+$PAD
+Sh "0" R 1.8 2.2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.4 1.1
+$EndPAD
+$PAD
+Sh "0" R 1.8 2.2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.4 1.1
+$EndPAD
+$PAD
+Sh "1" R 0.3 1.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.25 -4.55
+$EndPAD
+$PAD
+Sh "2" R 0.3 1.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.75 -4.55
+$EndPAD
+$PAD
+Sh "3" R 0.3 1.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.25 -4.55
+$EndPAD
+$PAD
+Sh "4" R 0.3 1.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.75 -4.55
+$EndPAD
+$PAD
+Sh "5" R 0.3 1.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.25 -4.55
+$EndPAD
+$PAD
+Sh "6" R 0.3 1.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.25 -4.55
+$EndPAD
+$PAD
+Sh "7" R 0.3 1.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.75 -4.55
+$EndPAD
+$PAD
+Sh "8" R 0.3 1.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.25 -4.55
+$EndPAD
+$PAD
+Sh "9" R 0.3 1.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.75 -4.55
+$EndPAD
+$PAD
+Sh "10" R 0.3 1.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.25 -4.55
+$EndPAD
+$EndMODULE FPC10
+$EndLIBRARY

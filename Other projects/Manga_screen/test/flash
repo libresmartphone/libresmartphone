@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+# chkconfig: 35 90 12
+# description: Flash server
+#
+
+start() {
+        /usr/bin/python /home/pi/manga-screen/test/flash_and_test_from_rpi.py &
+}
+# Restart the service Flash
+stop() {
+	killall flash_and_test_rpi.py
+}
+### main logic ###
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  status)
+        status FOO
+        ;;
+  restart|reload|condrestart)
+        stop
+        start
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|restart|reload|status}"
+        exit 1
+esac
+exit 0

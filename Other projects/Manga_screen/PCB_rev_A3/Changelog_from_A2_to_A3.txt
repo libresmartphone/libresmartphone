@@ -1,0 +1,11 @@
+Changelog from Rev A2 to A3
+---------------------------
+ + Move text on C20
+ + Values on R10 and R11 should be 22R instead of 22
+ + Bit the bullet and added an EEPROM
+ + Added +3.3v and +27V test points
+ + Grounded the USB shield
+ + Added a notch for the LCD FPC
+ + Added license on the board: CC BY-SA
+
+

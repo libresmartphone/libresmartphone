@@ -1,0 +1,43 @@
+PCBNEW-LibModule-V1  mar. 07 oct. 2014 10:14:29 CEST
+# encoding utf-8
+Units mm
+$INDEX
+SMDXTAL24mhz
+$EndINDEX
+$MODULE SMDXTAL24mhz
+Po 0 0 0 15 5433A0C6 00000000 ~~
+Li SMDXTAL24mhz
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0 1 1 0 0.15 N V 21 N "x"
+T1 0 0 1 1 0 0.15 N V 21 N "VAL**"
+DS -2.4 1.7 -2.5 1.7 0.15 21
+DS -2.5 1.7 -2.7 1.5 0.15 21
+DS -2.7 1.5 -2.7 -1.1 0.15 21
+DS -2.7 -1.1 -2.7 -1.2 0.15 21
+DS -2.7 -1.2 -2.7 -1.5 0.15 21
+DS -2.7 -1.5 -2.5 -1.7 0.15 21
+DS -2.5 -1.7 2.4 -1.7 0.15 21
+DS 2.4 -1.7 2.6 -1.7 0.15 21
+DS 2.6 -1.7 2.8 -1.5 0.15 21
+DS 2.8 -1.5 2.8 1.3 0.15 21
+DS 2.8 1.3 2.8 1.5 0.15 21
+DS 2.8 1.5 2.6 1.7 0.15 21
+DS 2.6 1.7 -2.4 1.7 0.15 21
+$PAD
+Sh "1" R 1.7 2.4 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.85 0
+$EndPAD
+$PAD
+Sh "2" R 1.7 2.4 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.85 0
+$EndPAD
+$EndMODULE SMDXTAL24mhz
+$EndLIBRARY

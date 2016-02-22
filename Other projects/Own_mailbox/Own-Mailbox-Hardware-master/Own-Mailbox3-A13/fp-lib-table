@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name QFN56)(type KiCad)(uri "$(KIPRJMOD)/QFN56.pretty")(options "")(descr ""))
+  (lib (name xtal24mhz)(type Legacy)(uri "$(KIPRJMOD)/xtal24mhz.mod")(options "")(descr ""))
+)

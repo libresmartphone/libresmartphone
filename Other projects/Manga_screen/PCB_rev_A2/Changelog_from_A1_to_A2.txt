@@ -1,0 +1,17 @@
+Changelog from Rev A1 to A2
+---------------------------
+ + USB power instead of HDMI since the HDMI has a 0.1A limit..
+ + VDDIO and VCI must be connected to 3.3V
+ + OCK_INV tied high.
+ + More room for the screws. 
+ + New uC: ATmega32U4
+ + IA logo/manga graphic stuff. 
+ + LED for status
+ + Bitbanged I2C for the EEPROM
+ + I2C connections for the touch panel. 
+ + SCDT connected to uC to sense if there is data streaming.
+ + Test points (HSYNC, VSYNC, PCLOCK, DE)
+ + Header pin for external power (DNI)
+ + Consider capacitor on input. 
+ + ATTN pin from the touch panel on interrupt input
+
