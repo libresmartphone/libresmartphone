@@ -1,0 +1,67 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: FCDEV3B.PcbDoc   2/2/2016  2:04:52 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top to Bottom
+ASCII Plated RoundHoles File : FCDEV3B-Plated.TXT
+EIA File   : FCDEV3B.DRL
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T2      8mil (0.203mm)                                            Round             24        PTH        6.59inch (167.49mm)
+T3      12mil (0.305mm)                                           Round             5         PTH        1.52inch (38.58mm)
+T4      35mil (0.889mm)                                           Round             17        PTH        3.28inch (83.19mm)
+T5      37mil (0.94mm)                                            Round             24        PTH        2.85inch (72.42mm)
+T6      56mil (1.422mm)                                           Round             3         PTH        0.40inch (10.16mm)
+T7      134mil (3.4mm)                                            Round             4         PTH        8.35inch (212.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              77
+Layer Pair : Top to LAYER 2
+ASCII Plated RoundHoles File : FCDEV3B-Plated.TX1
+EIA File   : FCDEV3B.DR1
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      4mil (0.102mm)                                            Round             1009      PTH        39.09inch (992.94mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              1009
+Layer Pair : LAYER 2 to LAYER 3_GND
+ASCII Plated RoundHoles File : FCDEV3B-Plated.TX2
+EIA File   : FCDEV3B.DR2
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      4mil (0.102mm)                                            Round             529       PTH        27.50inch (698.39mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              529
+Layer Pair : LAYER 3_GND to LAYER 6_POWER
+ASCII Plated RoundHoles File : FCDEV3B-Plated.TX3
+EIA File   : FCDEV3B.DR3
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T3      12mil (0.305mm)                                           Round             594       PTH        31.62inch (803.19mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              594
+Layer Pair : LAYER 6_POWER to LAYER 7
+ASCII Plated RoundHoles File : FCDEV3B-Plated.TX4
+EIA File   : FCDEV3B.DR4
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      4mil (0.102mm)                                            Round             791       PTH        35.48inch (901.23mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              791
+Layer Pair : LAYER 7 to Bottom
+ASCII Plated RoundHoles File : FCDEV3B-Plated.TX5
+EIA File   : FCDEV3B.DR5
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      4mil (0.102mm)                                            Round             1076      PTH        38.89inch (987.82mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              1076
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              4076
+
+Total Processing Time (hh:mm:ss) : 00:00:02

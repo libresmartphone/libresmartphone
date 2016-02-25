@@ -1,0 +1,31 @@
+The Gerber and drill files contained in this package capture the state of the
+FCDEV3B project as of 2016-02-02.  The design is still unfinished, i.e., we are
+NOT going to order physical PCB fabrication with the present set of gerbers.
+The issues which still need to be fixed are as follows:
+
+* The footprints for through-hole connectors and jumpers have the wrong drill
+  diameter;
+* SH1 metal shieldcan footprint: the corners and T-shaped pieces which got lost
+  in the PADS->Altium translation have been restored on the soldermask layer,
+  but not on the solder paste layer yet;
+* K301 and R317 refdes silk text overlaps some SMT pads;
+* J302 and C306 have vias in the pads, but they are top-to-bottom vias, not
+  microvias going just one layer deep.
+* The RF clearing in the ground plane on layer 7 underneath C401 has the wrong
+  shape;
+* Some of the vias and TH component pin plated holes lack the copper on inner
+  layers;
+* TH component plated holes which connect to GND planes lack thermal reliefs on
+  the inner layers.
+
+There are other potential issues (may or may not be problems in need of fixing)
+which are still being investigated.
+
+Please also note that the board as viewed in the design tools from which the
+gerbers are generated is flipped upside-down.  All components are placed on the
+side which the design tools see as the bottom, and this side will actually be
+the top during SMT assembly and in final usage.  The side which the design tools
+see as the top will really be the bottom.  This unfortunate flip exists because
+our board design has been derived from Openmoko's GTA02 motherboard, and the
+latter had its Calypso GSM modem section (the critical part we are reusing) on
+the side which was the bottom (or the back) in the GTA02 smartphone.

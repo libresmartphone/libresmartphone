@@ -1,0 +1,39 @@
+The Gerber files in the film subdirectory correspond to physical layers
+as follows:
+
+FCDEV3B.G1		Copper layer 2 of 8 (internal)
+FCDEV3B.G2		Copper layer 3 of 8 (internal)
+FCDEV3B.G3		Copper layer 4 of 8 (internal)
+FCDEV3B.G4		Copper layer 5 of 8 (internal)
+FCDEV3B.G5		Copper layer 6 of 8 (internal)
+FCDEV3B.G6		Copper layer 7 of 8 (internal)
+FCDEV3B.GBL		Bottom copper layer
+FCDEV3B.GBO		Bottom silk screen
+FCDEV3B.GBP		Bottom solder paste stencil
+FCDEV3B.GBS		Bottom soldermask
+FCDEV3B.GD1		Drill drawing for top-bottom drill
+FCDEV3B.GD2		Drill drawing for L1-L2 drill
+FCDEV3B.GD3		Drill drawing for L2-L3 drill
+FCDEV3B.GD4		Drill drawing for L3-L6 drill
+FCDEV3B.GD5		Drill drawing for L6-L7 drill
+FCDEV3B.GD6		Drill drawing for L7-L8 drill
+FCDEV3B.GG1		Drill guide for top-bottom drill
+FCDEV3B.GG2		Drill guide for L1-L2 drill
+FCDEV3B.GG3		Drill guide for L2-L3 drill
+FCDEV3B.GG4		Drill guide for L3-L6 drill
+FCDEV3B.GG5		Drill guide for L6-L7 drill
+FCDEV3B.GG6		Drill guide for L7-L8 drill
+FCDEV3B.GKO		Board outline
+FCDEV3B.GTL		Top copper layer
+FCDEV3B.GTO		Top silk screen
+FCDEV3B.GTS		Top soldermask
+
+The NC drill files in the drill subdirectory correspond to drill passes
+as follows:
+
+FCDEV3B-Plated.TX1	Microvias from L1 to L2
+FCDEV3B-Plated.TX2	Microvias from L2 to L3
+FCDEV3B-Plated.TX3	Buried vias from L3 to L6
+FCDEV3B-Plated.TX4	Microvias from L6 to L7
+FCDEV3B-Plated.TX5	Microvias from L7 to L8
+FCDEV3B-Plated.TXT	Conventional top to bottom drill

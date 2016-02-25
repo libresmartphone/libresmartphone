@@ -1,0 +1,38 @@
+The FCDEV3B board to be made in this project is an 8-layer PCB, and its physical
+stackup will need to be exactly the same as that of Openmoko's GTA02 board from
+which it has been derived.
+
+Unfortunately, we don't have a very authoritative source for this stackup info,
+but there is a stackup drawing on the GSM RF page of GTA02 schematics; this
+drawing has been reproduced below in ASCII art:
+
+L8 ------------------- 1.40
+    PP 1078	2.51
+L7 ------------------- 1.375 (0.5 Oz)
+    PP 1080	3.31
+L6 ------------------- 1.277 (1 Oz)
+    FR4 Core	4.00
+L5 ------------------- 1.242 (1 Oz)
+    PP 7628	8.33
+L4 ------------------- 1.254 (1 Oz)
+    FR4 Core	4.00
+L3 ------------------- 1.273 (1 Oz)
+    PP 1080	3.31
+L2 ------------------- 1.525 (0.5 Oz)
+    PP 1078	2.51
+L1 ------------------- 1.40
+
+Unit: mils
+Er=4.2
+
+The drill structure is as follows:
+
+L1-L2: filled microvias, 4 mil diameter, presumably laser
+L2-L3: filled microvias, 4 mil diameter, presumably laser
+L3-L6: inner buried vias, 12 mil diameter, presumably filled
+L6-L7: filled microvias, 4 mil diameter, presumably laser
+L7-L8: filled microvias, 4 mil diameter, presumably laser
+
+There are also some top to bottom plated holes, but relatively few of them
+compared to the blind and buried vias.  Some of the filled microvias are
+in the pads.
