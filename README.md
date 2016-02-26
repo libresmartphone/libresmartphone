@@ -1,4 +1,4 @@
-This page contains the software used in the open hardware smartphone (libresmartphone) and other projects files and documentation that can be useful to develop it. In the future it will have the mechanical (Freecad) and Electronical (Kicad) designs to make it. Visit http://libresmartphone.com and https://hackaday.io/project/6310-libresmartphone for more information.
+This page contains the software used in the open hardware smartphone (libresmartphone) and other projects files and documentation that can be useful to develop it. In the future it will have the mechanical (Freecad) and Electronical (Kicad) designs to make it. Visit http://libresmartphone.com for more information.
 
 # Objective
 
