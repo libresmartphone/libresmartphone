@@ -49,8 +49,11 @@ Make a manual so every user with a raspberry pi can achieve a working prototype 
 # Want to help?
 
 1) Tell to your friends, family or the internet (reddit, forums...) about this project.
+
 2) Try to program the software or help with the smartphone design.
+
 3) Donate money (any quantity, even $ 5, means a lot to us) or materials for the development of libresmartphone.
+
 4) Keep informed with our website http://libresmartphone.com .
 
 
