@@ -12,7 +12,7 @@ If you are concerned by the mass surveillance the goverment makes you will be ab
 
 # Roadmap 
 
-* 1) Make a raspberry pi prototype work as desired (Estimated time: 3 months – 1 year)(Estimated cost: <500€): *
+* 1) Make a raspberry pi prototype work as desired (Estimated time: 3 months – 1 year)(Estimated cost: <500€):
 
 · Software to make calls, send/receive SMS (with the adafruit 3G Fona or similar), import contacts (csv) and take photos in any GNU/linux or BSD OS.
 
@@ -24,9 +24,9 @@ If you are concerned by the mass surveillance the goverment makes you will be ab
 
 Make a manual so every user with a raspberry pi can achieve a working prototype easily.
 
-*The raspberry pi prototype will be made to have a bigger user base for the project, currently there are 8 million raspberry pi in the market and a lot of their users are DIY enthusiats. Many of them are not willing to pay for an open source smartphone but would love to make calls with the raspberry, send SMS for their projects, make an easy to make GPS for their car, etc. *
+*The raspberry pi prototype will be made to have a bigger user base for the project, currently there are 8 million raspberry pi in the market and a lot of their users are DIY enthusiats. Many of them are not willing to pay for an open source smartphone but would love to make calls with the raspberry, send SMS for their projects, make an easy to make GPS for their car, etc.*
 
-* 2) Make a prototype with the components more open (Estimated time: 6 months – 4 years)(Estimated cost: 500-40.000€): *
+* 2) Make a prototype with the components more open (Estimated time: 6 months – 4 years)(Estimated cost: 500-40.000€):
 
 · Use a more open HW board (A64 OLinuXino or similar) instead of the raspberry pi.
 
@@ -40,7 +40,7 @@ Make a manual so every user with a raspberry pi can achieve a working prototype 
 
 *When the prototype has the size and requirements desired libresmartphone development will start part 3.*
 
-* 3) Libresmartphone final design (Estimated time: <2 years)(Estimated cost: 50.000-200.000€). *
+* 3) Libresmartphone final design (Estimated time: <2 years)(Estimated cost: 50.000-200.000€).
 
 ·Design a pcb that has the CPU, GPU, RAM, modem, WiFi, etc in the same board taking in consideration all the designs used in part 2 of the development.
 
