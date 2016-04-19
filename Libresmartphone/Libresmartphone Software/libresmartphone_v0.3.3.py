@@ -8,7 +8,7 @@ import sys, Queue, serial, threading, time, glob
 class finicial(QtGui.QMainWindow):
     def __init__(self):
         
-        global emtruquen, teditdis, AonEscric, TipLLet
+        global emtruquen, teditdisp, AonEscric, TipLLet
         emtruquen = 'N'
         teditdisp = 0
         AonEscric = ''
