@@ -1,0 +1,18 @@
+All files within this ZIP archive are owned by MJW Designs (Michael Weston).
+
+They are free to use for non-commercial use.
+If you plan to modify them and redistribute them, 
+always keep this license and a link to www.openpandora.org 
+in the archive and on your project page (if you have one).
+
+If you plan to use them for any commercial projects, please do contact us.
+
+Contact details:
+
+OpenPandora GmbH
+Michael Mrozek
+Schäffbräustr. 11
+85049 Ingolstadt
+Germany
+
+EvilDragon@openpandora.org

@@ -1,0 +1,7328 @@
+G04*
+G04  File:            PANDORA_R6D.BOARD, Sun Oct 02 23:09:28 2011*
+G04  Source:          P-CAD 2001 PCB, Version 16.00.56, (C:\Pandora\hardware\DESIGN\rev6\mainboard\pandora_r6d.pcb)*
+G04  Format:          Gerber Format (RS-274-D), ASCII*
+G04*
+G04  Format Options:  Absolute Positioning*
+G04                   Leading-Zero Suppression*
+G04                   Scale Factor 1:1*
+G04                   NO Circular Interpolation*
+G04                   Millimeter Units*
+G04                   Numeric Format: 4.4 (XXXX.XXXX)*
+G04                   G54 Used for Aperture Change*
+G04                   Apertures Embedded*
+G04*
+G04  File Options:    Offset = (0.000mm,0.000mm)*
+G04                   Drill Symbol Size = 2.032mm*
+G04                   No Pad/Via Holes*
+G04*
+G04  File Contents:   No Pads*
+G04                   No Vias*
+G04                   No Designators*
+G04                   No Types*
+G04                   No Values*
+G04                   No Drill Symbols*
+G04                   Board*
+G04*
+%INPANDORA_R6D.BOARD*%
+%ICAS*%
+%MOMM*%
+G04*
+G04  Aperture MACROs for general use --- invoked via D-code assignment *
+G04*
+G04  General MACRO for flashed round with rotation and/or offset hole *
+%AMROTOFFROUND*
+1,1,$1,0.0000,0.0000*
+1,0,$2,$3,$4*%
+G04*
+G04  General MACRO for flashed oval (obround) with rotation and/or offset hole *
+%AMROTOFFOVAL*
+21,1,$1,$2,0.0000,0.0000,$3*
+1,1,$4,$5,$6*
+1,1,$4,0-$5,0-$6*
+1,0,$7,$8,$9*%
+G04*
+G04  General MACRO for flashed oval (obround) with rotation and no hole *
+%AMROTOVALNOHOLE*
+21,1,$1,$2,0.0000,0.0000,$3*
+1,1,$4,$5,$6*
+1,1,$4,0-$5,0-$6*%
+G04*
+G04  General MACRO for flashed rectangle with rotation and/or offset hole *
+%AMROTOFFRECT*
+21,1,$1,$2,0.0000,0.0000,$3*
+1,0,$4,$5,$6*%
+G04*
+G04  General MACRO for flashed rectangle with rotation and no hole *
+%AMROTRECTNOHOLE*
+21,1,$1,$2,0.0000,0.0000,$3*%
+G04*
+G04  General MACRO for flashed rounded-rectangle *
+%AMROUNDRECT*
+21,1,$1,$2-$4,0.0000,0.0000,$3*
+21,1,$1-$4,$2,0.0000,0.0000,$3*
+1,1,$4,$5,$6*
+1,1,$4,$7,$8*
+1,1,$4,0-$5,0-$6*
+1,1,$4,0-$7,0-$8*
+1,0,$9,$10,$11*%
+G04*
+G04  General MACRO for flashed rounded-rectangle with rotation and no hole *
+%AMROUNDRECTNOHOLE*
+21,1,$1,$2-$4,0.0000,0.0000,$3*
+21,1,$1-$4,$2,0.0000,0.0000,$3*
+1,1,$4,$5,$6*
+1,1,$4,$7,$8*
+1,1,$4,0-$5,0-$6*
+1,1,$4,0-$7,0-$8*%
+G04*
+G04  General MACRO for flashed regular polygon *
+%AMREGPOLY*
+5,1,$1,0.0000,0.0000,$2,$3+$4*
+1,0,$5,$6,$7*%
+G04*
+G04  General MACRO for flashed regular polygon with no hole *
+%AMREGPOLYNOHOLE*
+5,1,$1,0.0000,0.0000,$2,$3+$4*%
+G04*
+G04  General MACRO for target *
+%AMTARGET*
+6,0,0,$1,$2,$3,4,$4,$5,$6*%
+G04*
+G04  General MACRO for mounting hole *
+%AMMTHOLE*
+1,1,$1,0,0*
+1,0,$2,0,0*
+$1=$1-$2*
+$1=$1/2*
+21,1,$2+$1,$3,0,0,$4*
+21,1,$3,$2+$1,0,0,$4*%
+G04*
+G04*
+G04  D10 : "Ellipse X0.051mm Y0.051mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.0510*
+%ADD10C, 0.0510*%
+G04  D11 : "Ellipse X0.254mm Y0.254mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.2540*
+%ADD11C, 0.2540*%
+G04  D12 : "Ellipse X0.275mm Y0.275mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.2750*
+%ADD12C, 0.2750*%
+G04  D13 : "Ellipse X0.280mm Y0.280mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.2800*
+%ADD13C, 0.2800*%
+G04  D14 : "Ellipse X0.300mm Y0.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.3000*
+%ADD14C, 0.3000*%
+G04  D15 : "Ellipse X0.308mm Y0.308mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.3080*
+%ADD15C, 0.3080*%
+G04  D16 : "Ellipse X0.325mm Y0.325mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.3250*
+%ADD16C, 0.3250*%
+G04  D17 : "Ellipse X0.350mm Y0.350mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.3500*
+%ADD17C, 0.3500*%
+G04  D18 : "Ellipse X0.400mm Y0.400mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.4000*
+%ADD18C, 0.4000*%
+G04  D19 : "Ellipse X0.450mm Y0.450mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.4500*
+%ADD19C, 0.4500*%
+G04  D20 : "Ellipse X0.457mm Y0.457mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.4570*
+%ADD20C, 0.4570*%
+G04  D21 : "Ellipse X0.500mm Y0.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.5000*
+%ADD21C, 0.5000*%
+G04  D22 : "Ellipse X0.050mm Y0.050mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.0500*
+%ADD22C, 0.0500*%
+G04  D23 : "Ellipse X0.051mm Y0.051mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.0512*
+%ADD23C, 0.0512*%
+G04  D24 : "Ellipse X0.508mm Y0.508mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.5080*
+%ADD24C, 0.5080*%
+G04  D25 : "Ellipse X0.550mm Y0.550mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.5500*
+%ADD25C, 0.5500*%
+G04  D26 : "Ellipse X0.600mm Y0.600mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.6000*
+%ADD26C, 0.6000*%
+G04  D27 : "Ellipse X0.700mm Y0.700mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.7000*
+%ADD27C, 0.7000*%
+G04  D28 : "Ellipse X7.000mm Y7.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=7.0000*
+%ADD28C, 7.0000*%
+G04  D29 : "Ellipse X0.750mm Y0.750mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.7500*
+%ADD29C, 0.7500*%
+G04  D30 : "Ellipse X0.080mm Y0.080mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.0800*
+%ADD30C, 0.0800*%
+G04  D31 : "Ellipse X0.097mm Y0.097mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.0970*
+%ADD31C, 0.0970*%
+G04  D32 : "Ellipse X0.100mm Y0.100mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1000*
+%ADD32C, 0.1000*%
+G04  D33 : "Ellipse X0.098mm Y0.098mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.0980*
+%ADD33C, 0.0980*%
+G04  D34 : "Ellipse X0.800mm Y0.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.8000*
+%ADD34C, 0.8000*%
+G04  D35 : "Ellipse X0.850mm Y0.850mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.8500*
+%ADD35C, 0.8500*%
+G04  D36 : "Ellipse X0.900mm Y0.900mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.9000*
+%ADD36C, 0.9000*%
+G04  D37 : "Ellipse X1.000mm Y1.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=1.0000*
+%ADD37C, 1.0000*%
+G04  D38 : "Ellipse X10.000mm Y10.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=10.0000*
+%ADD38C, 10.0000*%
+G04  D39 : "Ellipse X0.102mm Y0.102mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1020*
+%ADD39C, 0.1020*%
+G04  D40 : "Ellipse X0.104mm Y0.104mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1040*
+%ADD40C, 0.1040*%
+G04  D41 : "Ellipse X0.110mm Y0.110mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1100*
+%ADD41C, 0.1100*%
+G04  D42 : "Ellipse X0.115mm Y0.115mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1150*
+%ADD42C, 0.1150*%
+G04  D43 : "Ellipse X0.120mm Y0.120mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1200*
+%ADD43C, 0.1200*%
+G04  D44 : "Ellipse X0.121mm Y0.121mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1210*
+%ADD44C, 0.1210*%
+G04  D45 : "Ellipse X0.125mm Y0.125mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1250*
+%ADD45C, 0.1250*%
+G04  D46 : "Ellipse X1.100mm Y1.100mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=1.1000*
+%ADD46C, 1.1000*%
+G04  D47 : "Ellipse X1.200mm Y1.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=1.2000*
+%ADD47C, 1.2000*%
+G04  D48 : "Ellipse X0.127mm Y0.127mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1270*
+%ADD48C, 0.1270*%
+G04  D49 : "Ellipse X0.130mm Y0.130mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1300*
+%ADD49C, 0.1300*%
+G04  D50 : "Ellipse X0.139mm Y0.139mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1390*
+%ADD50C, 0.1390*%
+G04  D51 : "Ellipse X0.150mm Y0.150mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1500*
+%ADD51C, 0.1500*%
+G04  D52 : "Ellipse X1.300mm Y1.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=1.3000*
+%ADD52C, 1.3000*%
+G04  D53 : "Ellipse X1.400mm Y1.400mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=1.4000*
+%ADD53C, 1.4000*%
+G04  D54 : "Ellipse X1.500mm Y1.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=1.5000*
+%ADD54C, 1.5000*%
+G04  D55 : "Ellipse X0.154mm Y0.154mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1540*
+%ADD55C, 0.1540*%
+G04  D56 : "Ellipse X0.170mm Y0.170mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1700*
+%ADD56C, 0.1700*%
+G04  D57 : "Ellipse X0.175mm Y0.175mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1750*
+%ADD57C, 0.1750*%
+G04  D58 : "Ellipse X0.176mm Y0.176mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1760*
+%ADD58C, 0.1760*%
+G04  D59 : "Ellipse X0.178mm Y0.178mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.1780*
+%ADD59C, 0.1780*%
+G04  D60 : "Ellipse X0.200mm Y0.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.2000*
+%ADD60C, 0.2000*%
+G04  D61 : "Ellipse X1.800mm Y1.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=1.8000*
+%ADD61C, 1.8000*%
+G04  D62 : "Ellipse X2.000mm Y2.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=2.0000*
+%ADD62C, 2.0000*%
+G04  D63 : "Ellipse X0.203mm Y0.203mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.2032*
+%ADD63C, 0.2032*%
+G04  D64 : "Ellipse X0.204mm Y0.204mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.2040*
+%ADD64C, 0.2040*%
+G04  D65 : "Ellipse X0.220mm Y0.220mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.2200*
+%ADD65C, 0.2200*%
+G04  D66 : "Ellipse X0.250mm Y0.250mm H0.000mm 0.0deg (0.000mm,0.000mm) Draw"*
+G04  Disc: OuterDia=0.2500*
+%ADD66C, 0.2500*%
+G04  D67 : "Ellipse X0.275mm Y0.275mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.2750*
+%ADD67C, 0.2750*%
+G04  D68 : "Ellipse X2.700mm Y2.700mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=2.7000*
+%ADD68C, 2.7000*%
+G04  D69 : "Ellipse X0.300mm Y0.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.3000*
+%ADD69C, 0.3000*%
+G04  D70 : "Ellipse X2.800mm Y2.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=2.8000*
+%ADD70C, 2.8000*%
+G04  D71 : "Ellipse X2.904mm Y2.904mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=2.9040*
+%ADD71C, 2.9040*%
+G04  D72 : "Ellipse X3.000mm Y3.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=3.0000*
+%ADD72C, 3.0000*%
+G04  D73 : "Ellipse X0.350mm Y0.350mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.3500*
+%ADD73C, 0.3500*%
+G04  D74 : "Ellipse X0.425mm Y0.425mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.4250*
+%ADD74C, 0.4250*%
+G04  D75 : "Ellipse X0.450mm Y0.450mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.4500*
+%ADD75C, 0.4500*%
+G04  D76 : "Ellipse X0.500mm Y0.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.5000*
+%ADD76C, 0.5000*%
+G04  D77 : "Ellipse X5.650mm Y5.650mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=5.6500*
+%ADD77C, 5.6500*%
+G04  D78 : "Ellipse X0.604mm Y0.604mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.6040*
+%ADD78C, 0.6040*%
+G04  D79 : "Ellipse X0.652mm Y0.652mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.6520*
+%ADD79C, 0.6520*%
+G04  D80 : "Ellipse X0.952mm Y0.952mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.9520*
+%ADD80C, 0.9520*%
+G04  D81 : "Ellipse X1.000mm Y1.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.0000*
+%ADD81C, 1.0000*%
+G04  D82 : "Ellipse X1.052mm Y1.052mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.0520*
+%ADD82C, 1.0520*%
+G04  D83 : "Ellipse X1.104mm Y1.104mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.1040*
+%ADD83C, 1.1040*%
+G04  D84 : "Ellipse X1.200mm Y1.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.2000*
+%ADD84C, 1.2000*%
+G04  D85 : "Ellipse X1.202mm Y1.202mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.2020*
+%ADD85C, 1.2020*%
+G04  D86 : "Ellipse X1.250mm Y1.250mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.2500*
+%ADD86C, 1.2500*%
+G04  D87 : "Ellipse X1.450mm Y1.450mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.4500*
+%ADD87C, 1.4500*%
+G04  D88 : "Ellipse X1.500mm Y1.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.5000*
+%ADD88C, 1.5000*%
+G04  D89 : "Ellipse X1.600mm Y1.600mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.6000*
+%ADD89C, 1.6000*%
+G04  D90 : "Ellipse X1.604mm Y1.604mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.6040*
+%ADD90C, 1.6040*%
+G04  D91 : "Ellipse X1.700mm Y1.700mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.7000*
+%ADD91C, 1.7000*%
+G04  D92 : "Ellipse X1.804mm Y1.804mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.8040*
+%ADD92C, 1.8040*%
+G04  D93 : "Ellipse X2.000mm Y2.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=2.0000*
+%ADD93C, 2.0000*%
+G04  D94 : "Ellipse X2.100mm Y2.100mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=2.1000*
+%ADD94C, 2.1000*%
+G04  D95 : "Ellipse X0.230mm Y0.230mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.2300*
+%ADD95C, 0.2300*%
+G04  D96 : "Ellipse X2.400mm Y2.400mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=2.4000*
+%ADD96C, 2.4000*%
+G04  D97 : "Mounting Hole X5.250mm Y5.250mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Mounting Hole: Diameter=5.2500, Rotation=0.0, LineWidth=0.1270 *
+%ADD97MTHOLE, 5.2500 X4.7420 X0.1270 X0.0*%
+G04  D98 : "Mounting Hole X0.700mm Y0.700mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Mounting Hole: Diameter=0.7000, Rotation=0.0, LineWidth=0.1270 *
+%ADD98MTHOLE, 0.7000 X0.1920 X0.1270 X0.0*%
+G04  D99 : "Mounting Hole X0.800mm Y0.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Mounting Hole: Diameter=0.8000, Rotation=0.0, LineWidth=0.1270 *
+%ADD99MTHOLE, 0.8000 X0.2920 X0.1270 X0.0*%
+G04  D100 : "Mounting Hole X0.850mm Y0.850mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Mounting Hole: Diameter=0.8500, Rotation=0.0, LineWidth=0.1270 *
+%ADD100MTHOLE, 0.8500 X0.3420 X0.1270 X0.0*%
+G04  D101 : "Mounting Hole X1.050mm Y1.050mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Mounting Hole: Diameter=1.0500, Rotation=0.0, LineWidth=0.1270 *
+%ADD101MTHOLE, 1.0500 X0.5420 X0.1270 X0.0*%
+G04  D102 : "Mounting Hole X1.100mm Y1.100mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Mounting Hole: Diameter=1.1000, Rotation=0.0, LineWidth=0.1270 *
+%ADD102MTHOLE, 1.1000 X0.5920 X0.1270 X0.0*%
+G04  D103 : "Mounting Hole X1.200mm Y1.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Mounting Hole: Diameter=1.2000, Rotation=0.0, LineWidth=0.1270 *
+%ADD103MTHOLE, 1.2000 X0.6920 X0.1270 X0.0*%
+G04  D104 : "Mounting Hole X1.700mm Y1.700mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Mounting Hole: Diameter=1.7000, Rotation=0.0, LineWidth=0.1270 *
+%ADD104MTHOLE, 1.7000 X1.1920 X0.1270 X0.0*%
+G04  D105 : "Mounting Hole X2.000mm Y2.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Mounting Hole: Diameter=2.0000, Rotation=0.0, LineWidth=0.1270 *
+%ADD105MTHOLE, 2.0000 X1.4920 X0.1270 X0.0*%
+G04  D106 : "Rounded Rectangle X1.500mm Y1.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  RoundRct: DimX=1.5000, DimY=1.2000, CornerRad=0.3000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD106ROUNDRECTNOHOLE, 1.5000 X1.2000 X0.0 X0.6000 X-0.4500 X-0.3000 X-0.4500 X0.3000*%
+G04  D107 : "Rounded Rectangle X1.600mm Y1.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  RoundRct: DimX=1.6000, DimY=1.3000, CornerRad=0.3250, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD107ROUNDRECTNOHOLE, 1.6000 X1.3000 X0.0 X0.6500 X-0.4750 X-0.3250 X-0.4750 X0.3250*%
+G04  D108 : "Rectangle X1.104mm Y2.604mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1040, DimY=2.6040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD108R, 1.1040 X2.6040*%
+G04  D109 : "Rectangle X0.280mm Y0.850mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.2800, DimY=0.8500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD109R, 0.2800 X0.8500*%
+G04  D110 : "Rectangle X0.500mm Y0.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5000, DimY=0.3000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD110R, 0.5000 X0.3000*%
+G04  D111 : "Rectangle X0.550mm Y0.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5500, DimY=0.3000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD111R, 0.5500 X0.3000*%
+G04  D112 : "Rectangle X0.300mm Y0.600mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.3000, DimY=0.6000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD112R, 0.3000 X0.6000*%
+G04  D113 : "Rectangle X0.300mm Y0.850mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.3000, DimY=0.8500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD113R, 0.3000 X0.8500*%
+G04  D114 : "Rectangle X0.850mm Y0.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.8500, DimY=0.3000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD114R, 0.8500 X0.3000*%
+G04  D115 : "Rectangle X0.300mm Y0.900mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.3000, DimY=0.9000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD115R, 0.3000 X0.9000*%
+G04  D116 : "Rectangle X2.600mm Y2.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.6000, DimY=2.8000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD116R, 2.6000 X2.8000*%
+G04  D117 : "Rectangle X2.800mm Y2.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Square: Side=2.8000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000*
+%ADD117R, 2.8000 X2.8000*%
+G04  D118 : "Rectangle X3.000mm Y2.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=3.0000, DimY=2.8000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD118R, 3.0000 X2.8000*%
+G04  D119 : "Rectangle X2.800mm Y1.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.8000, DimY=1.5000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD119R, 2.8000 X1.5000*%
+G04  D120 : "Rectangle X1.700mm Y2.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.7000, DimY=2.8000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD120R, 1.7000 X2.8000*%
+G04  D121 : "Rectangle X2.800mm Y2.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.8000, DimY=2.0000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD121R, 2.8000 X2.0000*%
+G04  D122 : "Rectangle X2.800mm Y2.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.8000, DimY=2.2000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD122R, 2.8000 X2.2000*%
+G04  D123 : "Rectangle X2.704mm Y2.904mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.7040, DimY=2.9040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD123R, 2.7040 X2.9040*%
+G04  D124 : "Rectangle X2.904mm Y2.904mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Square: Side=2.9040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000*
+%ADD124R, 2.9040 X2.9040*%
+G04  D125 : "Rectangle X3.104mm Y2.904mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=3.1040, DimY=2.9040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD125R, 3.1040 X2.9040*%
+G04  D126 : "Rectangle X2.904mm Y1.604mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.9040, DimY=1.6040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD126R, 2.9040 X1.6040*%
+G04  D127 : "Rectangle X1.804mm Y2.904mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.8040, DimY=2.9040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD127R, 1.8040 X2.9040*%
+G04  D128 : "Rectangle X2.904mm Y2.104mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.9040, DimY=2.1040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD128R, 2.9040 X2.1040*%
+G04  D129 : "Rectangle X2.904mm Y2.304mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.9040, DimY=2.3040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD129R, 2.9040 X2.3040*%
+G04  D130 : "Rectangle X1.250mm Y3.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.2500, DimY=3.0000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD130R, 1.2500 X3.0000*%
+G04  D131 : "Rectangle X1.354mm Y3.104mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.3540, DimY=3.1040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD131R, 1.3540 X3.1040*%
+G04  D132 : "Rectangle X1.205mm Y3.150mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.2050, DimY=3.1500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD132R, 1.2050 X3.1500*%
+G04  D133 : "Rectangle X0.550mm Y0.350mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5500, DimY=0.3500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD133R, 0.5500 X0.3500*%
+G04  D134 : "Rectangle X2.050mm Y3.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.0500, DimY=3.5000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD134R, 2.0500 X3.5000*%
+G04  D135 : "Rectangle X2.154mm Y3.604mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.1540, DimY=3.6040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD135R, 2.1540 X3.6040*%
+G04  D136 : "Rectangle X1.460mm Y3.650mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.4600, DimY=3.6500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD136R, 1.4600 X3.6500*%
+G04  D137 : "Rectangle X1.600mm Y0.400mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.6000, DimY=0.4000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD137R, 1.6000 X0.4000*%
+G04  D138 : "Rectangle X0.404mm Y0.704mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.4040, DimY=0.7040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD138R, 0.4040 X0.7040*%
+G04  D139 : "Rectangle X0.404mm Y0.954mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.4040, DimY=0.9540, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD139R, 0.4040 X0.9540*%
+G04  D140 : "Rectangle X0.954mm Y0.404mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.9540, DimY=0.4040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD140R, 0.9540 X0.4040*%
+G04  D141 : "Rectangle X1.650mm Y0.450mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.6500, DimY=0.4500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD141R, 1.6500 X0.4500*%
+G04  D142 : "Rectangle X0.500mm Y2.880mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5000, DimY=2.8800, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD142R, 0.5000 X2.8800*%
+G04  D143 : "Rectangle X0.500mm Y0.425mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5000, DimY=0.4250, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD143R, 0.5000 X0.4250*%
+G04  D144 : "Rectangle X1.704mm Y0.504mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.7040, DimY=0.5040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD144R, 1.7040 X0.5040*%
+G04  D145 : "Rectangle X5.000mm Y3.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=5.0000, DimY=3.0000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD145R, 5.0000 X3.0000*%
+G04  D146 : "Rectangle X5.104mm Y3.104mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=5.1040, DimY=3.1040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD146R, 5.1040 X3.1040*%
+G04  D147 : "Rectangle X0.550mm Y0.475mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5500, DimY=0.4750, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD147R, 0.5500 X0.4750*%
+G04  D148 : "Rectangle X0.600mm Y0.650mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.6000, DimY=0.6500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD148R, 0.6000 X0.6500*%
+G04  D149 : "Rectangle X0.650mm Y0.600mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.6500, DimY=0.6000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD149R, 0.6500 X0.6000*%
+G04  D150 : "Rectangle X0.604mm Y2.984mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.6040, DimY=2.9840, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD150R, 0.6040 X2.9840*%
+G04  D151 : "Rectangle X0.700mm Y0.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.7000, DimY=0.3000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD151R, 0.7000 X0.3000*%
+G04  D152 : "Rectangle X0.700mm Y1.400mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.7000, DimY=1.4000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD152R, 0.7000 X1.4000*%
+G04  D153 : "Rectangle X0.750mm Y0.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.7500, DimY=0.8000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD153R, 0.7500 X0.8000*%
+G04  D154 : "Rectangle X0.800mm Y0.750mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.8000, DimY=0.7500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD154R, 0.8000 X0.7500*%
+G04  D155 : "Rectangle X0.804mm Y0.404mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.8040, DimY=0.4040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD155R, 0.8040 X0.4040*%
+G04  D156 : "Rectangle X0.804mm Y1.504mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.8040, DimY=1.5040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD156R, 0.8040 X1.5040*%
+G04  D157 : "Rectangle X0.850mm Y0.600mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.8500, DimY=0.6000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD157R, 0.8500 X0.6000*%
+G04  D158 : "Rectangle X0.250mm Y0.850mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.2500, DimY=0.8500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD158R, 0.2500 X0.8500*%
+G04  D159 : "Rectangle X0.875mm Y0.575mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.8750, DimY=0.5750, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD159R, 0.8750 X0.5750*%
+G04  D160 : "Rectangle X0.575mm Y0.875mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5750, DimY=0.8750, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD160R, 0.5750 X0.8750*%
+G04  D161 : "Rectangle X0.889mm Y1.092mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.8890, DimY=1.0922, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD161R, 0.8890 X1.0922*%
+G04  D162 : "Rectangle X1.092mm Y0.889mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0922, DimY=0.8890, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD162R, 1.0922 X0.8890*%
+G04  D163 : "Rectangle X0.900mm Y0.600mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.9000, DimY=0.6000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD163R, 0.9000 X0.6000*%
+G04  D164 : "Rectangle X0.600mm Y0.900mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.6000, DimY=0.9000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD164R, 0.6000 X0.9000*%
+G04  D165 : "Rectangle X0.900mm Y0.650mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.9000, DimY=0.6500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD165R, 0.9000 X0.6500*%
+G04  D166 : "Rectangle X0.950mm Y1.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.9500, DimY=1.0000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD166R, 0.9500 X1.0000*%
+G04  D167 : "Rectangle X1.000mm Y0.950mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0000, DimY=0.9500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD167R, 1.0000 X0.9500*%
+G04  D168 : "Rectangle X0.949mm Y1.142mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.9490, DimY=1.1420, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD168R, 0.9490 X1.1420*%
+G04  D169 : "Rectangle X1.142mm Y0.949mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1420, DimY=0.9490, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD169R, 1.1420 X0.9490*%
+G04  D170 : "Rectangle X0.993mm Y1.196mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.9930, DimY=1.1962, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD170R, 0.9930 X1.1962*%
+G04  D171 : "Rectangle X1.196mm Y0.993mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1962, DimY=0.9930, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD171R, 1.1962 X0.9930*%
+G04  D172 : "Rectangle X1.000mm Y0.700mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0000, DimY=0.7000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD172R, 1.0000 X0.7000*%
+G04  D173 : "Rectangle X0.700mm Y1.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.7000, DimY=1.0000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD173R, 0.7000 X1.0000*%
+G04  D174 : "Rectangle X1.050mm Y1.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0500, DimY=1.0000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD174R, 1.0500 X1.0000*%
+G04  D175 : "Rectangle X1.000mm Y1.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0000, DimY=1.2000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD175R, 1.0000 X1.2000*%
+G04  D176 : "Rectangle X1.016mm Y0.400mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0160, DimY=0.4000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD176R, 1.0160 X0.4000*%
+G04  D177 : "Rectangle X0.400mm Y1.016mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.4000, DimY=1.0160, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD177R, 0.4000 X1.0160*%
+G04  D178 : "Rectangle X0.500mm Y1.016mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5000, DimY=1.0160, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD178R, 0.5000 X1.0160*%
+G04  D179 : "Rectangle X0.550mm Y1.016mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5500, DimY=1.0160, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD179R, 0.5500 X1.0160*%
+G04  D180 : "Rectangle X1.054mm Y1.104mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0540, DimY=1.1040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD180R, 1.0540 X1.1040*%
+G04  D181 : "Rectangle X1.104mm Y1.054mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1040, DimY=1.0540, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD181R, 1.1040 X1.0540*%
+G04  D182 : "Rectangle X0.450mm Y1.066mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.4500, DimY=1.0660, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD182R, 0.4500 X1.0660*%
+G04  D183 : "Rectangle X0.300mm Y1.100mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.3000, DimY=1.1000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD183R, 0.3000 X1.1000*%
+G04  D184 : "Rectangle X1.154mm Y1.104mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1540, DimY=1.1040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD184R, 1.1540 X1.1040*%
+G04  D185 : "Rectangle X1.104mm Y1.304mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1040, DimY=1.3040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD185R, 1.1040 X1.3040*%
+G04  D186 : "Rectangle X1.120mm Y0.504mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1200, DimY=0.5040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD186R, 1.1200 X0.5040*%
+G04  D187 : "Rectangle X0.504mm Y1.120mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5040, DimY=1.1200, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD187R, 0.5040 X1.1200*%
+G04  D188 : "Rectangle X0.604mm Y1.120mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.6040, DimY=1.1200, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD188R, 0.6040 X1.1200*%
+G04  D189 : "Rectangle X0.654mm Y1.120mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.6540, DimY=1.1200, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD189R, 0.6540 X1.1200*%
+G04  D190 : "Rectangle X1.150mm Y2.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1500, DimY=2.8000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD190R, 1.1500 X2.8000*%
+G04  D191 : "Rectangle X1.150mm Y1.650mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1500, DimY=1.6500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD191R, 1.1500 X1.6500*%
+G04  D192 : "Rectangle X1.650mm Y1.150mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.6500, DimY=1.1500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD192R, 1.6500 X1.1500*%
+G04  D193 : "Rectangle X0.406mm Y1.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.4064, DimY=1.2000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD193R, 0.4064 X1.2000*%
+G04  D194 : "Rectangle X0.600mm Y1.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.6000, DimY=1.2000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD194R, 0.6000 X1.2000*%
+G04  D195 : "Rectangle X1.200mm Y1.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Square: Side=1.2000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000*
+%ADD195R, 1.2000 X1.2000*%
+G04  D196 : "Rectangle X1.200mm Y1.700mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.2000, DimY=1.7000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD196R, 1.2000 X1.7000*%
+G04  D197 : "Rectangle X0.404mm Y1.204mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.4040, DimY=1.2040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD197R, 0.4040 X1.2040*%
+G04  D198 : "Rectangle X0.915mm Y1.220mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.9150, DimY=1.2200, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD198R, 0.9150 X1.2200*%
+G04  D199 : "Rectangle X1.228mm Y0.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.2280, DimY=0.5000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD199R, 1.2280 X0.5000*%
+G04  D200 : "Rectangle X0.500mm Y1.228mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5000, DimY=1.2280, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD200R, 0.5000 X1.2280*%
+G04  D201 : "Rectangle X0.871mm Y1.227mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.8710, DimY=1.2270, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD201R, 0.8710 X1.2270*%
+G04  D202 : "Rectangle X0.456mm Y1.250mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.4560, DimY=1.2500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD202R, 0.4560 X1.2500*%
+G04  D203 : "Rectangle X0.650mm Y1.250mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.6500, DimY=1.2500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD203R, 0.6500 X1.2500*%
+G04  D204 : "Rectangle X1.254mm Y2.904mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.2540, DimY=2.9040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD204R, 1.2540 X2.9040*%
+G04  D205 : "Rectangle X1.254mm Y1.754mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.2540, DimY=1.7540, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD205R, 1.2540 X1.7540*%
+G04  D206 : "Rectangle X1.754mm Y1.254mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.7540, DimY=1.2540, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD206R, 1.7540 X1.2540*%
+G04  D207 : "Rectangle X0.921mm Y1.257mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.9210, DimY=1.2570, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD207R, 0.9210 X1.2570*%
+G04  D208 : "Rectangle X1.270mm Y2.000mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.2700, DimY=2.0000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD208R, 1.2700 X2.0000*%
+G04  D209 : "Rectangle X2.000mm Y1.270mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.0000, DimY=1.2700, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD209R, 2.0000 X1.2700*%
+G04  D210 : "Rectangle X1.278mm Y0.550mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.2780, DimY=0.5500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD210R, 1.2780 X0.5500*%
+G04  D211 : "Rectangle X0.550mm Y1.278mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5500, DimY=1.2780, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD211R, 0.5500 X1.2780*%
+G04  D212 : "Rectangle X3.000mm Y1.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=3.0000, DimY=1.3000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD212R, 3.0000 X1.3000*%
+G04  D213 : "Rectangle X1.304mm Y1.304mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Square: Side=1.3040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000*
+%ADD213R, 1.3040 X1.3040*%
+G04  D214 : "Rectangle X1.019mm Y1.324mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0190, DimY=1.3240, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD214R, 1.0190 X1.3240*%
+G04  D215 : "Rectangle X1.374mm Y2.104mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.3740, DimY=2.1040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD215R, 1.3740 X2.1040*%
+G04  D216 : "Rectangle X2.104mm Y1.374mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.1040, DimY=1.3740, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD216R, 2.1040 X1.3740*%
+G04  D217 : "Rectangle X1.000mm Y1.400mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0000, DimY=1.4000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD217R, 1.0000 X1.4000*%
+G04  D218 : "Rectangle X2.500mm Y1.400mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.5000, DimY=1.4000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD218R, 2.5000 X1.4000*%
+G04  D219 : "Rectangle X3.104mm Y1.404mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=3.1040, DimY=1.4040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD219R, 3.1040 X1.4040*%
+G04  D220 : "Rectangle X0.300mm Y1.450mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.3000, DimY=1.4500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD220R, 0.3000 X1.4500*%
+G04  D221 : "Rectangle X0.500mm Y1.450mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5000, DimY=1.4500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD221R, 0.5000 X1.4500*%
+G04  D222 : "Rectangle X1.450mm Y0.950mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.4500, DimY=0.9500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD222R, 1.4500 X0.9500*%
+G04  D223 : "Rectangle X0.950mm Y1.450mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.9500, DimY=1.4500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD223R, 0.9500 X1.4500*%
+G04  D224 : "Rectangle X1.179mm Y1.450mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1786, DimY=1.4503, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD224R, 1.1786 X1.4503*%
+G04  D225 : "Rectangle X0.300mm Y1.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.3000, DimY=1.5000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD225R, 0.3000 X1.5000*%
+G04  D226 : "Rectangle X0.350mm Y1.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.3500, DimY=1.5000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD226R, 0.3500 X1.5000*%
+G04  D227 : "Rectangle X0.550mm Y1.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5500, DimY=1.5000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD227R, 0.5500 X1.5000*%
+G04  D228 : "Rectangle X1.500mm Y1.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Square: Side=1.5000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000*
+%ADD228R, 1.5000 X1.5000*%
+G04  D229 : "Rectangle X2.604mm Y1.504mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.6040, DimY=1.5040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD229R, 2.6040 X1.5040*%
+G04  D230 : "Rectangle X1.104mm Y1.504mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.1040, DimY=1.5040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD230R, 1.1040 X1.5040*%
+G04  D231 : "Rectangle X1.554mm Y1.054mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.5540, DimY=1.0540, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD231R, 1.5540 X1.0540*%
+G04  D232 : "Rectangle X1.054mm Y1.554mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0540, DimY=1.5540, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD232R, 1.0540 X1.5540*%
+G04  D233 : "Rectangle X1.283mm Y1.554mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.2826, DimY=1.5543, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD233R, 1.2826 X1.5543*%
+G04  D234 : "Rectangle X1.600mm Y1.250mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.6000, DimY=1.2500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD234R, 1.6000 X1.2500*%
+G04  D235 : "Rectangle X0.404mm Y1.604mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.4040, DimY=1.6040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD235R, 0.4040 X1.6040*%
+G04  D236 : "Rectangle X1.650mm Y1.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.6500, DimY=1.3000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD236R, 1.6500 X1.3000*%
+G04  D237 : "Rectangle X0.200mm Y1.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.2000, DimY=1.5000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD237R, 0.2000 X1.5000*%
+G04  D238 : "Rectangle X1.500mm Y0.200mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.5000, DimY=0.2000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD238R, 1.5000 X0.2000*%
+G04  D239 : "Rectangle X1.800mm Y0.406mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.8000, DimY=0.4064, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD239R, 1.8000 X0.4064*%
+G04  D240 : "Rectangle X1.800mm Y2.250mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.8000, DimY=2.2500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD240R, 1.8000 X2.2500*%
+G04  D241 : "Rectangle X2.250mm Y1.800mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.2500, DimY=1.8000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD241R, 2.2500 X1.8000*%
+G04  D242 : "Rectangle X1.850mm Y0.456mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.8500, DimY=0.4560, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD242R, 1.8500 X0.4560*%
+G04  D243 : "Rectangle X2.100mm Y1.900mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.1000, DimY=1.9000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD243R, 2.1000 X1.9000*%
+G04  D244 : "Rectangle X1.904mm Y2.354mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.9040, DimY=2.3540, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD244R, 1.9040 X2.3540*%
+G04  D245 : "Rectangle X2.354mm Y1.904mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.3540, DimY=1.9040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD245R, 2.3540 X1.9040*%
+G04  D246 : "Rectangle X2.204mm Y2.004mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.2040, DimY=2.0040, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD246R, 2.2040 X2.0040*%
+G04  D247 : "Rectangle X2.032mm Y0.660mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.0320, DimY=0.6604, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD247R, 2.0320 X0.6604*%
+G04  D248 : "Rectangle X2.082mm Y0.710mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.0820, DimY=0.7100, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD248R, 2.0820 X0.7100*%
+G04  D249 : "Rectangle X2.200mm Y1.050mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.2000, DimY=1.0500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD249R, 2.2000 X1.0500*%
+G04  D250 : "Rectangle X0.500mm Y0.250mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=0.5000, DimY=0.2500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD250R, 0.5000 X0.2500*%
+G04  D251 : "Rectangle X2.450mm Y2.300mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.4500, DimY=2.3000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD251R, 2.4500 X2.3000*%
+G04  D252 : "Rectangle X2.304mm Y1.154mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.3040, DimY=1.1540, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD252R, 2.3040 X1.1540*%
+G04  D253 : "Rectangle X2.500mm Y2.350mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=2.5000, DimY=2.3500, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD253R, 2.5000 X2.3500*%
+G04  D254 : "Rectangle X1.000mm Y2.500mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Rectangular: DimX=1.0000, DimY=2.5000, Rotation=0.0, OffsetX=0.0000, OffsetY=0.0000, HoleDia=0.0000 *
+%ADD254R, 1.0000 X2.5000*%
+G04  D255 : "Thermal 4 Spoke/45 O1.200mm I0.900mm G0.200mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Thermal Relief: OuterDia=1.2000, InnerDia=0.9000, GapWidth=0.2000, Rotation=45.0000 *
+%AMTHERMAL4D255*
+1,1,1.2000,0,0*
+1,0,0.9000,0,0*
+21,0,1.2000,0.2000,0,0,45.0000*
+21,0,0.2000,1.2000,0,0,45.0000*%
+%ADD255THERMAL4D255*%
+G04  D256 : "Ellipse X0.254mm Y0.254mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.2540*
+%ADD256C, 0.2540*%
+G04  D257 : "Ellipse X0.400mm Y0.400mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.4000*
+%ADD257C, 0.4000*%
+G04  D258 : "Ellipse X0.458mm Y0.458mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.4580*
+%ADD258C, 0.4580*%
+G04  D259 : "Ellipse X0.508mm Y0.508mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.5080*
+%ADD259C, 0.5080*%
+G04  D260 : "Ellipse X0.552mm Y0.552mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.5520*
+%ADD260C, 0.5520*%
+G04  D261 : "Ellipse X0.600mm Y0.600mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.6000*
+%ADD261C, 0.6000*%
+G04  D262 : "Ellipse X0.658mm Y0.658mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.6580*
+%ADD262C, 0.6580*%
+G04  D263 : "Ellipse X0.809mm Y0.809mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.8092*
+%ADD263C, 0.8092*%
+G04  D264 : "Ellipse X1.016mm Y1.016mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.0160*
+%ADD264C, 1.0160*%
+G04  D265 : "Ellipse X1.120mm Y1.120mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=1.1200*
+%ADD265C, 1.1200*%
+G04  D266 : "Ellipse X0.250mm Y0.250mm H0.000mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Disc: OuterDia=0.2500*
+%ADD266C, 0.2500*%
+G04  D267 : "Thermal 4 Spoke/45 O0.914mm I0.686mm G0.152mm 0.0deg (0.000mm,0.000mm) Flash"*
+G04  Thermal Relief: OuterDia=0.9144, InnerDia=0.6858, GapWidth=0.1524, Rotation=45.0000 *
+%AMTHERMAL4D267*
+1,1,0.9144,0,0*
+1,0,0.6858,0,0*
+21,0,0.9144,0.1524,0,0,45.0000*
+21,0,0.1524,0.9144,0,0,45.0000*%
+%ADD267THERMAL4D267*%
+G04*
+%FSLAX44Y44*%
+%SFA1B1*%
+%OFA0.000B0.000*%
+G04*
+G71*
+G90*
+G01*
+D2*
+%LNBoard*%
+G54D48*
+X450000Y800000*
+X447589Y800145D1*
+X445213Y800581*
+X442907Y801299*
+X440705Y802290*
+X438638Y803540*
+X436737Y805029*
+X435029Y806737*
+X433540Y808638*
+X432290Y810705*
+X431299Y812907*
+X430581Y815213*
+X430145Y817589*
+X430000Y820000*
+Y1552500D2*
+X430145Y1554910D1*
+X430581Y1557286*
+X431299Y1559592*
+X432290Y1561794*
+X433540Y1563861*
+X435029Y1565762*
+X436737Y1567470*
+X438638Y1568959*
+X440705Y1570209*
+X442907Y1571200*
+X445213Y1571918*
+X447589Y1572354*
+X450000Y1572500*
+X607500Y795000D2*
+Y800000D1*
+X651500Y795000D2*
+Y800000D1*
+X792000Y1572500D2*
+Y1575500D1*
+X828500Y1572500D2*
+Y1575500D1*
+X792000*
+X1355000Y1572500D2*
+Y1544250D1*
+X1377250D2*
+Y1572500D1*
+X430000Y1552500D2*
+Y820000D1*
+X1770000D2*
+Y1552500D1*
+X450000Y800000D2*
+X607500D1*
+X1355000Y1544250D2*
+X1377250D1*
+X1770000Y820000D2*
+X1769854Y817589D1*
+X1769418Y815213*
+X1768700Y812907*
+X1767709Y810705*
+X1766459Y808638*
+X1764970Y806737*
+X1763262Y805029*
+X1761361Y803540*
+X1759294Y802290*
+X1757092Y801299*
+X1754786Y800581*
+X1752410Y800145*
+X1750000Y800000*
+X1770000Y1552500D2*
+X1769854Y1554910D1*
+X1769418Y1557286*
+X1768700Y1559592*
+X1767709Y1561794*
+X1766459Y1563861*
+X1764970Y1565762*
+X1763262Y1567470*
+X1761361Y1568959*
+X1759294Y1570209*
+X1757092Y1571200*
+X1754786Y1571918*
+X1752410Y1572354*
+X1750000Y1572500*
+D2*
+G54D51*
+X1517000Y1544250*
+Y1442650D1*
+D2*
+G54D10*
+X1509726Y1497260*
+X1524273D1*
+X1509768Y1497513D2*
+X1524231D1*
+X1509810Y1497767D2*
+X1524189D1*
+X1509852Y1498020D2*
+X1524147D1*
+X1509894Y1498274D2*
+X1524105D1*
+X1509936Y1498527D2*
+X1524063D1*
+X1509978Y1498781D2*
+X1524021D1*
+X1510020Y1499034D2*
+X1523979D1*
+X1510062Y1499288D2*
+X1523937D1*
+X1510104Y1499541D2*
+X1523895D1*
+X1510146Y1499795D2*
+X1523853D1*
+X1510188Y1500048D2*
+X1523811D1*
+X1510230Y1500302D2*
+X1523769D1*
+X1510272Y1500555D2*
+X1523727D1*
+X1510314Y1500809D2*
+X1523685D1*
+X1510356Y1501062D2*
+X1523643D1*
+X1510398Y1501316D2*
+X1523601D1*
+X1510440Y1501569D2*
+X1523559D1*
+X1510482Y1501823D2*
+X1523517D1*
+X1510524Y1502076D2*
+X1523475D1*
+X1510566Y1502330D2*
+X1523433D1*
+X1510608Y1502583D2*
+X1523391D1*
+X1510651Y1502837D2*
+X1523348D1*
+X1510693Y1503090D2*
+X1523306D1*
+X1510735Y1503344D2*
+X1523264D1*
+X1510777Y1503597D2*
+X1523222D1*
+X1510819Y1503851D2*
+X1523180D1*
+X1510861Y1504104D2*
+X1523138D1*
+X1510903Y1504358D2*
+X1523096D1*
+X1510945Y1504611D2*
+X1523054D1*
+X1510987Y1504865D2*
+X1523012D1*
+X1511029Y1505118D2*
+X1522970D1*
+X1511071Y1505372D2*
+X1522928D1*
+X1511113Y1505625D2*
+X1522886D1*
+X1511155Y1505879D2*
+X1522844D1*
+X1511197Y1506132D2*
+X1522802D1*
+X1511239Y1506386D2*
+X1522760D1*
+X1511281Y1506639D2*
+X1522718D1*
+X1511323Y1506893D2*
+X1522676D1*
+X1511365Y1507146D2*
+X1522634D1*
+X1511407Y1507400D2*
+X1522592D1*
+X1511449Y1507653D2*
+X1522550D1*
+X1511491Y1507907D2*
+X1522508D1*
+X1511533Y1508160D2*
+X1522466D1*
+X1511575Y1508414D2*
+X1522424D1*
+X1511617Y1508667D2*
+X1522382D1*
+X1511659Y1508921D2*
+X1522340D1*
+X1511701Y1509174D2*
+X1522298D1*
+X1511743Y1509428D2*
+X1522256D1*
+X1511785Y1509681D2*
+X1522214D1*
+X1511827Y1509935D2*
+X1522172D1*
+X1511869Y1510188D2*
+X1522130D1*
+X1511911Y1510442D2*
+X1522088D1*
+X1511953Y1510695D2*
+X1522046D1*
+X1511995Y1510949D2*
+X1522004D1*
+X1512037Y1511202D2*
+X1521962D1*
+X1512079Y1511456D2*
+X1521920D1*
+X1512121Y1511709D2*
+X1521878D1*
+X1512163Y1511963D2*
+X1521836D1*
+X1512206Y1512216D2*
+X1521793D1*
+X1512248Y1512470D2*
+X1521751D1*
+X1512290Y1512723D2*
+X1521709D1*
+X1512332Y1512977D2*
+X1521667D1*
+X1512374Y1513230D2*
+X1521625D1*
+X1512416Y1513484D2*
+X1521583D1*
+X1512458Y1513737D2*
+X1521541D1*
+X1512500Y1513991D2*
+X1521499D1*
+X1512542Y1514244D2*
+X1521457D1*
+X1512584Y1514498D2*
+X1521415D1*
+X1512626Y1514751D2*
+X1521373D1*
+X1512668Y1515005D2*
+X1521331D1*
+X1512710Y1515258D2*
+X1521289D1*
+X1512752Y1515512D2*
+X1521247D1*
+X1512794Y1515765D2*
+X1521205D1*
+X1512836Y1516019D2*
+X1521163D1*
+X1512878Y1516272D2*
+X1521121D1*
+X1512920Y1516526D2*
+X1521079D1*
+X1512962Y1516779D2*
+X1521037D1*
+X1513004Y1517033D2*
+X1520995D1*
+X1513046Y1517286D2*
+X1520953D1*
+X1513088Y1517540D2*
+X1520911D1*
+X1513130Y1517793D2*
+X1520869D1*
+X1513172Y1518047D2*
+X1520827D1*
+X1513214Y1518300D2*
+X1520785D1*
+X1513256Y1518554D2*
+X1520743D1*
+X1513298Y1518807D2*
+X1520701D1*
+X1513340Y1519061D2*
+X1520659D1*
+X1513382Y1519314D2*
+X1520617D1*
+X1513424Y1519568D2*
+X1520575D1*
+X1513466Y1519821D2*
+X1520533D1*
+X1513508Y1520075D2*
+X1520491D1*
+X1513550Y1520328D2*
+X1520449D1*
+X1513592Y1520582D2*
+X1520407D1*
+X1513634Y1520835D2*
+X1520365D1*
+X1513676Y1521089D2*
+X1520323D1*
+X1513718Y1521342D2*
+X1520281D1*
+X1513761Y1521596D2*
+X1520238D1*
+X1513803Y1521849D2*
+X1520196D1*
+X1513845Y1522103D2*
+X1520154D1*
+X1513887Y1522356D2*
+X1520112D1*
+X1513929Y1522610D2*
+X1520070D1*
+X1513971Y1522863D2*
+X1520028D1*
+X1514013Y1523117D2*
+X1519986D1*
+X1514055Y1523370D2*
+X1519944D1*
+X1514097Y1523624D2*
+X1519902D1*
+X1514139Y1523877D2*
+X1519860D1*
+X1514181Y1524131D2*
+X1519818D1*
+X1514223Y1524384D2*
+X1519776D1*
+X1514265Y1524638D2*
+X1519734D1*
+X1514307Y1524891D2*
+X1519692D1*
+X1514349Y1525145D2*
+X1519650D1*
+X1514391Y1525398D2*
+X1519608D1*
+X1514433Y1525652D2*
+X1519566D1*
+X1514475Y1525905D2*
+X1519524D1*
+X1514517Y1526159D2*
+X1519482D1*
+X1514559Y1526412D2*
+X1519440D1*
+X1514601Y1526666D2*
+X1519398D1*
+X1514643Y1526919D2*
+X1519356D1*
+X1514685Y1527173D2*
+X1519314D1*
+X1514727Y1527426D2*
+X1519272D1*
+X1514769Y1527680D2*
+X1519230D1*
+X1514811Y1527933D2*
+X1519188D1*
+X1514853Y1528187D2*
+X1519146D1*
+X1514895Y1528440D2*
+X1519104D1*
+X1514937Y1528694D2*
+X1519062D1*
+X1514979Y1528947D2*
+X1519020D1*
+X1515021Y1529201D2*
+X1518978D1*
+X1515063Y1529454D2*
+X1518936D1*
+X1515105Y1529708D2*
+X1518894D1*
+X1515147Y1529961D2*
+X1518852D1*
+X1515189Y1530215D2*
+X1518810D1*
+X1515231Y1530468D2*
+X1518768D1*
+X1515274Y1530722D2*
+X1518725D1*
+X1515316Y1530975D2*
+X1518683D1*
+X1515358Y1531229D2*
+X1518641D1*
+X1515400Y1531482D2*
+X1518599D1*
+X1515442Y1531736D2*
+X1518557D1*
+X1515484Y1531989D2*
+X1518515D1*
+X1515526Y1532243D2*
+X1518473D1*
+X1515568Y1532496D2*
+X1518431D1*
+X1515610Y1532750D2*
+X1518389D1*
+X1515652Y1533003D2*
+X1518347D1*
+X1515694Y1533257D2*
+X1518305D1*
+X1515736Y1533510D2*
+X1518263D1*
+X1515778Y1533764D2*
+X1518221D1*
+X1515820Y1534017D2*
+X1518179D1*
+X1515862Y1534271D2*
+X1518137D1*
+X1515904Y1534524D2*
+X1518095D1*
+X1515946Y1534778D2*
+X1518053D1*
+X1515988Y1535031D2*
+X1518011D1*
+X1516030Y1535285D2*
+X1517969D1*
+X1516072Y1535538D2*
+X1517927D1*
+X1516114Y1535792D2*
+X1517885D1*
+X1516156Y1536045D2*
+X1517843D1*
+X1516198Y1536299D2*
+X1517801D1*
+X1516240Y1536552D2*
+X1517759D1*
+X1516282Y1536806D2*
+X1517717D1*
+X1516324Y1537059D2*
+X1517675D1*
+X1516366Y1537313D2*
+X1517633D1*
+X1516408Y1537566D2*
+X1517591D1*
+X1516450Y1537820D2*
+X1517549D1*
+X1516492Y1538073D2*
+X1517507D1*
+X1516534Y1538327D2*
+X1517465D1*
+X1516576Y1538580D2*
+X1517423D1*
+X1516618Y1538834D2*
+X1517381D1*
+X1516660Y1539087D2*
+X1517339D1*
+X1516702Y1539341D2*
+X1517297D1*
+X1516744Y1539594D2*
+X1517255D1*
+X1516786Y1539848D2*
+X1517213D1*
+X1516829Y1540101D2*
+X1517170D1*
+X1516871Y1540355D2*
+X1517128D1*
+X1516913Y1540608D2*
+X1517086D1*
+X1516955Y1540862D2*
+X1517044D1*
+X1516997Y1541115D2*
+X1517002D1*
+X1517000Y1542691D2*
+X1509425Y1497005D1*
+X1524574*
+X1517000Y1542691*
+D2*
+G54D51*
+Y1572500*
+Y1749428D1*
+D2*
+G54D10*
+X1516957Y1575870*
+X1517042D1*
+X1516915Y1576124D2*
+X1517084D1*
+X1516873Y1576377D2*
+X1517126D1*
+X1516831Y1576631D2*
+X1517168D1*
+X1516789Y1576884D2*
+X1517210D1*
+X1516747Y1577138D2*
+X1517252D1*
+X1516705Y1577391D2*
+X1517294D1*
+X1516663Y1577645D2*
+X1517336D1*
+X1516621Y1577898D2*
+X1517378D1*
+X1516579Y1578152D2*
+X1517420D1*
+X1516537Y1578405D2*
+X1517462D1*
+X1516495Y1578659D2*
+X1517504D1*
+X1516453Y1578912D2*
+X1517546D1*
+X1516411Y1579166D2*
+X1517588D1*
+X1516369Y1579419D2*
+X1517630D1*
+X1516327Y1579673D2*
+X1517672D1*
+X1516285Y1579926D2*
+X1517714D1*
+X1516243Y1580180D2*
+X1517756D1*
+X1516201Y1580433D2*
+X1517798D1*
+X1516159Y1580687D2*
+X1517840D1*
+X1516117Y1580940D2*
+X1517882D1*
+X1516075Y1581194D2*
+X1517924D1*
+X1516033Y1581447D2*
+X1517966D1*
+X1515991Y1581701D2*
+X1518008D1*
+X1515949Y1581954D2*
+X1518050D1*
+X1515907Y1582208D2*
+X1518092D1*
+X1515865Y1582461D2*
+X1518134D1*
+X1515823Y1582715D2*
+X1518176D1*
+X1515781Y1582968D2*
+X1518218D1*
+X1515739Y1583222D2*
+X1518260D1*
+X1515697Y1583475D2*
+X1518302D1*
+X1515655Y1583729D2*
+X1518344D1*
+X1515613Y1583982D2*
+X1518386D1*
+X1515571Y1584236D2*
+X1518428D1*
+X1515529Y1584489D2*
+X1518470D1*
+X1515487Y1584743D2*
+X1518512D1*
+X1515444Y1584996D2*
+X1518555D1*
+X1515402Y1585250D2*
+X1518597D1*
+X1515360Y1585503D2*
+X1518639D1*
+X1515318Y1585757D2*
+X1518681D1*
+X1515276Y1586010D2*
+X1518723D1*
+X1515234Y1586264D2*
+X1518765D1*
+X1515192Y1586517D2*
+X1518807D1*
+X1515150Y1586771D2*
+X1518849D1*
+X1515108Y1587024D2*
+X1518891D1*
+X1515066Y1587278D2*
+X1518933D1*
+X1515024Y1587531D2*
+X1518975D1*
+X1514982Y1587785D2*
+X1519017D1*
+X1514940Y1588038D2*
+X1519059D1*
+X1514898Y1588292D2*
+X1519101D1*
+X1514856Y1588545D2*
+X1519143D1*
+X1514814Y1588799D2*
+X1519185D1*
+X1514772Y1589052D2*
+X1519227D1*
+X1514730Y1589306D2*
+X1519269D1*
+X1514688Y1589559D2*
+X1519311D1*
+X1514646Y1589813D2*
+X1519353D1*
+X1514604Y1590066D2*
+X1519395D1*
+X1514562Y1590320D2*
+X1519437D1*
+X1514520Y1590573D2*
+X1519479D1*
+X1514478Y1590827D2*
+X1519521D1*
+X1514436Y1591080D2*
+X1519563D1*
+X1514394Y1591334D2*
+X1519605D1*
+X1514352Y1591587D2*
+X1519647D1*
+X1514310Y1591841D2*
+X1519689D1*
+X1514268Y1592094D2*
+X1519731D1*
+X1514226Y1592348D2*
+X1519773D1*
+X1514184Y1592601D2*
+X1519815D1*
+X1514142Y1592855D2*
+X1519857D1*
+X1514100Y1593108D2*
+X1519899D1*
+X1514058Y1593362D2*
+X1519941D1*
+X1514016Y1593615D2*
+X1519983D1*
+X1513974Y1593869D2*
+X1520025D1*
+X1513932Y1594122D2*
+X1520067D1*
+X1513889Y1594376D2*
+X1520110D1*
+X1513847Y1594629D2*
+X1520152D1*
+X1513805Y1594883D2*
+X1520194D1*
+X1513763Y1595136D2*
+X1520236D1*
+X1513721Y1595390D2*
+X1520278D1*
+X1513679Y1595643D2*
+X1520320D1*
+X1513637Y1595897D2*
+X1520362D1*
+X1513595Y1596150D2*
+X1520404D1*
+X1513553Y1596404D2*
+X1520446D1*
+X1513511Y1596657D2*
+X1520488D1*
+X1513469Y1596911D2*
+X1520530D1*
+X1513427Y1597164D2*
+X1520572D1*
+X1513385Y1597418D2*
+X1520614D1*
+X1513343Y1597671D2*
+X1520656D1*
+X1513301Y1597925D2*
+X1520698D1*
+X1513259Y1598178D2*
+X1520740D1*
+X1513217Y1598432D2*
+X1520782D1*
+X1513175Y1598685D2*
+X1520824D1*
+X1513133Y1598939D2*
+X1520866D1*
+X1513091Y1599192D2*
+X1520908D1*
+X1513049Y1599446D2*
+X1520950D1*
+X1513007Y1599699D2*
+X1520992D1*
+X1512965Y1599953D2*
+X1521034D1*
+X1512923Y1600206D2*
+X1521076D1*
+X1512881Y1600460D2*
+X1521118D1*
+X1512839Y1600713D2*
+X1521160D1*
+X1512797Y1600967D2*
+X1521202D1*
+X1512755Y1601220D2*
+X1521244D1*
+X1512713Y1601474D2*
+X1521286D1*
+X1512671Y1601727D2*
+X1521328D1*
+X1512629Y1601981D2*
+X1521370D1*
+X1512587Y1602234D2*
+X1521412D1*
+X1512545Y1602488D2*
+X1521454D1*
+X1512503Y1602741D2*
+X1521496D1*
+X1512461Y1602995D2*
+X1521538D1*
+X1512419Y1603248D2*
+X1521580D1*
+X1512376Y1603502D2*
+X1521623D1*
+X1512334Y1603755D2*
+X1521665D1*
+X1512292Y1604009D2*
+X1521707D1*
+X1512250Y1604262D2*
+X1521749D1*
+X1512208Y1604516D2*
+X1521791D1*
+X1512166Y1604769D2*
+X1521833D1*
+X1512124Y1605023D2*
+X1521875D1*
+X1512082Y1605276D2*
+X1521917D1*
+X1512040Y1605530D2*
+X1521959D1*
+X1511998Y1605783D2*
+X1522001D1*
+X1511956Y1606037D2*
+X1522043D1*
+X1511914Y1606290D2*
+X1522085D1*
+X1511872Y1606544D2*
+X1522127D1*
+X1511830Y1606797D2*
+X1522169D1*
+X1511788Y1607051D2*
+X1522211D1*
+X1511746Y1607304D2*
+X1522253D1*
+X1511704Y1607558D2*
+X1522295D1*
+X1511662Y1607811D2*
+X1522337D1*
+X1511620Y1608065D2*
+X1522379D1*
+X1511578Y1608318D2*
+X1522421D1*
+X1511536Y1608572D2*
+X1522463D1*
+X1511494Y1608825D2*
+X1522505D1*
+X1511452Y1609079D2*
+X1522547D1*
+X1511410Y1609332D2*
+X1522589D1*
+X1511368Y1609586D2*
+X1522631D1*
+X1511326Y1609839D2*
+X1522673D1*
+X1511284Y1610093D2*
+X1522715D1*
+X1511242Y1610346D2*
+X1522757D1*
+X1511200Y1610600D2*
+X1522799D1*
+X1511158Y1610853D2*
+X1522841D1*
+X1511116Y1611107D2*
+X1522883D1*
+X1511074Y1611360D2*
+X1522925D1*
+X1511032Y1611614D2*
+X1522967D1*
+X1510990Y1611867D2*
+X1523009D1*
+X1510948Y1612121D2*
+X1523051D1*
+X1510906Y1612374D2*
+X1523093D1*
+X1510864Y1612628D2*
+X1523135D1*
+X1510821Y1612881D2*
+X1523178D1*
+X1510779Y1613135D2*
+X1523220D1*
+X1510737Y1613388D2*
+X1523262D1*
+X1510695Y1613642D2*
+X1523304D1*
+X1510653Y1613895D2*
+X1523346D1*
+X1510611Y1614149D2*
+X1523388D1*
+X1510569Y1614402D2*
+X1523430D1*
+X1510527Y1614656D2*
+X1523472D1*
+X1510485Y1614909D2*
+X1523514D1*
+X1510443Y1615163D2*
+X1523556D1*
+X1510401Y1615416D2*
+X1523598D1*
+X1510359Y1615670D2*
+X1523640D1*
+X1510317Y1615923D2*
+X1523682D1*
+X1510275Y1616177D2*
+X1523724D1*
+X1510233Y1616430D2*
+X1523766D1*
+X1510191Y1616684D2*
+X1523808D1*
+X1510149Y1616937D2*
+X1523850D1*
+X1510107Y1617191D2*
+X1523892D1*
+X1510065Y1617444D2*
+X1523934D1*
+X1510023Y1617698D2*
+X1523976D1*
+X1509981Y1617951D2*
+X1524018D1*
+X1509939Y1618205D2*
+X1524060D1*
+X1509897Y1618458D2*
+X1524102D1*
+X1509855Y1618712D2*
+X1524144D1*
+X1509813Y1618965D2*
+X1524186D1*
+X1509771Y1619219D2*
+X1524228D1*
+X1509729Y1619472D2*
+X1524270D1*
+X1524574Y1619745D2*
+X1509425D1*
+X1517000Y1574058*
+X1524574Y1619745*
+D2*
+G54D51*
+X1392490Y1544250*
+X1544500D1*
+X1392490Y1572500D2*
+X1544500D1*
+D2*
+G54D34*
+X1508406Y1766281*
+X1506687D1*
+X1503250Y1768000*
+X1501531Y1769718*
+X1499812Y1773156*
+Y1780031*
+X1501531Y1783468*
+X1503250Y1785187*
+X1506687Y1786906*
+X1510125*
+X1513562Y1785187*
+X1518718Y1781750*
+X1535906Y1764562*
+Y1788625*
+X1532468Y1802375D2*
+X1534187Y1800656D1*
+X1535906Y1802375*
+X1534187Y1804093*
+X1532468Y1802375*
+X1499812Y1824718D2*
+X1501531Y1819562D1*
+X1504968Y1817843*
+X1508406*
+X1511843Y1819562*
+X1513562Y1823000*
+X1515281Y1829875*
+X1517000Y1835031*
+X1520437Y1838468*
+X1523875Y1840187*
+X1529031*
+X1532468Y1838468*
+X1534187Y1836750*
+X1535906Y1831593*
+Y1824718*
+X1534187Y1819562*
+X1532468Y1817843*
+X1529031Y1816125*
+X1523875*
+X1520437Y1817843*
+X1517000Y1821281*
+X1515281Y1826437*
+X1513562Y1833312*
+X1511843Y1836750*
+X1508406Y1838468*
+X1504968*
+X1501531Y1836750*
+X1499812Y1831593*
+Y1824718*
+X1508406Y1852218D2*
+X1506687D1*
+X1503250Y1853937*
+X1501531Y1855656*
+X1499812Y1859093*
+Y1865968*
+X1501531Y1869406*
+X1503250Y1871125*
+X1506687Y1872843*
+X1510125*
+X1513562Y1871125*
+X1518718Y1867687*
+X1535906Y1850500*
+Y1874562*
+X1499812Y1905500D2*
+Y1888312D1*
+X1515281Y1886593*
+X1513562Y1888312*
+X1511843Y1893468*
+Y1898625*
+X1513562Y1903781*
+X1517000Y1907218*
+X1522156Y1908937*
+X1525593*
+X1530750Y1907218*
+X1534187Y1903781*
+X1535906Y1898625*
+Y1893468*
+X1534187Y1888312*
+X1532468Y1886593*
+X1529031Y1884875*
+D2*
+G54D48*
+X607500Y795000*
+X651500D1*
+X828500Y1572500D2*
+X1355000D1*
+X450000D2*
+X792000D1*
+X607500Y760566D2*
+X505900D1*
+D2*
+G54D10*
+X560512Y753544*
+X562023D1*
+X560512Y753795D2*
+X563535D1*
+X560512Y754045D2*
+X565047D1*
+X560512Y754296D2*
+X566558D1*
+X560512Y754547D2*
+X568070D1*
+X560512Y754797D2*
+X569582D1*
+X560512Y755048D2*
+X571093D1*
+X560512Y755298D2*
+X572605D1*
+X560512Y755549D2*
+X574117D1*
+X560512Y755800D2*
+X575628D1*
+X560512Y756050D2*
+X577140D1*
+X560512Y756301D2*
+X578652D1*
+X560512Y756551D2*
+X580164D1*
+X560512Y756802D2*
+X581675D1*
+X560512Y757053D2*
+X583187D1*
+X560512Y757303D2*
+X584699D1*
+X560512Y757554D2*
+X586210D1*
+X560512Y757804D2*
+X587722D1*
+X560512Y758055D2*
+X589234D1*
+X560512Y758306D2*
+X590745D1*
+X560512Y758556D2*
+X592257D1*
+X560512Y758807D2*
+X593769D1*
+X560512Y759057D2*
+X595281D1*
+X560512Y759308D2*
+X596792D1*
+X560512Y759559D2*
+X598304D1*
+X560512Y759809D2*
+X599816D1*
+X560512Y760060D2*
+X601327D1*
+X560512Y760310D2*
+X602839D1*
+X560512Y760561D2*
+X604351D1*
+X560512Y760812D2*
+X602902D1*
+X560512Y761062D2*
+X601390D1*
+X560512Y761313D2*
+X599878D1*
+X560512Y761563D2*
+X598367D1*
+X560512Y761814D2*
+X596855D1*
+X560512Y762065D2*
+X595343D1*
+X560512Y762315D2*
+X593832D1*
+X560512Y762566D2*
+X592320D1*
+X560512Y762816D2*
+X590808D1*
+X560512Y763067D2*
+X589296D1*
+X560512Y763318D2*
+X587785D1*
+X560512Y763568D2*
+X586273D1*
+X560512Y763819D2*
+X584761D1*
+X560512Y764069D2*
+X583250D1*
+X560512Y764320D2*
+X581738D1*
+X560512Y764571D2*
+X580226D1*
+X560512Y764821D2*
+X578715D1*
+X560512Y765072D2*
+X577203D1*
+X560512Y765322D2*
+X575691D1*
+X560512Y765573D2*
+X574180D1*
+X560512Y765824D2*
+X572668D1*
+X560512Y766074D2*
+X571156D1*
+X560512Y766325D2*
+X569644D1*
+X560512Y766575D2*
+X568133D1*
+X560512Y766826D2*
+X566621D1*
+X560512Y767077D2*
+X565109D1*
+X560512Y767327D2*
+X563598D1*
+X560512Y767578D2*
+X562086D1*
+X560512Y767828D2*
+X560574D1*
+X560257Y768139D2*
+Y752993D1*
+X605941Y760566*
+X560257Y768139*
+D2*
+G54D48*
+X651500Y760566*
+X834396D1*
+D2*
+G54D10*
+X696976Y753544*
+X698488D1*
+X695464Y753795D2*
+X698488D1*
+X693952Y754045D2*
+X698488D1*
+X692441Y754296D2*
+X698488D1*
+X690929Y754547D2*
+X698488D1*
+X689417Y754797D2*
+X698488D1*
+X687906Y755048D2*
+X698488D1*
+X686394Y755298D2*
+X698488D1*
+X684882Y755549D2*
+X698488D1*
+X683371Y755800D2*
+X698488D1*
+X681859Y756050D2*
+X698488D1*
+X680347Y756301D2*
+X698488D1*
+X678835Y756551D2*
+X698488D1*
+X677324Y756802D2*
+X698488D1*
+X675812Y757053D2*
+X698488D1*
+X674300Y757303D2*
+X698488D1*
+X672789Y757554D2*
+X698488D1*
+X671277Y757804D2*
+X698488D1*
+X669765Y758055D2*
+X698488D1*
+X668254Y758306D2*
+X698488D1*
+X666742Y758556D2*
+X698488D1*
+X665230Y758807D2*
+X698488D1*
+X663718Y759057D2*
+X698488D1*
+X662207Y759308D2*
+X698488D1*
+X660695Y759559D2*
+X698488D1*
+X659183Y759809D2*
+X698488D1*
+X657672Y760060D2*
+X698488D1*
+X656160Y760310D2*
+X698488D1*
+X654648Y760561D2*
+X698488D1*
+X656097Y760812D2*
+X698488D1*
+X657609Y761062D2*
+X698488D1*
+X659121Y761313D2*
+X698488D1*
+X660632Y761563D2*
+X698488D1*
+X662144Y761814D2*
+X698488D1*
+X663656Y762065D2*
+X698488D1*
+X665167Y762315D2*
+X698488D1*
+X666679Y762566D2*
+X698488D1*
+X668191Y762816D2*
+X698488D1*
+X669703Y763067D2*
+X698488D1*
+X671214Y763318D2*
+X698488D1*
+X672726Y763568D2*
+X698488D1*
+X674238Y763819D2*
+X698488D1*
+X675749Y764069D2*
+X698488D1*
+X677261Y764320D2*
+X698488D1*
+X678773Y764571D2*
+X698488D1*
+X680284Y764821D2*
+X698488D1*
+X681796Y765072D2*
+X698488D1*
+X683308Y765322D2*
+X698488D1*
+X684819Y765573D2*
+X698488D1*
+X686331Y765824D2*
+X698488D1*
+X687843Y766074D2*
+X698488D1*
+X689355Y766325D2*
+X698488D1*
+X690866Y766575D2*
+X698488D1*
+X692378Y766826D2*
+X698488D1*
+X693890Y767077D2*
+X698488D1*
+X695401Y767327D2*
+X698488D1*
+X696913Y767578D2*
+X698488D1*
+X698425Y767828D2*
+X698488D1*
+X698743Y768139D2*
+X653058Y760566D1*
+X698743Y752993*
+Y768139*
+D2*
+G54D48*
+X607500Y779760*
+Y733066D1*
+X651500Y784760D2*
+Y733066D1*
+D2*
+G54D34*
+X866718Y741660*
+Y777754D1*
+X849530Y753691*
+X875311*
+X887343Y745097D2*
+X885624Y743379D1*
+X887343Y741660*
+X889061Y743379*
+X887343Y745097*
+X918280Y741660D2*
+Y777754D1*
+X901093Y753691*
+X926874*
+X945780Y777754D2*
+X940624Y776035D1*
+X937186Y770879*
+X935468Y762285*
+Y757129*
+X937186Y748535*
+X940624Y743379*
+X945780Y741660*
+X949218*
+X954374Y743379*
+X957811Y748535*
+X959530Y757129*
+Y762285*
+X957811Y770879*
+X954374Y776035*
+X949218Y777754*
+X945780*
+X957811Y770879D2*
+X937186Y748535D1*
+X980155Y777754D2*
+X974999Y776035D1*
+X971561Y770879*
+X969843Y762285*
+Y757129*
+X971561Y748535*
+X974999Y743379*
+X980155Y741660*
+X983593*
+X988749Y743379*
+X992186Y748535*
+X993905Y757129*
+Y762285*
+X992186Y770879*
+X988749Y776035*
+X983593Y777754*
+X980155*
+X992186Y770879D2*
+X971561Y748535D1*
+D2*
+G54D48*
+X828500Y1658800*
+X930100D1*
+D2*
+G54D10*
+X873978Y1651777*
+X875490D1*
+X872466Y1652027D2*
+X875490D1*
+X870955Y1652278D2*
+X875490D1*
+X869443Y1652528D2*
+X875490D1*
+X867932Y1652779D2*
+X875490D1*
+X866420Y1653030D2*
+X875490D1*
+X864909Y1653280D2*
+X875490D1*
+X863397Y1653531D2*
+X875490D1*
+X861885Y1653781D2*
+X875490D1*
+X860374Y1654032D2*
+X875490D1*
+X858862Y1654283D2*
+X875490D1*
+X857351Y1654533D2*
+X875490D1*
+X855839Y1654784D2*
+X875490D1*
+X854328Y1655034D2*
+X875490D1*
+X852816Y1655285D2*
+X875490D1*
+X851304Y1655536D2*
+X875490D1*
+X849793Y1655786D2*
+X875490D1*
+X848281Y1656037D2*
+X875490D1*
+X846770Y1656287D2*
+X875490D1*
+X845258Y1656538D2*
+X875490D1*
+X843747Y1656789D2*
+X875490D1*
+X842235Y1657039D2*
+X875490D1*
+X840723Y1657290D2*
+X875490D1*
+X839212Y1657540D2*
+X875490D1*
+X837700Y1657791D2*
+X875490D1*
+X836189Y1658042D2*
+X875490D1*
+X834677Y1658292D2*
+X875490D1*
+X833166Y1658543D2*
+X875490D1*
+X831654Y1658793D2*
+X875490D1*
+X833091Y1659044D2*
+X875490D1*
+X834602Y1659295D2*
+X875490D1*
+X836114Y1659545D2*
+X875490D1*
+X837626Y1659796D2*
+X875490D1*
+X839137Y1660046D2*
+X875490D1*
+X840649Y1660297D2*
+X875490D1*
+X842160Y1660548D2*
+X875490D1*
+X843672Y1660798D2*
+X875490D1*
+X845183Y1661049D2*
+X875490D1*
+X846695Y1661299D2*
+X875490D1*
+X848207Y1661550D2*
+X875490D1*
+X849718Y1661801D2*
+X875490D1*
+X851230Y1662051D2*
+X875490D1*
+X852741Y1662302D2*
+X875490D1*
+X854253Y1662552D2*
+X875490D1*
+X855764Y1662803D2*
+X875490D1*
+X857276Y1663054D2*
+X875490D1*
+X858787Y1663304D2*
+X875490D1*
+X860299Y1663555D2*
+X875490D1*
+X861811Y1663805D2*
+X875490D1*
+X863322Y1664056D2*
+X875490D1*
+X864834Y1664307D2*
+X875490D1*
+X866345Y1664557D2*
+X875490D1*
+X867857Y1664808D2*
+X875490D1*
+X869368Y1665058D2*
+X875490D1*
+X870880Y1665309D2*
+X875490D1*
+X872392Y1665560D2*
+X875490D1*
+X873903Y1665810D2*
+X875490D1*
+X875415Y1666061D2*
+X875490D1*
+X875745Y1666374D2*
+X830058Y1658800D1*
+X875745Y1651225*
+Y1666374*
+D2*
+G54D48*
+X792000Y1658800*
+X692721D1*
+D2*
+G54D10*
+X745010Y1651777*
+X746521D1*
+X745010Y1652027D2*
+X748033D1*
+X745010Y1652278D2*
+X749544D1*
+X745010Y1652528D2*
+X751056D1*
+X745010Y1652779D2*
+X752567D1*
+X745010Y1653030D2*
+X754079D1*
+X745010Y1653280D2*
+X755590D1*
+X745010Y1653531D2*
+X757102D1*
+X745010Y1653781D2*
+X758614D1*
+X745010Y1654032D2*
+X760125D1*
+X745010Y1654283D2*
+X761637D1*
+X745010Y1654533D2*
+X763148D1*
+X745010Y1654784D2*
+X764660D1*
+X745010Y1655034D2*
+X766171D1*
+X745010Y1655285D2*
+X767683D1*
+X745010Y1655536D2*
+X769195D1*
+X745010Y1655786D2*
+X770706D1*
+X745010Y1656037D2*
+X772218D1*
+X745010Y1656287D2*
+X773729D1*
+X745010Y1656538D2*
+X775241D1*
+X745010Y1656789D2*
+X776752D1*
+X745010Y1657039D2*
+X778264D1*
+X745010Y1657290D2*
+X779776D1*
+X745010Y1657540D2*
+X781287D1*
+X745010Y1657791D2*
+X782799D1*
+X745010Y1658042D2*
+X784310D1*
+X745010Y1658292D2*
+X785822D1*
+X745010Y1658543D2*
+X787333D1*
+X745010Y1658793D2*
+X788845D1*
+X745010Y1659044D2*
+X787408D1*
+X745010Y1659295D2*
+X785897D1*
+X745010Y1659545D2*
+X784385D1*
+X745010Y1659796D2*
+X782873D1*
+X745010Y1660046D2*
+X781362D1*
+X745010Y1660297D2*
+X779850D1*
+X745010Y1660548D2*
+X778339D1*
+X745010Y1660798D2*
+X776827D1*
+X745010Y1661049D2*
+X775316D1*
+X745010Y1661299D2*
+X773804D1*
+X745010Y1661550D2*
+X772292D1*
+X745010Y1661801D2*
+X770781D1*
+X745010Y1662051D2*
+X769269D1*
+X745010Y1662302D2*
+X767758D1*
+X745010Y1662552D2*
+X766246D1*
+X745010Y1662803D2*
+X764735D1*
+X745010Y1663054D2*
+X763223D1*
+X745010Y1663304D2*
+X761712D1*
+X745010Y1663555D2*
+X760200D1*
+X745010Y1663805D2*
+X758688D1*
+X745010Y1664056D2*
+X757177D1*
+X745010Y1664307D2*
+X755665D1*
+X745010Y1664557D2*
+X754154D1*
+X745010Y1664808D2*
+X752642D1*
+X745010Y1665058D2*
+X751131D1*
+X745010Y1665309D2*
+X749619D1*
+X745010Y1665560D2*
+X748107D1*
+X745010Y1665810D2*
+X746596D1*
+X745010Y1666061D2*
+X745084D1*
+X744755Y1666374D2*
+Y1651225D1*
+X790441Y1658800*
+X744755Y1666374*
+D2*
+G54D48*
+X792000Y1590740*
+Y1686300D1*
+X828500Y1587740D2*
+Y1686300D1*
+D2*
+G54D34*
+X536650Y1675987*
+X555556D1*
+X545243Y1662237*
+X550400*
+X553837Y1660518*
+X555556Y1658800*
+X557275Y1653643*
+Y1650206*
+X555556Y1645050*
+X552118Y1641612*
+X546962Y1639893*
+X541806*
+X536650Y1641612*
+X534931Y1643331*
+X533212Y1646768*
+X571025Y1643331D2*
+X569306Y1641612D1*
+X571025Y1639893*
+X572743Y1641612*
+X571025Y1643331*
+X607118Y1670831D2*
+X605400Y1674268D1*
+X600243Y1675987*
+X596806*
+X591650Y1674268*
+X588212Y1669112*
+X586493Y1660518*
+Y1651925*
+X588212Y1645050*
+X591650Y1641612*
+X596806Y1639893*
+X598525*
+X603681Y1641612*
+X607118Y1645050*
+X608837Y1650206*
+Y1651925*
+X607118Y1657081*
+X603681Y1660518*
+X598525Y1662237*
+X596806*
+X591650Y1660518*
+X588212Y1657081*
+X586493Y1651925*
+X639775Y1675987D2*
+X622587D1*
+X620868Y1660518*
+X622587Y1662237*
+X627743Y1663956*
+X632900*
+X638056Y1662237*
+X641493Y1658800*
+X643212Y1653643*
+Y1650206*
+X641493Y1645050*
+X638056Y1641612*
+X632900Y1639893*
+X627743*
+X622587Y1641612*
+X620868Y1643331*
+X619150Y1646768*
+X663837Y1675987D2*
+X658681Y1674268D1*
+X655243Y1669112*
+X653525Y1660518*
+Y1655362*
+X655243Y1646768*
+X658681Y1641612*
+X663837Y1639893*
+X667275*
+X672431Y1641612*
+X675868Y1646768*
+X677587Y1655362*
+Y1660518*
+X675868Y1669112*
+X672431Y1674268*
+X667275Y1675987*
+X663837*
+X675868Y1669112D2*
+X655243Y1646768D1*
+D2*
+G54D48*
+X1892012Y752631*
+X1828512D1*
+X1750000Y820000D2*
+X1764721Y806462D1*
+X1828512Y752631*
+D2*
+G54D10*
+X1762039Y808826*
+X1762229D1*
+X1761650Y809080D2*
+X1762030D1*
+X1761262Y809334D2*
+X1761832D1*
+X1760874Y809588D2*
+X1761634D1*
+X1760486Y809842D2*
+X1761435D1*
+X1760098Y810095D2*
+X1761237D1*
+X1759709Y810349D2*
+X1761039D1*
+X1759321Y810603D2*
+X1760841D1*
+X1758933Y810857D2*
+X1760642D1*
+X1758545Y811111D2*
+X1760444D1*
+X1758157Y811365D2*
+X1760246D1*
+X1757769Y811619D2*
+X1760047D1*
+X1757380Y811873D2*
+X1759849D1*
+X1756992Y812127D2*
+X1759651D1*
+X1756604Y812381D2*
+X1759453D1*
+X1756216Y812634D2*
+X1759254D1*
+X1755828Y812888D2*
+X1759056D1*
+X1755439Y813142D2*
+X1758858D1*
+X1755051Y813396D2*
+X1758660D1*
+X1754663Y813650D2*
+X1758461D1*
+X1754275Y813904D2*
+X1758263D1*
+X1753887Y814158D2*
+X1758065D1*
+X1753498Y814412D2*
+X1757866D1*
+X1753110Y814666D2*
+X1757668D1*
+X1752722Y814920D2*
+X1757470D1*
+X1752334Y815173D2*
+X1757272D1*
+X1751946Y815427D2*
+X1757073D1*
+X1751558Y815681D2*
+X1756875D1*
+X1751169Y815935D2*
+X1756677D1*
+X1750781Y816189D2*
+X1756478D1*
+X1750393Y816443D2*
+X1756280D1*
+X1750005Y816697D2*
+X1756082D1*
+X1749617Y816951D2*
+X1755884D1*
+X1749228Y817205D2*
+X1755685D1*
+X1748840Y817459D2*
+X1755487D1*
+X1748452Y817712D2*
+X1755289D1*
+X1748064Y817966D2*
+X1755091D1*
+X1747676Y818220D2*
+X1754892D1*
+X1747287Y818474D2*
+X1754694D1*
+X1746899Y818728D2*
+X1754496D1*
+X1746511Y818982D2*
+X1754297D1*
+X1746123Y819236D2*
+X1754099D1*
+X1745735Y819490D2*
+X1753901D1*
+X1745347Y819744D2*
+X1753703D1*
+X1744958Y819998D2*
+X1753504D1*
+X1744570Y820251D2*
+X1753306D1*
+X1744182Y820505D2*
+X1753108D1*
+X1743794Y820759D2*
+X1752909D1*
+X1743406Y821013D2*
+X1752711D1*
+X1743017Y821267D2*
+X1752513D1*
+X1742629Y821521D2*
+X1752315D1*
+X1742241Y821775D2*
+X1752116D1*
+X1741853Y822029D2*
+X1751918D1*
+X1741465Y822283D2*
+X1751720D1*
+X1741076Y822537D2*
+X1751522D1*
+X1740688Y822790D2*
+X1751323D1*
+X1740300Y823044D2*
+X1751125D1*
+X1739912Y823298D2*
+X1750927D1*
+X1739524Y823552D2*
+X1750728D1*
+X1739136Y823806D2*
+X1750530D1*
+X1738747Y824060D2*
+X1750332D1*
+X1738359Y824314D2*
+X1750134D1*
+X1737971Y824568D2*
+X1749935D1*
+X1737583Y824822D2*
+X1749737D1*
+X1737195Y825076D2*
+X1749539D1*
+X1736806Y825329D2*
+X1749340D1*
+X1736418Y825583D2*
+X1749142D1*
+X1736030Y825837D2*
+X1748944D1*
+X1735642Y826091D2*
+X1748746D1*
+X1735254Y826345D2*
+X1748547D1*
+X1734865Y826599D2*
+X1748349D1*
+X1734477Y826853D2*
+X1748151D1*
+X1734089Y827107D2*
+X1747953D1*
+X1733701Y827361D2*
+X1747754D1*
+X1733313Y827615D2*
+X1747556D1*
+X1732925Y827868D2*
+X1747358D1*
+X1732536Y828122D2*
+X1747159D1*
+X1732148Y828376D2*
+X1746961D1*
+X1731760Y828630D2*
+X1746763D1*
+X1731372Y828884D2*
+X1746565D1*
+X1730984Y829138D2*
+X1746366D1*
+X1730595Y829392D2*
+X1746168D1*
+X1730207Y829646D2*
+X1745970D1*
+X1729819Y829900D2*
+X1745771D1*
+X1729431Y830154D2*
+X1745573D1*
+X1729043Y830407D2*
+X1745375D1*
+X1728654Y830661D2*
+X1745177D1*
+X1728266Y830915D2*
+X1744978D1*
+X1727878Y831169D2*
+X1744780D1*
+X1727490Y831423D2*
+X1744582D1*
+X1727102Y831677D2*
+X1744384D1*
+X1726714Y831931D2*
+X1744185D1*
+X1726325Y832185D2*
+X1743987D1*
+X1725937Y832439D2*
+X1743789D1*
+X1725549Y832693D2*
+X1743590D1*
+X1725241Y832946D2*
+X1743392D1*
+X1725475Y833200D2*
+X1743194D1*
+X1725708Y833454D2*
+X1742996D1*
+X1725941Y833708D2*
+X1742797D1*
+X1726175Y833962D2*
+X1742599D1*
+X1726408Y834216D2*
+X1742401D1*
+X1726642Y834470D2*
+X1742202D1*
+X1726875Y834724D2*
+X1742004D1*
+X1727109Y834978D2*
+X1741806D1*
+X1727342Y835232D2*
+X1741608D1*
+X1727576Y835485D2*
+X1741409D1*
+X1727809Y835739D2*
+X1741211D1*
+X1728043Y835993D2*
+X1741013D1*
+X1728276Y836247D2*
+X1740815D1*
+X1728510Y836501D2*
+X1740616D1*
+X1728743Y836755D2*
+X1740418D1*
+X1728977Y837009D2*
+X1740220D1*
+X1729210Y837263D2*
+X1740021D1*
+X1729444Y837517D2*
+X1739823D1*
+X1729677Y837771D2*
+X1739625D1*
+X1729911Y838024D2*
+X1739427D1*
+X1730144Y838278D2*
+X1739228D1*
+X1730377Y838532D2*
+X1739030D1*
+X1730611Y838786D2*
+X1738832D1*
+X1730844Y839040D2*
+X1738633D1*
+X1731078Y839294D2*
+X1738435D1*
+X1731311Y839548D2*
+X1738237D1*
+X1731545Y839802D2*
+X1738039D1*
+X1731778Y840056D2*
+X1737840D1*
+X1732012Y840310D2*
+X1737642D1*
+X1732245Y840563D2*
+X1737444D1*
+X1732479Y840817D2*
+X1737246D1*
+X1732712Y841071D2*
+X1737047D1*
+X1732946Y841325D2*
+X1736849D1*
+X1733179Y841579D2*
+X1736651D1*
+X1733413Y841833D2*
+X1736452D1*
+X1733646Y842087D2*
+X1736254D1*
+X1733880Y842341D2*
+X1736056D1*
+X1734113Y842595D2*
+X1735858D1*
+X1734347Y842849D2*
+X1735659D1*
+X1734580Y843102D2*
+X1735461D1*
+X1734813Y843356D2*
+X1735263D1*
+X1735047Y843610D2*
+X1735064D1*
+X1735072Y844014D2*
+X1724820Y832865D1*
+X1763574Y807517*
+X1735072Y844014*
+D2*
+G54D34*
+X1906324Y752631*
+X1921793D1*
+X1926949Y754350*
+X1928668Y756069*
+X1930387Y759506*
+Y762944*
+X1928668Y766381*
+X1926949Y768100*
+X1921793Y769819*
+X1906324*
+Y733725*
+X1918355Y752631D2*
+X1930387Y733725D1*
+X1964762Y761225D2*
+Y762944D1*
+X1966480Y766381*
+X1968199Y768100*
+X1971637Y769819*
+X1978512*
+X1981949Y768100*
+X1983668Y766381*
+X1985387Y762944*
+Y759506*
+X1983668Y756069*
+X1980230Y750912*
+X1963043Y733725*
+X1987105*
+X2000855Y737162D2*
+X1999137Y735444D1*
+X2000855Y733725*
+X2002574Y735444*
+X2000855Y737162*
+X2024918Y769819D2*
+X2019762Y768100D1*
+X2016324Y762944*
+X2014605Y754350*
+Y749194*
+X2016324Y740600*
+X2019762Y735444*
+X2024918Y733725*
+X2028355*
+X2033512Y735444*
+X2036949Y740600*
+X2038668Y749194*
+Y754350*
+X2036949Y762944*
+X2033512Y768100*
+X2028355Y769819*
+X2024918*
+X2036949Y762944D2*
+X2016324Y740600D1*
+X2059293Y769819D2*
+X2054137Y768100D1*
+X2050699Y762944*
+X2048980Y754350*
+Y749194*
+X2050699Y740600*
+X2054137Y735444*
+X2059293Y733725*
+X2062730*
+X2067887Y735444*
+X2071324Y740600*
+X2073043Y749194*
+Y754350*
+X2071324Y762944*
+X2067887Y768100*
+X2062730Y769819*
+X2059293*
+X2071324Y762944D2*
+X2050699Y740600D1*
+X2093668Y769819D2*
+X2088512Y768100D1*
+X2085074Y762944*
+X2083355Y754350*
+Y749194*
+X2085074Y740600*
+X2088512Y735444*
+X2093668Y733725*
+X2097105*
+X2102262Y735444*
+X2105699Y740600*
+X2107418Y749194*
+Y754350*
+X2105699Y762944*
+X2102262Y768100*
+X2097105Y769819*
+X2093668*
+X2105699Y762944D2*
+X2085074Y740600D1*
+D2*
+G54D51*
+X708500Y800000*
+Y901600D1*
+D2*
+G54D10*
+X708457Y803370*
+X708542D1*
+X708415Y803624D2*
+X708584D1*
+X708373Y803877D2*
+X708626D1*
+X708331Y804131D2*
+X708668D1*
+X708289Y804384D2*
+X708710D1*
+X708247Y804638D2*
+X708752D1*
+X708205Y804891D2*
+X708794D1*
+X708163Y805145D2*
+X708836D1*
+X708121Y805398D2*
+X708878D1*
+X708079Y805652D2*
+X708920D1*
+X708037Y805905D2*
+X708962D1*
+X707995Y806159D2*
+X709004D1*
+X707953Y806412D2*
+X709046D1*
+X707911Y806666D2*
+X709088D1*
+X707869Y806919D2*
+X709130D1*
+X707827Y807173D2*
+X709172D1*
+X707785Y807426D2*
+X709214D1*
+X707743Y807680D2*
+X709256D1*
+X707701Y807933D2*
+X709298D1*
+X707659Y808187D2*
+X709340D1*
+X707617Y808440D2*
+X709382D1*
+X707575Y808694D2*
+X709424D1*
+X707533Y808947D2*
+X709466D1*
+X707491Y809201D2*
+X709508D1*
+X707449Y809454D2*
+X709550D1*
+X707407Y809708D2*
+X709592D1*
+X707365Y809961D2*
+X709634D1*
+X707323Y810215D2*
+X709676D1*
+X707281Y810468D2*
+X709718D1*
+X707239Y810722D2*
+X709760D1*
+X707197Y810975D2*
+X709802D1*
+X707155Y811229D2*
+X709844D1*
+X707113Y811482D2*
+X709886D1*
+X707071Y811736D2*
+X709928D1*
+X707029Y811989D2*
+X709970D1*
+X706987Y812243D2*
+X710012D1*
+X706944Y812496D2*
+X710055D1*
+X706902Y812750D2*
+X710097D1*
+X706860Y813003D2*
+X710139D1*
+X706818Y813257D2*
+X710181D1*
+X706776Y813510D2*
+X710223D1*
+X706734Y813764D2*
+X710265D1*
+X706692Y814017D2*
+X710307D1*
+X706650Y814271D2*
+X710349D1*
+X706608Y814524D2*
+X710391D1*
+X706566Y814778D2*
+X710433D1*
+X706524Y815031D2*
+X710475D1*
+X706482Y815285D2*
+X710517D1*
+X706440Y815538D2*
+X710559D1*
+X706398Y815792D2*
+X710601D1*
+X706356Y816045D2*
+X710643D1*
+X706314Y816299D2*
+X710685D1*
+X706272Y816552D2*
+X710727D1*
+X706230Y816806D2*
+X710769D1*
+X706188Y817059D2*
+X710811D1*
+X706146Y817313D2*
+X710853D1*
+X706104Y817566D2*
+X710895D1*
+X706062Y817820D2*
+X710937D1*
+X706020Y818073D2*
+X710979D1*
+X705978Y818327D2*
+X711021D1*
+X705936Y818580D2*
+X711063D1*
+X705894Y818834D2*
+X711105D1*
+X705852Y819087D2*
+X711147D1*
+X705810Y819341D2*
+X711189D1*
+X705768Y819594D2*
+X711231D1*
+X705726Y819848D2*
+X711273D1*
+X705684Y820101D2*
+X711315D1*
+X705642Y820355D2*
+X711357D1*
+X705600Y820608D2*
+X711399D1*
+X705558Y820862D2*
+X711441D1*
+X705516Y821115D2*
+X711483D1*
+X705474Y821369D2*
+X711525D1*
+X705432Y821622D2*
+X711567D1*
+X705389Y821876D2*
+X711610D1*
+X705347Y822129D2*
+X711652D1*
+X705305Y822383D2*
+X711694D1*
+X705263Y822636D2*
+X711736D1*
+X705221Y822890D2*
+X711778D1*
+X705179Y823143D2*
+X711820D1*
+X705137Y823397D2*
+X711862D1*
+X705095Y823650D2*
+X711904D1*
+X705053Y823904D2*
+X711946D1*
+X705011Y824157D2*
+X711988D1*
+X704969Y824411D2*
+X712030D1*
+X704927Y824664D2*
+X712072D1*
+X704885Y824918D2*
+X712114D1*
+X704843Y825171D2*
+X712156D1*
+X704801Y825425D2*
+X712198D1*
+X704759Y825678D2*
+X712240D1*
+X704717Y825932D2*
+X712282D1*
+X704675Y826185D2*
+X712324D1*
+X704633Y826439D2*
+X712366D1*
+X704591Y826692D2*
+X712408D1*
+X704549Y826946D2*
+X712450D1*
+X704507Y827199D2*
+X712492D1*
+X704465Y827453D2*
+X712534D1*
+X704423Y827706D2*
+X712576D1*
+X704381Y827960D2*
+X712618D1*
+X704339Y828213D2*
+X712660D1*
+X704297Y828467D2*
+X712702D1*
+X704255Y828720D2*
+X712744D1*
+X704213Y828974D2*
+X712786D1*
+X704171Y829227D2*
+X712828D1*
+X704129Y829481D2*
+X712870D1*
+X704087Y829734D2*
+X712912D1*
+X704045Y829988D2*
+X712954D1*
+X704003Y830241D2*
+X712996D1*
+X703961Y830495D2*
+X713038D1*
+X703919Y830748D2*
+X713080D1*
+X703876Y831002D2*
+X713123D1*
+X703834Y831255D2*
+X713165D1*
+X703792Y831509D2*
+X713207D1*
+X703750Y831762D2*
+X713249D1*
+X703708Y832016D2*
+X713291D1*
+X703666Y832269D2*
+X713333D1*
+X703624Y832523D2*
+X713375D1*
+X703582Y832776D2*
+X713417D1*
+X703540Y833030D2*
+X713459D1*
+X703498Y833283D2*
+X713501D1*
+X703456Y833537D2*
+X713543D1*
+X703414Y833790D2*
+X713585D1*
+X703372Y834044D2*
+X713627D1*
+X703330Y834297D2*
+X713669D1*
+X703288Y834551D2*
+X713711D1*
+X703246Y834804D2*
+X713753D1*
+X703204Y835058D2*
+X713795D1*
+X703162Y835311D2*
+X713837D1*
+X703120Y835565D2*
+X713879D1*
+X703078Y835818D2*
+X713921D1*
+X703036Y836072D2*
+X713963D1*
+X702994Y836325D2*
+X714005D1*
+X702952Y836579D2*
+X714047D1*
+X702910Y836832D2*
+X714089D1*
+X702868Y837086D2*
+X714131D1*
+X702826Y837339D2*
+X714173D1*
+X702784Y837593D2*
+X714215D1*
+X702742Y837846D2*
+X714257D1*
+X702700Y838100D2*
+X714299D1*
+X702658Y838353D2*
+X714341D1*
+X702616Y838607D2*
+X714383D1*
+X702574Y838860D2*
+X714425D1*
+X702532Y839114D2*
+X714467D1*
+X702490Y839367D2*
+X714509D1*
+X702448Y839621D2*
+X714551D1*
+X702406Y839874D2*
+X714593D1*
+X702364Y840128D2*
+X714635D1*
+X702321Y840381D2*
+X714678D1*
+X702279Y840635D2*
+X714720D1*
+X702237Y840888D2*
+X714762D1*
+X702195Y841142D2*
+X714804D1*
+X702153Y841395D2*
+X714846D1*
+X702111Y841649D2*
+X714888D1*
+X702069Y841902D2*
+X714930D1*
+X702027Y842156D2*
+X714972D1*
+X701985Y842409D2*
+X715014D1*
+X701943Y842663D2*
+X715056D1*
+X701901Y842916D2*
+X715098D1*
+X701859Y843170D2*
+X715140D1*
+X701817Y843423D2*
+X715182D1*
+X701775Y843677D2*
+X715224D1*
+X701733Y843930D2*
+X715266D1*
+X701691Y844184D2*
+X715308D1*
+X701649Y844437D2*
+X715350D1*
+X701607Y844691D2*
+X715392D1*
+X701565Y844944D2*
+X715434D1*
+X701523Y845198D2*
+X715476D1*
+X701481Y845451D2*
+X715518D1*
+X701439Y845705D2*
+X715560D1*
+X701397Y845958D2*
+X715602D1*
+X701355Y846212D2*
+X715644D1*
+X701313Y846465D2*
+X715686D1*
+X701271Y846719D2*
+X715728D1*
+X701229Y846972D2*
+X715770D1*
+X716074Y847245D2*
+X700925D1*
+X708500Y801558*
+X716074Y847245*
+D2*
+G54D51*
+X708500Y795000*
+Y693400D1*
+D2*
+G54D10*
+X701226Y748010*
+X715773D1*
+X701268Y748263D2*
+X715731D1*
+X701310Y748517D2*
+X715689D1*
+X701352Y748770D2*
+X715647D1*
+X701394Y749024D2*
+X715605D1*
+X701436Y749277D2*
+X715563D1*
+X701478Y749531D2*
+X715521D1*
+X701520Y749784D2*
+X715479D1*
+X701562Y750038D2*
+X715437D1*
+X701604Y750291D2*
+X715395D1*
+X701646Y750545D2*
+X715353D1*
+X701688Y750798D2*
+X715311D1*
+X701730Y751052D2*
+X715269D1*
+X701772Y751305D2*
+X715227D1*
+X701814Y751559D2*
+X715185D1*
+X701856Y751812D2*
+X715143D1*
+X701898Y752066D2*
+X715101D1*
+X701940Y752319D2*
+X715059D1*
+X701982Y752573D2*
+X715017D1*
+X702024Y752826D2*
+X714975D1*
+X702066Y753080D2*
+X714933D1*
+X702108Y753333D2*
+X714891D1*
+X702151Y753587D2*
+X714848D1*
+X702193Y753840D2*
+X714806D1*
+X702235Y754094D2*
+X714764D1*
+X702277Y754347D2*
+X714722D1*
+X702319Y754601D2*
+X714680D1*
+X702361Y754854D2*
+X714638D1*
+X702403Y755108D2*
+X714596D1*
+X702445Y755361D2*
+X714554D1*
+X702487Y755615D2*
+X714512D1*
+X702529Y755868D2*
+X714470D1*
+X702571Y756122D2*
+X714428D1*
+X702613Y756375D2*
+X714386D1*
+X702655Y756629D2*
+X714344D1*
+X702697Y756882D2*
+X714302D1*
+X702739Y757136D2*
+X714260D1*
+X702781Y757389D2*
+X714218D1*
+X702823Y757643D2*
+X714176D1*
+X702865Y757896D2*
+X714134D1*
+X702907Y758150D2*
+X714092D1*
+X702949Y758403D2*
+X714050D1*
+X702991Y758657D2*
+X714008D1*
+X703033Y758910D2*
+X713966D1*
+X703075Y759164D2*
+X713924D1*
+X703117Y759417D2*
+X713882D1*
+X703159Y759671D2*
+X713840D1*
+X703201Y759924D2*
+X713798D1*
+X703243Y760178D2*
+X713756D1*
+X703285Y760431D2*
+X713714D1*
+X703327Y760685D2*
+X713672D1*
+X703369Y760938D2*
+X713630D1*
+X703411Y761192D2*
+X713588D1*
+X703453Y761445D2*
+X713546D1*
+X703495Y761699D2*
+X713504D1*
+X703537Y761952D2*
+X713462D1*
+X703579Y762206D2*
+X713420D1*
+X703621Y762459D2*
+X713378D1*
+X703663Y762713D2*
+X713336D1*
+X703706Y762966D2*
+X713293D1*
+X703748Y763220D2*
+X713251D1*
+X703790Y763473D2*
+X713209D1*
+X703832Y763727D2*
+X713167D1*
+X703874Y763980D2*
+X713125D1*
+X703916Y764234D2*
+X713083D1*
+X703958Y764487D2*
+X713041D1*
+X704000Y764741D2*
+X712999D1*
+X704042Y764994D2*
+X712957D1*
+X704084Y765248D2*
+X712915D1*
+X704126Y765501D2*
+X712873D1*
+X704168Y765755D2*
+X712831D1*
+X704210Y766008D2*
+X712789D1*
+X704252Y766262D2*
+X712747D1*
+X704294Y766515D2*
+X712705D1*
+X704336Y766769D2*
+X712663D1*
+X704378Y767022D2*
+X712621D1*
+X704420Y767276D2*
+X712579D1*
+X704462Y767529D2*
+X712537D1*
+X704504Y767783D2*
+X712495D1*
+X704546Y768036D2*
+X712453D1*
+X704588Y768290D2*
+X712411D1*
+X704630Y768543D2*
+X712369D1*
+X704672Y768797D2*
+X712327D1*
+X704714Y769050D2*
+X712285D1*
+X704756Y769304D2*
+X712243D1*
+X704798Y769557D2*
+X712201D1*
+X704840Y769811D2*
+X712159D1*
+X704882Y770064D2*
+X712117D1*
+X704924Y770318D2*
+X712075D1*
+X704966Y770571D2*
+X712033D1*
+X705008Y770825D2*
+X711991D1*
+X705050Y771078D2*
+X711949D1*
+X705092Y771332D2*
+X711907D1*
+X705134Y771585D2*
+X711865D1*
+X705176Y771839D2*
+X711823D1*
+X705218Y772092D2*
+X711781D1*
+X705261Y772346D2*
+X711738D1*
+X705303Y772599D2*
+X711696D1*
+X705345Y772853D2*
+X711654D1*
+X705387Y773106D2*
+X711612D1*
+X705429Y773360D2*
+X711570D1*
+X705471Y773613D2*
+X711528D1*
+X705513Y773867D2*
+X711486D1*
+X705555Y774120D2*
+X711444D1*
+X705597Y774374D2*
+X711402D1*
+X705639Y774627D2*
+X711360D1*
+X705681Y774881D2*
+X711318D1*
+X705723Y775134D2*
+X711276D1*
+X705765Y775388D2*
+X711234D1*
+X705807Y775641D2*
+X711192D1*
+X705849Y775895D2*
+X711150D1*
+X705891Y776148D2*
+X711108D1*
+X705933Y776402D2*
+X711066D1*
+X705975Y776655D2*
+X711024D1*
+X706017Y776909D2*
+X710982D1*
+X706059Y777162D2*
+X710940D1*
+X706101Y777416D2*
+X710898D1*
+X706143Y777669D2*
+X710856D1*
+X706185Y777923D2*
+X710814D1*
+X706227Y778176D2*
+X710772D1*
+X706269Y778430D2*
+X710730D1*
+X706311Y778683D2*
+X710688D1*
+X706353Y778937D2*
+X710646D1*
+X706395Y779190D2*
+X710604D1*
+X706437Y779444D2*
+X710562D1*
+X706479Y779697D2*
+X710520D1*
+X706521Y779951D2*
+X710478D1*
+X706563Y780204D2*
+X710436D1*
+X706605Y780458D2*
+X710394D1*
+X706647Y780711D2*
+X710352D1*
+X706689Y780965D2*
+X710310D1*
+X706731Y781218D2*
+X710268D1*
+X706774Y781472D2*
+X710225D1*
+X706816Y781725D2*
+X710183D1*
+X706858Y781979D2*
+X710141D1*
+X706900Y782232D2*
+X710099D1*
+X706942Y782486D2*
+X710057D1*
+X706984Y782739D2*
+X710015D1*
+X707026Y782993D2*
+X709973D1*
+X707068Y783246D2*
+X709931D1*
+X707110Y783500D2*
+X709889D1*
+X707152Y783753D2*
+X709847D1*
+X707194Y784007D2*
+X709805D1*
+X707236Y784260D2*
+X709763D1*
+X707278Y784514D2*
+X709721D1*
+X707320Y784767D2*
+X709679D1*
+X707362Y785021D2*
+X709637D1*
+X707404Y785274D2*
+X709595D1*
+X707446Y785528D2*
+X709553D1*
+X707488Y785781D2*
+X709511D1*
+X707530Y786035D2*
+X709469D1*
+X707572Y786288D2*
+X709427D1*
+X707614Y786542D2*
+X709385D1*
+X707656Y786795D2*
+X709343D1*
+X707698Y787049D2*
+X709301D1*
+X707740Y787302D2*
+X709259D1*
+X707782Y787556D2*
+X709217D1*
+X707824Y787809D2*
+X709175D1*
+X707866Y788063D2*
+X709133D1*
+X707908Y788316D2*
+X709091D1*
+X707950Y788570D2*
+X709049D1*
+X707992Y788823D2*
+X709007D1*
+X708034Y789077D2*
+X708965D1*
+X708076Y789330D2*
+X708923D1*
+X708118Y789584D2*
+X708881D1*
+X708160Y789837D2*
+X708839D1*
+X708202Y790091D2*
+X708797D1*
+X708244Y790344D2*
+X708755D1*
+X708286Y790598D2*
+X708713D1*
+X708329Y790851D2*
+X708670D1*
+X708371Y791105D2*
+X708628D1*
+X708413Y791358D2*
+X708586D1*
+X708455Y791612D2*
+X708544D1*
+X708497Y791865D2*
+X708502D1*
+X708500Y793441D2*
+X700925Y747755D1*
+X716074*
+X708500Y793441*
+D2*
+G54D51*
+X666740Y795000*
+X736000D1*
+X666740Y800000D2*
+X736000D1*
+D2*
+G54D34*
+X646625Y678937*
+X641468Y677218D1*
+X638031Y672062*
+X636312Y663468*
+Y658312*
+X638031Y649718*
+X641468Y644562*
+X646625Y642843*
+X650062*
+X655218Y644562*
+X658656Y649718*
+X660375Y658312*
+Y663468*
+X658656Y672062*
+X655218Y677218*
+X650062Y678937*
+X646625*
+X658656Y672062D2*
+X638031Y649718D1*
+X674125Y646281D2*
+X672406Y644562D1*
+X674125Y642843*
+X675843Y644562*
+X674125Y646281*
+X708500Y678937D2*
+X691312D1*
+X689593Y663468*
+X691312Y665187*
+X696468Y666906*
+X701625*
+X706781Y665187*
+X710218Y661750*
+X711937Y656593*
+Y653156*
+X710218Y648000*
+X706781Y644562*
+X701625Y642843*
+X696468*
+X691312Y644562*
+X689593Y646281*
+X687875Y649718*
+X732562Y678937D2*
+X727406Y677218D1*
+X723968Y672062*
+X722250Y663468*
+Y658312*
+X723968Y649718*
+X727406Y644562*
+X732562Y642843*
+X736000*
+X741156Y644562*
+X744593Y649718*
+X746312Y658312*
+Y663468*
+X744593Y672062*
+X741156Y677218*
+X736000Y678937*
+X732562*
+X744593Y672062D2*
+X723968Y649718D1*
+X766937Y678937D2*
+X761781Y677218D1*
+X758343Y672062*
+X756625Y663468*
+Y658312*
+X758343Y649718*
+X761781Y644562*
+X766937Y642843*
+X770375*
+X775531Y644562*
+X778968Y649718*
+X780687Y658312*
+Y663468*
+X778968Y672062*
+X775531Y677218*
+X770375Y678937*
+X766937*
+X778968Y672062D2*
+X758343Y649718D1*
+D2*
+G54D48*
+X430000Y588048*
+X328400D1*
+D2*
+G54D10*
+X383012Y581026*
+X384523D1*
+X383012Y581276D2*
+X386035D1*
+X383012Y581527D2*
+X387547D1*
+X383012Y581778D2*
+X389058D1*
+X383012Y582028D2*
+X390570D1*
+X383012Y582279D2*
+X392082D1*
+X383012Y582529D2*
+X393593D1*
+X383012Y582780D2*
+X395105D1*
+X383012Y583031D2*
+X396617D1*
+X383012Y583281D2*
+X398128D1*
+X383012Y583532D2*
+X399640D1*
+X383012Y583782D2*
+X401152D1*
+X383012Y584033D2*
+X402664D1*
+X383012Y584284D2*
+X404175D1*
+X383012Y584534D2*
+X405687D1*
+X383012Y584785D2*
+X407199D1*
+X383012Y585035D2*
+X408710D1*
+X383012Y585286D2*
+X410222D1*
+X383012Y585537D2*
+X411734D1*
+X383012Y585787D2*
+X413245D1*
+X383012Y586038D2*
+X414757D1*
+X383012Y586288D2*
+X416269D1*
+X383012Y586539D2*
+X417781D1*
+X383012Y586790D2*
+X419292D1*
+X383012Y587040D2*
+X420804D1*
+X383012Y587291D2*
+X422316D1*
+X383012Y587541D2*
+X423827D1*
+X383012Y587792D2*
+X425339D1*
+X383012Y588043D2*
+X426851D1*
+X383012Y588293D2*
+X425402D1*
+X383012Y588544D2*
+X423890D1*
+X383012Y588794D2*
+X422378D1*
+X383012Y589045D2*
+X420867D1*
+X383012Y589296D2*
+X419355D1*
+X383012Y589546D2*
+X417843D1*
+X383012Y589797D2*
+X416332D1*
+X383012Y590047D2*
+X414820D1*
+X383012Y590298D2*
+X413308D1*
+X383012Y590549D2*
+X411796D1*
+X383012Y590799D2*
+X410285D1*
+X383012Y591050D2*
+X408773D1*
+X383012Y591300D2*
+X407261D1*
+X383012Y591551D2*
+X405750D1*
+X383012Y591802D2*
+X404238D1*
+X383012Y592052D2*
+X402726D1*
+X383012Y592303D2*
+X401215D1*
+X383012Y592553D2*
+X399703D1*
+X383012Y592804D2*
+X398191D1*
+X383012Y593055D2*
+X396680D1*
+X383012Y593305D2*
+X395168D1*
+X383012Y593556D2*
+X393656D1*
+X383012Y593806D2*
+X392144D1*
+X383012Y594057D2*
+X390633D1*
+X383012Y594308D2*
+X389121D1*
+X383012Y594558D2*
+X387609D1*
+X383012Y594809D2*
+X386098D1*
+X383012Y595059D2*
+X384586D1*
+X383012Y595310D2*
+X383074D1*
+X382757Y595621D2*
+Y580474D1*
+X428441Y588048*
+X382757Y595621*
+D2*
+G54D48*
+X607500Y588048*
+X709100D1*
+D2*
+G54D10*
+X652976Y581026*
+X654488D1*
+X651464Y581276D2*
+X654488D1*
+X649952Y581527D2*
+X654488D1*
+X648441Y581778D2*
+X654488D1*
+X646929Y582028D2*
+X654488D1*
+X645417Y582279D2*
+X654488D1*
+X643906Y582529D2*
+X654488D1*
+X642394Y582780D2*
+X654488D1*
+X640882Y583031D2*
+X654488D1*
+X639371Y583281D2*
+X654488D1*
+X637859Y583532D2*
+X654488D1*
+X636347Y583782D2*
+X654488D1*
+X634835Y584033D2*
+X654488D1*
+X633324Y584284D2*
+X654488D1*
+X631812Y584534D2*
+X654488D1*
+X630300Y584785D2*
+X654488D1*
+X628789Y585035D2*
+X654488D1*
+X627277Y585286D2*
+X654488D1*
+X625765Y585537D2*
+X654488D1*
+X624254Y585787D2*
+X654488D1*
+X622742Y586038D2*
+X654488D1*
+X621230Y586288D2*
+X654488D1*
+X619718Y586539D2*
+X654488D1*
+X618207Y586790D2*
+X654488D1*
+X616695Y587040D2*
+X654488D1*
+X615183Y587291D2*
+X654488D1*
+X613672Y587541D2*
+X654488D1*
+X612160Y587792D2*
+X654488D1*
+X610648Y588043D2*
+X654488D1*
+X612097Y588293D2*
+X654488D1*
+X613609Y588544D2*
+X654488D1*
+X615121Y588794D2*
+X654488D1*
+X616632Y589045D2*
+X654488D1*
+X618144Y589296D2*
+X654488D1*
+X619656Y589546D2*
+X654488D1*
+X621167Y589797D2*
+X654488D1*
+X622679Y590047D2*
+X654488D1*
+X624191Y590298D2*
+X654488D1*
+X625703Y590549D2*
+X654488D1*
+X627214Y590799D2*
+X654488D1*
+X628726Y591050D2*
+X654488D1*
+X630238Y591300D2*
+X654488D1*
+X631749Y591551D2*
+X654488D1*
+X633261Y591802D2*
+X654488D1*
+X634773Y592052D2*
+X654488D1*
+X636284Y592303D2*
+X654488D1*
+X637796Y592553D2*
+X654488D1*
+X639308Y592804D2*
+X654488D1*
+X640819Y593055D2*
+X654488D1*
+X642331Y593305D2*
+X654488D1*
+X643843Y593556D2*
+X654488D1*
+X645355Y593806D2*
+X654488D1*
+X646866Y594057D2*
+X654488D1*
+X648378Y594308D2*
+X654488D1*
+X649890Y594558D2*
+X654488D1*
+X651401Y594809D2*
+X654488D1*
+X652913Y595059D2*
+X654488D1*
+X654425Y595310D2*
+X654488D1*
+X654743Y595621D2*
+X609058Y588048D1*
+X654743Y580474*
+Y595621*
+D2*
+G54D48*
+X430000Y804760*
+Y560548D1*
+X607500Y784760D2*
+Y560548D1*
+D2*
+G54D34*
+X716784Y598360*
+X720221Y600079D1*
+X725377Y605235*
+Y569141*
+X752877D2*
+X770065Y605235D1*
+X746002*
+X783815Y572579D2*
+X782096Y570860D1*
+X783815Y569141*
+X785534Y570860*
+X783815Y572579*
+X804440Y569141D2*
+X821627Y605235D1*
+X797565*
+X852565D2*
+X835377D1*
+X833659Y589766*
+X835377Y591485*
+X840534Y593204*
+X845690*
+X850846Y591485*
+X854284Y588048*
+X856002Y582891*
+Y579454*
+X854284Y574298*
+X850846Y570860*
+X845690Y569141*
+X840534*
+X835377Y570860*
+X833659Y572579*
+X831940Y576016*
+X876627Y605235D2*
+X871471Y603516D1*
+X868034Y598360*
+X866315Y589766*
+Y584610*
+X868034Y576016*
+X871471Y570860*
+X876627Y569141*
+X880065*
+X885221Y570860*
+X888659Y576016*
+X890377Y584610*
+Y589766*
+X888659Y598360*
+X885221Y603516*
+X880065Y605235*
+X876627*
+X888659Y598360D2*
+X868034Y576016D1*
+D2*
+G54D48*
+X512600Y1572500*
+Y1470900D1*
+D2*
+G54D10*
+X505326Y1525510*
+X519873D1*
+X505368Y1525763D2*
+X519831D1*
+X505410Y1526017D2*
+X519789D1*
+X505452Y1526270D2*
+X519747D1*
+X505494Y1526524D2*
+X519705D1*
+X505536Y1526777D2*
+X519663D1*
+X505578Y1527031D2*
+X519621D1*
+X505620Y1527284D2*
+X519579D1*
+X505662Y1527538D2*
+X519537D1*
+X505704Y1527791D2*
+X519495D1*
+X505746Y1528045D2*
+X519453D1*
+X505788Y1528298D2*
+X519411D1*
+X505830Y1528552D2*
+X519369D1*
+X505872Y1528805D2*
+X519327D1*
+X505914Y1529059D2*
+X519285D1*
+X505956Y1529312D2*
+X519243D1*
+X505998Y1529566D2*
+X519201D1*
+X506040Y1529819D2*
+X519159D1*
+X506082Y1530073D2*
+X519117D1*
+X506124Y1530326D2*
+X519075D1*
+X506166Y1530580D2*
+X519033D1*
+X506208Y1530833D2*
+X518991D1*
+X506251Y1531087D2*
+X518948D1*
+X506293Y1531340D2*
+X518906D1*
+X506335Y1531594D2*
+X518864D1*
+X506377Y1531847D2*
+X518822D1*
+X506419Y1532101D2*
+X518780D1*
+X506461Y1532354D2*
+X518738D1*
+X506503Y1532608D2*
+X518696D1*
+X506545Y1532861D2*
+X518654D1*
+X506587Y1533115D2*
+X518612D1*
+X506629Y1533368D2*
+X518570D1*
+X506671Y1533622D2*
+X518528D1*
+X506713Y1533875D2*
+X518486D1*
+X506755Y1534129D2*
+X518444D1*
+X506797Y1534382D2*
+X518402D1*
+X506839Y1534636D2*
+X518360D1*
+X506881Y1534889D2*
+X518318D1*
+X506923Y1535143D2*
+X518276D1*
+X506965Y1535396D2*
+X518234D1*
+X507007Y1535650D2*
+X518192D1*
+X507049Y1535903D2*
+X518150D1*
+X507091Y1536157D2*
+X518108D1*
+X507133Y1536410D2*
+X518066D1*
+X507175Y1536664D2*
+X518024D1*
+X507217Y1536917D2*
+X517982D1*
+X507259Y1537171D2*
+X517940D1*
+X507301Y1537424D2*
+X517898D1*
+X507343Y1537678D2*
+X517856D1*
+X507385Y1537931D2*
+X517814D1*
+X507427Y1538185D2*
+X517772D1*
+X507469Y1538438D2*
+X517730D1*
+X507511Y1538692D2*
+X517688D1*
+X507553Y1538945D2*
+X517646D1*
+X507595Y1539199D2*
+X517604D1*
+X507637Y1539452D2*
+X517562D1*
+X507679Y1539706D2*
+X517520D1*
+X507721Y1539959D2*
+X517478D1*
+X507763Y1540213D2*
+X517436D1*
+X507806Y1540466D2*
+X517393D1*
+X507848Y1540720D2*
+X517351D1*
+X507890Y1540973D2*
+X517309D1*
+X507932Y1541227D2*
+X517267D1*
+X507974Y1541480D2*
+X517225D1*
+X508016Y1541734D2*
+X517183D1*
+X508058Y1541987D2*
+X517141D1*
+X508100Y1542241D2*
+X517099D1*
+X508142Y1542494D2*
+X517057D1*
+X508184Y1542748D2*
+X517015D1*
+X508226Y1543001D2*
+X516973D1*
+X508268Y1543255D2*
+X516931D1*
+X508310Y1543508D2*
+X516889D1*
+X508352Y1543762D2*
+X516847D1*
+X508394Y1544015D2*
+X516805D1*
+X508436Y1544269D2*
+X516763D1*
+X508478Y1544522D2*
+X516721D1*
+X508520Y1544776D2*
+X516679D1*
+X508562Y1545029D2*
+X516637D1*
+X508604Y1545283D2*
+X516595D1*
+X508646Y1545536D2*
+X516553D1*
+X508688Y1545790D2*
+X516511D1*
+X508730Y1546043D2*
+X516469D1*
+X508772Y1546297D2*
+X516427D1*
+X508814Y1546550D2*
+X516385D1*
+X508856Y1546804D2*
+X516343D1*
+X508898Y1547057D2*
+X516301D1*
+X508940Y1547311D2*
+X516259D1*
+X508982Y1547564D2*
+X516217D1*
+X509024Y1547818D2*
+X516175D1*
+X509066Y1548071D2*
+X516133D1*
+X509108Y1548325D2*
+X516091D1*
+X509150Y1548578D2*
+X516049D1*
+X509192Y1548832D2*
+X516007D1*
+X509234Y1549085D2*
+X515965D1*
+X509276Y1549339D2*
+X515923D1*
+X509318Y1549592D2*
+X515881D1*
+X509361Y1549846D2*
+X515838D1*
+X509403Y1550099D2*
+X515796D1*
+X509445Y1550353D2*
+X515754D1*
+X509487Y1550606D2*
+X515712D1*
+X509529Y1550860D2*
+X515670D1*
+X509571Y1551113D2*
+X515628D1*
+X509613Y1551367D2*
+X515586D1*
+X509655Y1551620D2*
+X515544D1*
+X509697Y1551874D2*
+X515502D1*
+X509739Y1552127D2*
+X515460D1*
+X509781Y1552381D2*
+X515418D1*
+X509823Y1552634D2*
+X515376D1*
+X509865Y1552888D2*
+X515334D1*
+X509907Y1553141D2*
+X515292D1*
+X509949Y1553395D2*
+X515250D1*
+X509991Y1553648D2*
+X515208D1*
+X510033Y1553902D2*
+X515166D1*
+X510075Y1554155D2*
+X515124D1*
+X510117Y1554409D2*
+X515082D1*
+X510159Y1554662D2*
+X515040D1*
+X510201Y1554916D2*
+X514998D1*
+X510243Y1555169D2*
+X514956D1*
+X510285Y1555423D2*
+X514914D1*
+X510327Y1555676D2*
+X514872D1*
+X510369Y1555930D2*
+X514830D1*
+X510411Y1556183D2*
+X514788D1*
+X510453Y1556437D2*
+X514746D1*
+X510495Y1556690D2*
+X514704D1*
+X510537Y1556944D2*
+X514662D1*
+X510579Y1557197D2*
+X514620D1*
+X510621Y1557451D2*
+X514578D1*
+X510663Y1557704D2*
+X514536D1*
+X510705Y1557958D2*
+X514494D1*
+X510747Y1558211D2*
+X514452D1*
+X510789Y1558465D2*
+X514410D1*
+X510831Y1558718D2*
+X514368D1*
+X510874Y1558972D2*
+X514325D1*
+X510916Y1559225D2*
+X514283D1*
+X510958Y1559479D2*
+X514241D1*
+X511000Y1559732D2*
+X514199D1*
+X511042Y1559986D2*
+X514157D1*
+X511084Y1560239D2*
+X514115D1*
+X511126Y1560493D2*
+X514073D1*
+X511168Y1560746D2*
+X514031D1*
+X511210Y1561000D2*
+X513989D1*
+X511252Y1561253D2*
+X513947D1*
+X511294Y1561507D2*
+X513905D1*
+X511336Y1561760D2*
+X513863D1*
+X511378Y1562014D2*
+X513821D1*
+X511420Y1562267D2*
+X513779D1*
+X511462Y1562521D2*
+X513737D1*
+X511504Y1562774D2*
+X513695D1*
+X511546Y1563028D2*
+X513653D1*
+X511588Y1563281D2*
+X513611D1*
+X511630Y1563535D2*
+X513569D1*
+X511672Y1563788D2*
+X513527D1*
+X511714Y1564042D2*
+X513485D1*
+X511756Y1564295D2*
+X513443D1*
+X511798Y1564549D2*
+X513401D1*
+X511840Y1564802D2*
+X513359D1*
+X511882Y1565056D2*
+X513317D1*
+X511924Y1565309D2*
+X513275D1*
+X511966Y1565563D2*
+X513233D1*
+X512008Y1565816D2*
+X513191D1*
+X512050Y1566070D2*
+X513149D1*
+X512092Y1566323D2*
+X513107D1*
+X512134Y1566577D2*
+X513065D1*
+X512176Y1566830D2*
+X513023D1*
+X512218Y1567084D2*
+X512981D1*
+X512260Y1567337D2*
+X512939D1*
+X512302Y1567591D2*
+X512897D1*
+X512344Y1567844D2*
+X512855D1*
+X512386Y1568098D2*
+X512813D1*
+X512429Y1568351D2*
+X512770D1*
+X512471Y1568605D2*
+X512728D1*
+X512513Y1568858D2*
+X512686D1*
+X512555Y1569112D2*
+X512644D1*
+X512597Y1569365D2*
+X512602D1*
+X512600Y1570941D2*
+X505025Y1525255D1*
+X520174*
+X512600Y1570941*
+D2*
+G54D48*
+Y1575500*
+Y1814328D1*
+D2*
+G54D10*
+X512557Y1578870*
+X512642D1*
+X512515Y1579124D2*
+X512684D1*
+X512473Y1579377D2*
+X512726D1*
+X512431Y1579631D2*
+X512768D1*
+X512389Y1579884D2*
+X512810D1*
+X512347Y1580138D2*
+X512852D1*
+X512305Y1580391D2*
+X512894D1*
+X512263Y1580645D2*
+X512936D1*
+X512221Y1580898D2*
+X512978D1*
+X512179Y1581152D2*
+X513020D1*
+X512137Y1581405D2*
+X513062D1*
+X512095Y1581659D2*
+X513104D1*
+X512053Y1581912D2*
+X513146D1*
+X512011Y1582166D2*
+X513188D1*
+X511969Y1582419D2*
+X513230D1*
+X511927Y1582673D2*
+X513272D1*
+X511885Y1582926D2*
+X513314D1*
+X511843Y1583180D2*
+X513356D1*
+X511801Y1583433D2*
+X513398D1*
+X511759Y1583687D2*
+X513440D1*
+X511717Y1583940D2*
+X513482D1*
+X511675Y1584194D2*
+X513524D1*
+X511633Y1584447D2*
+X513566D1*
+X511591Y1584701D2*
+X513608D1*
+X511549Y1584954D2*
+X513650D1*
+X511507Y1585208D2*
+X513692D1*
+X511465Y1585461D2*
+X513734D1*
+X511423Y1585715D2*
+X513776D1*
+X511381Y1585968D2*
+X513818D1*
+X511339Y1586222D2*
+X513860D1*
+X511297Y1586475D2*
+X513902D1*
+X511255Y1586729D2*
+X513944D1*
+X511213Y1586982D2*
+X513986D1*
+X511171Y1587236D2*
+X514028D1*
+X511129Y1587489D2*
+X514070D1*
+X511087Y1587743D2*
+X514112D1*
+X511044Y1587996D2*
+X514155D1*
+X511002Y1588250D2*
+X514197D1*
+X510960Y1588503D2*
+X514239D1*
+X510918Y1588757D2*
+X514281D1*
+X510876Y1589010D2*
+X514323D1*
+X510834Y1589264D2*
+X514365D1*
+X510792Y1589517D2*
+X514407D1*
+X510750Y1589771D2*
+X514449D1*
+X510708Y1590024D2*
+X514491D1*
+X510666Y1590278D2*
+X514533D1*
+X510624Y1590531D2*
+X514575D1*
+X510582Y1590785D2*
+X514617D1*
+X510540Y1591038D2*
+X514659D1*
+X510498Y1591292D2*
+X514701D1*
+X510456Y1591545D2*
+X514743D1*
+X510414Y1591799D2*
+X514785D1*
+X510372Y1592052D2*
+X514827D1*
+X510330Y1592306D2*
+X514869D1*
+X510288Y1592559D2*
+X514911D1*
+X510246Y1592813D2*
+X514953D1*
+X510204Y1593066D2*
+X514995D1*
+X510162Y1593320D2*
+X515037D1*
+X510120Y1593573D2*
+X515079D1*
+X510078Y1593827D2*
+X515121D1*
+X510036Y1594080D2*
+X515163D1*
+X509994Y1594334D2*
+X515205D1*
+X509952Y1594587D2*
+X515247D1*
+X509910Y1594841D2*
+X515289D1*
+X509868Y1595094D2*
+X515331D1*
+X509826Y1595348D2*
+X515373D1*
+X509784Y1595601D2*
+X515415D1*
+X509742Y1595855D2*
+X515457D1*
+X509700Y1596108D2*
+X515499D1*
+X509658Y1596362D2*
+X515541D1*
+X509616Y1596615D2*
+X515583D1*
+X509574Y1596869D2*
+X515625D1*
+X509532Y1597122D2*
+X515667D1*
+X509489Y1597376D2*
+X515710D1*
+X509447Y1597629D2*
+X515752D1*
+X509405Y1597883D2*
+X515794D1*
+X509363Y1598136D2*
+X515836D1*
+X509321Y1598390D2*
+X515878D1*
+X509279Y1598643D2*
+X515920D1*
+X509237Y1598897D2*
+X515962D1*
+X509195Y1599150D2*
+X516004D1*
+X509153Y1599404D2*
+X516046D1*
+X509111Y1599657D2*
+X516088D1*
+X509069Y1599911D2*
+X516130D1*
+X509027Y1600164D2*
+X516172D1*
+X508985Y1600418D2*
+X516214D1*
+X508943Y1600671D2*
+X516256D1*
+X508901Y1600925D2*
+X516298D1*
+X508859Y1601178D2*
+X516340D1*
+X508817Y1601432D2*
+X516382D1*
+X508775Y1601685D2*
+X516424D1*
+X508733Y1601939D2*
+X516466D1*
+X508691Y1602192D2*
+X516508D1*
+X508649Y1602446D2*
+X516550D1*
+X508607Y1602699D2*
+X516592D1*
+X508565Y1602953D2*
+X516634D1*
+X508523Y1603206D2*
+X516676D1*
+X508481Y1603460D2*
+X516718D1*
+X508439Y1603713D2*
+X516760D1*
+X508397Y1603967D2*
+X516802D1*
+X508355Y1604220D2*
+X516844D1*
+X508313Y1604474D2*
+X516886D1*
+X508271Y1604727D2*
+X516928D1*
+X508229Y1604981D2*
+X516970D1*
+X508187Y1605234D2*
+X517012D1*
+X508145Y1605488D2*
+X517054D1*
+X508103Y1605741D2*
+X517096D1*
+X508061Y1605995D2*
+X517138D1*
+X508019Y1606248D2*
+X517180D1*
+X507976Y1606502D2*
+X517223D1*
+X507934Y1606755D2*
+X517265D1*
+X507892Y1607009D2*
+X517307D1*
+X507850Y1607262D2*
+X517349D1*
+X507808Y1607516D2*
+X517391D1*
+X507766Y1607769D2*
+X517433D1*
+X507724Y1608023D2*
+X517475D1*
+X507682Y1608276D2*
+X517517D1*
+X507640Y1608530D2*
+X517559D1*
+X507598Y1608783D2*
+X517601D1*
+X507556Y1609037D2*
+X517643D1*
+X507514Y1609290D2*
+X517685D1*
+X507472Y1609544D2*
+X517727D1*
+X507430Y1609797D2*
+X517769D1*
+X507388Y1610051D2*
+X517811D1*
+X507346Y1610304D2*
+X517853D1*
+X507304Y1610558D2*
+X517895D1*
+X507262Y1610811D2*
+X517937D1*
+X507220Y1611065D2*
+X517979D1*
+X507178Y1611318D2*
+X518021D1*
+X507136Y1611572D2*
+X518063D1*
+X507094Y1611825D2*
+X518105D1*
+X507052Y1612079D2*
+X518147D1*
+X507010Y1612332D2*
+X518189D1*
+X506968Y1612586D2*
+X518231D1*
+X506926Y1612839D2*
+X518273D1*
+X506884Y1613093D2*
+X518315D1*
+X506842Y1613346D2*
+X518357D1*
+X506800Y1613600D2*
+X518399D1*
+X506758Y1613853D2*
+X518441D1*
+X506716Y1614107D2*
+X518483D1*
+X506674Y1614360D2*
+X518525D1*
+X506632Y1614614D2*
+X518567D1*
+X506590Y1614867D2*
+X518609D1*
+X506548Y1615121D2*
+X518651D1*
+X506506Y1615374D2*
+X518693D1*
+X506464Y1615628D2*
+X518735D1*
+X506421Y1615881D2*
+X518778D1*
+X506379Y1616135D2*
+X518820D1*
+X506337Y1616388D2*
+X518862D1*
+X506295Y1616642D2*
+X518904D1*
+X506253Y1616895D2*
+X518946D1*
+X506211Y1617149D2*
+X518988D1*
+X506169Y1617402D2*
+X519030D1*
+X506127Y1617656D2*
+X519072D1*
+X506085Y1617909D2*
+X519114D1*
+X506043Y1618163D2*
+X519156D1*
+X506001Y1618416D2*
+X519198D1*
+X505959Y1618670D2*
+X519240D1*
+X505917Y1618923D2*
+X519282D1*
+X505875Y1619177D2*
+X519324D1*
+X505833Y1619430D2*
+X519366D1*
+X505791Y1619684D2*
+X519408D1*
+X505749Y1619937D2*
+X519450D1*
+X505707Y1620191D2*
+X519492D1*
+X505665Y1620444D2*
+X519534D1*
+X505623Y1620698D2*
+X519576D1*
+X505581Y1620951D2*
+X519618D1*
+X505539Y1621205D2*
+X519660D1*
+X505497Y1621458D2*
+X519702D1*
+X505455Y1621712D2*
+X519744D1*
+X505413Y1621965D2*
+X519786D1*
+X505371Y1622219D2*
+X519828D1*
+X505329Y1622472D2*
+X519870D1*
+X520174Y1622745D2*
+X505025D1*
+X512600Y1577058*
+X520174Y1622745*
+D2*
+G54D48*
+X776760Y1572500*
+X485100D1*
+X776760Y1575500D2*
+X485100D1*
+D2*
+G54D34*
+X495412Y1839775*
+X497131Y1834618D1*
+X502287Y1831181*
+X510881Y1829462*
+X516037*
+X524631Y1831181*
+X529787Y1834618*
+X531506Y1839775*
+Y1843212*
+X529787Y1848368*
+X524631Y1851806*
+X516037Y1853525*
+X510881*
+X502287Y1851806*
+X497131Y1848368*
+X495412Y1843212*
+Y1839775*
+X502287Y1851806D2*
+X524631Y1831181D1*
+X528068Y1867275D2*
+X529787Y1865556D1*
+X531506Y1867275*
+X529787Y1868993*
+X528068Y1867275*
+X495412Y1884462D2*
+Y1903368D1*
+X509162Y1893056*
+Y1898212*
+X510881Y1901650*
+X512600Y1903368*
+X517756Y1905087*
+X521193*
+X526350Y1903368*
+X529787Y1899931*
+X531506Y1894775*
+Y1889618*
+X529787Y1884462*
+X528068Y1882743*
+X524631Y1881025*
+X495412Y1925712D2*
+X497131Y1920556D1*
+X502287Y1917118*
+X510881Y1915400*
+X516037*
+X524631Y1917118*
+X529787Y1920556*
+X531506Y1925712*
+Y1929150*
+X529787Y1934306*
+X524631Y1937743*
+X516037Y1939462*
+X510881*
+X502287Y1937743*
+X497131Y1934306*
+X495412Y1929150*
+Y1925712*
+X502287Y1937743D2*
+X524631Y1917118D1*
+X495412Y1960087D2*
+X497131Y1954931D1*
+X502287Y1951493*
+X510881Y1949775*
+X516037*
+X524631Y1951493*
+X529787Y1954931*
+X531506Y1960087*
+Y1963525*
+X529787Y1968681*
+X524631Y1972118*
+X516037Y1973837*
+X510881*
+X502287Y1972118*
+X497131Y1968681*
+X495412Y1963525*
+Y1960087*
+X502287Y1972118D2*
+X524631Y1951493D1*
+D2*
+G54D48*
+X1988211Y1692495*
+X1924711D1*
+X1750000Y1552500D2*
+X1764191Y1566592D1*
+X1924711Y1692495*
+D2*
+G54D10*
+X1735722Y1528576*
+X1736157D1*
+X1735470Y1528830D2*
+X1736340D1*
+X1735217Y1529084D2*
+X1736523D1*
+X1734965Y1529338D2*
+X1736706D1*
+X1734713Y1529592D2*
+X1736890D1*
+X1734461Y1529846D2*
+X1737073D1*
+X1734208Y1530100D2*
+X1737256D1*
+X1733956Y1530354D2*
+X1737439D1*
+X1733704Y1530608D2*
+X1737622D1*
+X1733452Y1530862D2*
+X1737805D1*
+X1733199Y1531116D2*
+X1737988D1*
+X1732947Y1531370D2*
+X1738171D1*
+X1732695Y1531624D2*
+X1738354D1*
+X1732443Y1531878D2*
+X1738537D1*
+X1732191Y1532132D2*
+X1738721D1*
+X1731938Y1532386D2*
+X1738904D1*
+X1731686Y1532640D2*
+X1739087D1*
+X1731434Y1532894D2*
+X1739270D1*
+X1731182Y1533148D2*
+X1739453D1*
+X1730929Y1533402D2*
+X1739636D1*
+X1730677Y1533656D2*
+X1739819D1*
+X1730425Y1533910D2*
+X1740002D1*
+X1730173Y1534164D2*
+X1740185D1*
+X1729920Y1534418D2*
+X1740369D1*
+X1729668Y1534672D2*
+X1740552D1*
+X1729416Y1534926D2*
+X1740735D1*
+X1729164Y1535180D2*
+X1740918D1*
+X1728911Y1535434D2*
+X1741101D1*
+X1728659Y1535688D2*
+X1741284D1*
+X1728407Y1535942D2*
+X1741467D1*
+X1728155Y1536196D2*
+X1741650D1*
+X1727903Y1536450D2*
+X1741833D1*
+X1727650Y1536704D2*
+X1742016D1*
+X1727398Y1536958D2*
+X1742200D1*
+X1727146Y1537212D2*
+X1742383D1*
+X1726894Y1537466D2*
+X1742566D1*
+X1726641Y1537720D2*
+X1742749D1*
+X1726389Y1537974D2*
+X1742932D1*
+X1726137Y1538228D2*
+X1743115D1*
+X1725885Y1538482D2*
+X1743298D1*
+X1725856Y1538736D2*
+X1743481D1*
+X1726214Y1538990D2*
+X1743664D1*
+X1726571Y1539244D2*
+X1743848D1*
+X1726929Y1539498D2*
+X1744031D1*
+X1727286Y1539752D2*
+X1744214D1*
+X1727644Y1540006D2*
+X1744397D1*
+X1728001Y1540260D2*
+X1744580D1*
+X1728359Y1540514D2*
+X1744763D1*
+X1728717Y1540768D2*
+X1744946D1*
+X1729074Y1541022D2*
+X1745129D1*
+X1729432Y1541276D2*
+X1745312D1*
+X1729789Y1541530D2*
+X1745496D1*
+X1730147Y1541784D2*
+X1745679D1*
+X1730505Y1542038D2*
+X1745862D1*
+X1730862Y1542292D2*
+X1746045D1*
+X1731220Y1542546D2*
+X1746228D1*
+X1731577Y1542800D2*
+X1746411D1*
+X1731935Y1543054D2*
+X1746594D1*
+X1732292Y1543308D2*
+X1746777D1*
+X1732650Y1543562D2*
+X1746960D1*
+X1733008Y1543816D2*
+X1747143D1*
+X1733365Y1544070D2*
+X1747327D1*
+X1733723Y1544324D2*
+X1747510D1*
+X1734080Y1544578D2*
+X1747693D1*
+X1734438Y1544832D2*
+X1747876D1*
+X1734795Y1545086D2*
+X1748059D1*
+X1735153Y1545340D2*
+X1748242D1*
+X1735511Y1545594D2*
+X1748425D1*
+X1735868Y1545848D2*
+X1748608D1*
+X1736226Y1546102D2*
+X1748791D1*
+X1736583Y1546356D2*
+X1748975D1*
+X1736941Y1546610D2*
+X1749158D1*
+X1737299Y1546864D2*
+X1749341D1*
+X1737656Y1547118D2*
+X1749524D1*
+X1738014Y1547372D2*
+X1749707D1*
+X1738371Y1547626D2*
+X1749890D1*
+X1738729Y1547880D2*
+X1750073D1*
+X1739086Y1548134D2*
+X1750256D1*
+X1739444Y1548388D2*
+X1750439D1*
+X1739802Y1548642D2*
+X1750622D1*
+X1740159Y1548896D2*
+X1750806D1*
+X1740517Y1549150D2*
+X1750989D1*
+X1740874Y1549404D2*
+X1751172D1*
+X1741232Y1549658D2*
+X1751355D1*
+X1741589Y1549912D2*
+X1751538D1*
+X1741947Y1550166D2*
+X1751721D1*
+X1742305Y1550420D2*
+X1751904D1*
+X1742662Y1550674D2*
+X1752087D1*
+X1743020Y1550928D2*
+X1752270D1*
+X1743377Y1551182D2*
+X1752454D1*
+X1743735Y1551436D2*
+X1752637D1*
+X1744093Y1551690D2*
+X1752820D1*
+X1744450Y1551944D2*
+X1753003D1*
+X1744808Y1552198D2*
+X1753186D1*
+X1745165Y1552452D2*
+X1753369D1*
+X1745523Y1552706D2*
+X1753552D1*
+X1745880Y1552960D2*
+X1753735D1*
+X1746238Y1553214D2*
+X1753918D1*
+X1746596Y1553468D2*
+X1754101D1*
+X1746953Y1553722D2*
+X1754285D1*
+X1747311Y1553976D2*
+X1754468D1*
+X1747668Y1554230D2*
+X1754651D1*
+X1748026Y1554484D2*
+X1754834D1*
+X1748383Y1554738D2*
+X1755017D1*
+X1748741Y1554992D2*
+X1755200D1*
+X1749099Y1555246D2*
+X1755383D1*
+X1749456Y1555500D2*
+X1755566D1*
+X1749814Y1555754D2*
+X1755749D1*
+X1750171Y1556008D2*
+X1755933D1*
+X1750529Y1556262D2*
+X1756116D1*
+X1750887Y1556516D2*
+X1756299D1*
+X1751244Y1556770D2*
+X1756482D1*
+X1751602Y1557024D2*
+X1756665D1*
+X1751959Y1557278D2*
+X1756848D1*
+X1752317Y1557532D2*
+X1757031D1*
+X1752674Y1557786D2*
+X1757214D1*
+X1753032Y1558040D2*
+X1757397D1*
+X1753390Y1558294D2*
+X1757580D1*
+X1753747Y1558548D2*
+X1757764D1*
+X1754105Y1558802D2*
+X1757947D1*
+X1754462Y1559056D2*
+X1758130D1*
+X1754820Y1559310D2*
+X1758313D1*
+X1755178Y1559564D2*
+X1758496D1*
+X1755535Y1559818D2*
+X1758679D1*
+X1755893Y1560072D2*
+X1758862D1*
+X1756250Y1560326D2*
+X1759045D1*
+X1756608Y1560580D2*
+X1759228D1*
+X1756965Y1560834D2*
+X1759412D1*
+X1757323Y1561088D2*
+X1759595D1*
+X1757681Y1561342D2*
+X1759778D1*
+X1758038Y1561596D2*
+X1759961D1*
+X1758396Y1561850D2*
+X1760144D1*
+X1758753Y1562104D2*
+X1760327D1*
+X1759111Y1562358D2*
+X1760510D1*
+X1759468Y1562612D2*
+X1760693D1*
+X1759826Y1562866D2*
+X1760876D1*
+X1760184Y1563120D2*
+X1761059D1*
+X1760541Y1563374D2*
+X1761243D1*
+X1760899Y1563628D2*
+X1761426D1*
+X1761256Y1563882D2*
+X1761609D1*
+X1761614Y1564136D2*
+X1761792D1*
+X1761972Y1564390D2*
+X1761975D1*
+X1763085Y1565494D2*
+X1725332Y1538677D1*
+X1736005Y1527929*
+X1763085Y1565494*
+D2*
+G54D34*
+X2002524Y1692495*
+X2017992D1*
+X2023149Y1694213*
+X2024867Y1695932*
+X2026586Y1699370*
+Y1702807*
+X2024867Y1706245*
+X2023149Y1707963*
+X2017992Y1709682*
+X2002524*
+Y1673588*
+X2014555Y1692495D2*
+X2026586Y1673588D1*
+X2060961Y1701088D2*
+Y1702807D1*
+X2062680Y1706245*
+X2064399Y1707963*
+X2067836Y1709682*
+X2074711*
+X2078149Y1707963*
+X2079867Y1706245*
+X2081586Y1702807*
+Y1699370*
+X2079867Y1695932*
+X2076430Y1690776*
+X2059242Y1673588*
+X2083305*
+X2097055Y1677026D2*
+X2095336Y1675307D1*
+X2097055Y1673588*
+X2098774Y1675307*
+X2097055Y1677026*
+X2121117Y1709682D2*
+X2115961Y1707963D1*
+X2112524Y1702807*
+X2110805Y1694213*
+Y1689057*
+X2112524Y1680463*
+X2115961Y1675307*
+X2121117Y1673588*
+X2124555*
+X2129711Y1675307*
+X2133149Y1680463*
+X2134867Y1689057*
+Y1694213*
+X2133149Y1702807*
+X2129711Y1707963*
+X2124555Y1709682*
+X2121117*
+X2133149Y1702807D2*
+X2112524Y1680463D1*
+X2155492Y1709682D2*
+X2150336Y1707963D1*
+X2146899Y1702807*
+X2145180Y1694213*
+Y1689057*
+X2146899Y1680463*
+X2150336Y1675307*
+X2155492Y1673588*
+X2158930*
+X2164086Y1675307*
+X2167524Y1680463*
+X2169242Y1689057*
+Y1694213*
+X2167524Y1702807*
+X2164086Y1707963*
+X2158930Y1709682*
+X2155492*
+X2167524Y1702807D2*
+X2146899Y1680463D1*
+X2189867Y1709682D2*
+X2184711Y1707963D1*
+X2181274Y1702807*
+X2179555Y1694213*
+Y1689057*
+X2181274Y1680463*
+X2184711Y1675307*
+X2189867Y1673588*
+X2193305*
+X2198461Y1675307*
+X2201899Y1680463*
+X2203617Y1689057*
+Y1694213*
+X2201899Y1702807*
+X2198461Y1707963*
+X2193305Y1709682*
+X2189867*
+X2201899Y1702807D2*
+X2181274Y1680463D1*
+D2*
+G54D51*
+X1866769Y800000*
+Y1084084D1*
+D2*
+G54D10*
+X1866727Y803370*
+X1866811D1*
+X1866685Y803624D2*
+X1866853D1*
+X1866643Y803877D2*
+X1866895D1*
+X1866601Y804131D2*
+X1866937D1*
+X1866559Y804384D2*
+X1866979D1*
+X1866517Y804638D2*
+X1867021D1*
+X1866475Y804891D2*
+X1867063D1*
+X1866433Y805145D2*
+X1867105D1*
+X1866391Y805398D2*
+X1867147D1*
+X1866349Y805652D2*
+X1867189D1*
+X1866307Y805905D2*
+X1867231D1*
+X1866265Y806159D2*
+X1867273D1*
+X1866223Y806412D2*
+X1867316D1*
+X1866181Y806666D2*
+X1867358D1*
+X1866139Y806919D2*
+X1867400D1*
+X1866097Y807173D2*
+X1867442D1*
+X1866055Y807426D2*
+X1867484D1*
+X1866013Y807680D2*
+X1867526D1*
+X1865971Y807933D2*
+X1867568D1*
+X1865929Y808187D2*
+X1867610D1*
+X1865887Y808440D2*
+X1867652D1*
+X1865845Y808694D2*
+X1867694D1*
+X1865803Y808947D2*
+X1867736D1*
+X1865761Y809201D2*
+X1867778D1*
+X1865719Y809454D2*
+X1867820D1*
+X1865677Y809708D2*
+X1867862D1*
+X1865635Y809961D2*
+X1867904D1*
+X1865593Y810215D2*
+X1867946D1*
+X1865551Y810468D2*
+X1867988D1*
+X1865508Y810722D2*
+X1868030D1*
+X1865466Y810975D2*
+X1868072D1*
+X1865424Y811229D2*
+X1868114D1*
+X1865382Y811482D2*
+X1868156D1*
+X1865340Y811736D2*
+X1868198D1*
+X1865298Y811989D2*
+X1868240D1*
+X1865256Y812243D2*
+X1868282D1*
+X1865214Y812496D2*
+X1868324D1*
+X1865172Y812750D2*
+X1868366D1*
+X1865130Y813003D2*
+X1868408D1*
+X1865088Y813257D2*
+X1868450D1*
+X1865046Y813510D2*
+X1868492D1*
+X1865004Y813764D2*
+X1868534D1*
+X1864962Y814017D2*
+X1868576D1*
+X1864920Y814271D2*
+X1868618D1*
+X1864878Y814524D2*
+X1868660D1*
+X1864836Y814778D2*
+X1868702D1*
+X1864794Y815031D2*
+X1868744D1*
+X1864752Y815285D2*
+X1868786D1*
+X1864710Y815538D2*
+X1868828D1*
+X1864668Y815792D2*
+X1868870D1*
+X1864626Y816045D2*
+X1868912D1*
+X1864584Y816299D2*
+X1868954D1*
+X1864542Y816552D2*
+X1868996D1*
+X1864500Y816806D2*
+X1869038D1*
+X1864458Y817059D2*
+X1869081D1*
+X1864416Y817313D2*
+X1869123D1*
+X1864374Y817566D2*
+X1869165D1*
+X1864332Y817820D2*
+X1869207D1*
+X1864290Y818073D2*
+X1869249D1*
+X1864248Y818327D2*
+X1869291D1*
+X1864206Y818580D2*
+X1869333D1*
+X1864164Y818834D2*
+X1869375D1*
+X1864122Y819087D2*
+X1869417D1*
+X1864080Y819341D2*
+X1869459D1*
+X1864038Y819594D2*
+X1869501D1*
+X1863996Y819848D2*
+X1869543D1*
+X1863954Y820101D2*
+X1869585D1*
+X1863912Y820355D2*
+X1869627D1*
+X1863870Y820608D2*
+X1869669D1*
+X1863828Y820862D2*
+X1869711D1*
+X1863786Y821115D2*
+X1869753D1*
+X1863743Y821369D2*
+X1869795D1*
+X1863701Y821622D2*
+X1869837D1*
+X1863659Y821876D2*
+X1869879D1*
+X1863617Y822129D2*
+X1869921D1*
+X1863575Y822383D2*
+X1869963D1*
+X1863533Y822636D2*
+X1870005D1*
+X1863491Y822890D2*
+X1870047D1*
+X1863449Y823143D2*
+X1870089D1*
+X1863407Y823397D2*
+X1870131D1*
+X1863365Y823650D2*
+X1870173D1*
+X1863323Y823904D2*
+X1870215D1*
+X1863281Y824157D2*
+X1870257D1*
+X1863239Y824411D2*
+X1870299D1*
+X1863197Y824664D2*
+X1870341D1*
+X1863155Y824918D2*
+X1870383D1*
+X1863113Y825171D2*
+X1870425D1*
+X1863071Y825425D2*
+X1870467D1*
+X1863029Y825678D2*
+X1870509D1*
+X1862987Y825932D2*
+X1870551D1*
+X1862945Y826185D2*
+X1870593D1*
+X1862903Y826439D2*
+X1870635D1*
+X1862861Y826692D2*
+X1870677D1*
+X1862819Y826946D2*
+X1870719D1*
+X1862777Y827199D2*
+X1870761D1*
+X1862735Y827453D2*
+X1870803D1*
+X1862693Y827706D2*
+X1870845D1*
+X1862651Y827960D2*
+X1870888D1*
+X1862609Y828213D2*
+X1870930D1*
+X1862567Y828467D2*
+X1870972D1*
+X1862525Y828720D2*
+X1871014D1*
+X1862483Y828974D2*
+X1871056D1*
+X1862441Y829227D2*
+X1871098D1*
+X1862399Y829481D2*
+X1871140D1*
+X1862357Y829734D2*
+X1871182D1*
+X1862315Y829988D2*
+X1871224D1*
+X1862273Y830241D2*
+X1871266D1*
+X1862231Y830495D2*
+X1871308D1*
+X1862189Y830748D2*
+X1871350D1*
+X1862147Y831002D2*
+X1871392D1*
+X1862105Y831255D2*
+X1871434D1*
+X1862063Y831509D2*
+X1871476D1*
+X1862021Y831762D2*
+X1871518D1*
+X1861979Y832016D2*
+X1871560D1*
+X1861936Y832269D2*
+X1871602D1*
+X1861894Y832523D2*
+X1871644D1*
+X1861852Y832776D2*
+X1871686D1*
+X1861810Y833030D2*
+X1871728D1*
+X1861768Y833283D2*
+X1871770D1*
+X1861726Y833537D2*
+X1871812D1*
+X1861684Y833790D2*
+X1871854D1*
+X1861642Y834044D2*
+X1871896D1*
+X1861600Y834297D2*
+X1871938D1*
+X1861558Y834551D2*
+X1871980D1*
+X1861516Y834804D2*
+X1872022D1*
+X1861474Y835058D2*
+X1872064D1*
+X1861432Y835311D2*
+X1872106D1*
+X1861390Y835565D2*
+X1872148D1*
+X1861348Y835818D2*
+X1872190D1*
+X1861306Y836072D2*
+X1872232D1*
+X1861264Y836325D2*
+X1872274D1*
+X1861222Y836579D2*
+X1872316D1*
+X1861180Y836832D2*
+X1872358D1*
+X1861138Y837086D2*
+X1872400D1*
+X1861096Y837339D2*
+X1872442D1*
+X1861054Y837593D2*
+X1872484D1*
+X1861012Y837846D2*
+X1872526D1*
+X1860970Y838100D2*
+X1872568D1*
+X1860928Y838353D2*
+X1872610D1*
+X1860886Y838607D2*
+X1872653D1*
+X1860844Y838860D2*
+X1872695D1*
+X1860802Y839114D2*
+X1872737D1*
+X1860760Y839367D2*
+X1872779D1*
+X1860718Y839621D2*
+X1872821D1*
+X1860676Y839874D2*
+X1872863D1*
+X1860634Y840128D2*
+X1872905D1*
+X1860592Y840381D2*
+X1872947D1*
+X1860550Y840635D2*
+X1872989D1*
+X1860508Y840888D2*
+X1873031D1*
+X1860466Y841142D2*
+X1873073D1*
+X1860424Y841395D2*
+X1873115D1*
+X1860382Y841649D2*
+X1873157D1*
+X1860340Y841902D2*
+X1873199D1*
+X1860298Y842156D2*
+X1873241D1*
+X1860256Y842409D2*
+X1873283D1*
+X1860214Y842663D2*
+X1873325D1*
+X1860171Y842916D2*
+X1873367D1*
+X1860129Y843170D2*
+X1873409D1*
+X1860087Y843423D2*
+X1873451D1*
+X1860045Y843677D2*
+X1873493D1*
+X1860003Y843930D2*
+X1873535D1*
+X1859961Y844184D2*
+X1873577D1*
+X1859919Y844437D2*
+X1873619D1*
+X1859877Y844691D2*
+X1873661D1*
+X1859835Y844944D2*
+X1873703D1*
+X1859793Y845198D2*
+X1873745D1*
+X1859751Y845451D2*
+X1873787D1*
+X1859709Y845705D2*
+X1873829D1*
+X1859667Y845958D2*
+X1873871D1*
+X1859625Y846212D2*
+X1873913D1*
+X1859583Y846465D2*
+X1873955D1*
+X1859541Y846719D2*
+X1873997D1*
+X1859499Y846972D2*
+X1874039D1*
+X1874343Y847243D2*
+X1859196D1*
+X1866769Y801558*
+X1874343Y847243*
+D2*
+G54D51*
+X1866769Y1572500*
+Y1293102D1*
+D2*
+G54D10*
+X1859497Y1525512*
+X1874042D1*
+X1859539Y1525765D2*
+X1874000D1*
+X1859581Y1526019D2*
+X1873958D1*
+X1859623Y1526272D2*
+X1873916D1*
+X1859665Y1526526D2*
+X1873874D1*
+X1859707Y1526779D2*
+X1873832D1*
+X1859749Y1527033D2*
+X1873790D1*
+X1859791Y1527286D2*
+X1873748D1*
+X1859833Y1527540D2*
+X1873706D1*
+X1859875Y1527793D2*
+X1873664D1*
+X1859917Y1528047D2*
+X1873622D1*
+X1859959Y1528300D2*
+X1873580D1*
+X1860001Y1528554D2*
+X1873538D1*
+X1860043Y1528807D2*
+X1873495D1*
+X1860085Y1529061D2*
+X1873453D1*
+X1860127Y1529314D2*
+X1873411D1*
+X1860169Y1529568D2*
+X1873369D1*
+X1860211Y1529821D2*
+X1873327D1*
+X1860253Y1530075D2*
+X1873285D1*
+X1860295Y1530328D2*
+X1873243D1*
+X1860337Y1530582D2*
+X1873201D1*
+X1860379Y1530835D2*
+X1873159D1*
+X1860421Y1531089D2*
+X1873117D1*
+X1860463Y1531342D2*
+X1873075D1*
+X1860505Y1531596D2*
+X1873033D1*
+X1860547Y1531849D2*
+X1872991D1*
+X1860589Y1532103D2*
+X1872949D1*
+X1860631Y1532356D2*
+X1872907D1*
+X1860673Y1532610D2*
+X1872865D1*
+X1860715Y1532863D2*
+X1872823D1*
+X1860757Y1533117D2*
+X1872781D1*
+X1860799Y1533370D2*
+X1872739D1*
+X1860841Y1533624D2*
+X1872697D1*
+X1860883Y1533877D2*
+X1872655D1*
+X1860925Y1534131D2*
+X1872613D1*
+X1860967Y1534384D2*
+X1872571D1*
+X1861009Y1534638D2*
+X1872529D1*
+X1861051Y1534891D2*
+X1872487D1*
+X1861093Y1535145D2*
+X1872445D1*
+X1861136Y1535398D2*
+X1872403D1*
+X1861178Y1535652D2*
+X1872361D1*
+X1861220Y1535905D2*
+X1872319D1*
+X1861262Y1536159D2*
+X1872277D1*
+X1861304Y1536412D2*
+X1872235D1*
+X1861346Y1536666D2*
+X1872193D1*
+X1861388Y1536919D2*
+X1872151D1*
+X1861430Y1537173D2*
+X1872109D1*
+X1861472Y1537426D2*
+X1872067D1*
+X1861514Y1537680D2*
+X1872025D1*
+X1861556Y1537933D2*
+X1871983D1*
+X1861598Y1538187D2*
+X1871941D1*
+X1861640Y1538440D2*
+X1871899D1*
+X1861682Y1538694D2*
+X1871857D1*
+X1861724Y1538947D2*
+X1871815D1*
+X1861766Y1539201D2*
+X1871773D1*
+X1861808Y1539454D2*
+X1871730D1*
+X1861850Y1539708D2*
+X1871688D1*
+X1861892Y1539961D2*
+X1871646D1*
+X1861934Y1540215D2*
+X1871604D1*
+X1861976Y1540468D2*
+X1871562D1*
+X1862018Y1540722D2*
+X1871520D1*
+X1862060Y1540975D2*
+X1871478D1*
+X1862102Y1541229D2*
+X1871436D1*
+X1862144Y1541482D2*
+X1871394D1*
+X1862186Y1541736D2*
+X1871352D1*
+X1862228Y1541989D2*
+X1871310D1*
+X1862270Y1542243D2*
+X1871268D1*
+X1862312Y1542496D2*
+X1871226D1*
+X1862354Y1542750D2*
+X1871184D1*
+X1862396Y1543003D2*
+X1871142D1*
+X1862438Y1543257D2*
+X1871100D1*
+X1862480Y1543510D2*
+X1871058D1*
+X1862522Y1543764D2*
+X1871016D1*
+X1862564Y1544017D2*
+X1870974D1*
+X1862606Y1544271D2*
+X1870932D1*
+X1862648Y1544524D2*
+X1870890D1*
+X1862690Y1544778D2*
+X1870848D1*
+X1862732Y1545031D2*
+X1870806D1*
+X1862774Y1545285D2*
+X1870764D1*
+X1862816Y1545538D2*
+X1870722D1*
+X1862858Y1545792D2*
+X1870680D1*
+X1862901Y1546045D2*
+X1870638D1*
+X1862943Y1546299D2*
+X1870596D1*
+X1862985Y1546552D2*
+X1870554D1*
+X1863027Y1546806D2*
+X1870512D1*
+X1863069Y1547059D2*
+X1870470D1*
+X1863111Y1547313D2*
+X1870428D1*
+X1863153Y1547566D2*
+X1870386D1*
+X1863195Y1547820D2*
+X1870344D1*
+X1863237Y1548073D2*
+X1870302D1*
+X1863279Y1548327D2*
+X1870260D1*
+X1863321Y1548580D2*
+X1870218D1*
+X1863363Y1548834D2*
+X1870176D1*
+X1863405Y1549087D2*
+X1870134D1*
+X1863447Y1549341D2*
+X1870092D1*
+X1863489Y1549594D2*
+X1870050D1*
+X1863531Y1549848D2*
+X1870008D1*
+X1863573Y1550101D2*
+X1869966D1*
+X1863615Y1550355D2*
+X1869923D1*
+X1863657Y1550608D2*
+X1869881D1*
+X1863699Y1550862D2*
+X1869839D1*
+X1863741Y1551115D2*
+X1869797D1*
+X1863783Y1551369D2*
+X1869755D1*
+X1863825Y1551622D2*
+X1869713D1*
+X1863867Y1551876D2*
+X1869671D1*
+X1863909Y1552129D2*
+X1869629D1*
+X1863951Y1552383D2*
+X1869587D1*
+X1863993Y1552636D2*
+X1869545D1*
+X1864035Y1552890D2*
+X1869503D1*
+X1864077Y1553143D2*
+X1869461D1*
+X1864119Y1553397D2*
+X1869419D1*
+X1864161Y1553650D2*
+X1869377D1*
+X1864203Y1553904D2*
+X1869335D1*
+X1864245Y1554157D2*
+X1869293D1*
+X1864287Y1554411D2*
+X1869251D1*
+X1864329Y1554664D2*
+X1869209D1*
+X1864371Y1554918D2*
+X1869167D1*
+X1864413Y1555171D2*
+X1869125D1*
+X1864455Y1555425D2*
+X1869083D1*
+X1864497Y1555678D2*
+X1869041D1*
+X1864539Y1555932D2*
+X1868999D1*
+X1864581Y1556185D2*
+X1868957D1*
+X1864623Y1556439D2*
+X1868915D1*
+X1864666Y1556692D2*
+X1868873D1*
+X1864708Y1556946D2*
+X1868831D1*
+X1864750Y1557199D2*
+X1868789D1*
+X1864792Y1557453D2*
+X1868747D1*
+X1864834Y1557706D2*
+X1868705D1*
+X1864876Y1557960D2*
+X1868663D1*
+X1864918Y1558213D2*
+X1868621D1*
+X1864960Y1558467D2*
+X1868579D1*
+X1865002Y1558720D2*
+X1868537D1*
+X1865044Y1558974D2*
+X1868495D1*
+X1865086Y1559227D2*
+X1868453D1*
+X1865128Y1559481D2*
+X1868411D1*
+X1865170Y1559734D2*
+X1868369D1*
+X1865212Y1559988D2*
+X1868327D1*
+X1865254Y1560241D2*
+X1868285D1*
+X1865296Y1560495D2*
+X1868243D1*
+X1865338Y1560748D2*
+X1868201D1*
+X1865380Y1561002D2*
+X1868158D1*
+X1865422Y1561255D2*
+X1868116D1*
+X1865464Y1561509D2*
+X1868074D1*
+X1865506Y1561762D2*
+X1868032D1*
+X1865548Y1562016D2*
+X1867990D1*
+X1865590Y1562269D2*
+X1867948D1*
+X1865632Y1562523D2*
+X1867906D1*
+X1865674Y1562776D2*
+X1867864D1*
+X1865716Y1563030D2*
+X1867822D1*
+X1865758Y1563283D2*
+X1867780D1*
+X1865800Y1563537D2*
+X1867738D1*
+X1865842Y1563790D2*
+X1867696D1*
+X1865884Y1564044D2*
+X1867654D1*
+X1865926Y1564297D2*
+X1867612D1*
+X1865968Y1564551D2*
+X1867570D1*
+X1866010Y1564804D2*
+X1867528D1*
+X1866052Y1565058D2*
+X1867486D1*
+X1866094Y1565311D2*
+X1867444D1*
+X1866136Y1565565D2*
+X1867402D1*
+X1866178Y1565818D2*
+X1867360D1*
+X1866220Y1566072D2*
+X1867318D1*
+X1866262Y1566325D2*
+X1867276D1*
+X1866304Y1566579D2*
+X1867234D1*
+X1866346Y1566832D2*
+X1867192D1*
+X1866388Y1567086D2*
+X1867150D1*
+X1866431Y1567339D2*
+X1867108D1*
+X1866473Y1567593D2*
+X1867066D1*
+X1866515Y1567846D2*
+X1867024D1*
+X1866557Y1568100D2*
+X1866982D1*
+X1866599Y1568353D2*
+X1866940D1*
+X1866641Y1568607D2*
+X1866898D1*
+X1866683Y1568860D2*
+X1866856D1*
+X1866725Y1569114D2*
+X1866814D1*
+X1866767Y1569367D2*
+X1866772D1*
+X1866769Y1570941D2*
+X1859196Y1525257D1*
+X1874343*
+X1866769Y1570941*
+D2*
+G54D51*
+X1765240Y800000*
+X1894269D1*
+X1765240Y1572500D2*
+X1894269D1*
+D2*
+G54D34*
+X1885676Y1106093*
+X1849582Y1123281D1*
+Y1099218*
+X1885676Y1140468D2*
+X1849582Y1157656D1*
+Y1133593*
+X1882238Y1171406D2*
+X1883957Y1169687D1*
+X1885676Y1171406*
+X1883957Y1173124*
+X1882238Y1171406*
+X1858176Y1186874D2*
+X1856457D1*
+X1853019Y1188593*
+X1851301Y1190312*
+X1849582Y1193749*
+Y1200624*
+X1851301Y1204062*
+X1853019Y1205781*
+X1856457Y1207499*
+X1859894*
+X1863332Y1205781*
+X1868488Y1202343*
+X1885676Y1185156*
+Y1209218*
+X1849582Y1240156D2*
+Y1222968D1*
+X1865051Y1221249*
+X1863332Y1222968*
+X1861613Y1228124*
+Y1233281*
+X1863332Y1238437*
+X1866769Y1241874*
+X1871926Y1243593*
+X1875363*
+X1880519Y1241874*
+X1883957Y1238437*
+X1885676Y1233281*
+Y1228124*
+X1883957Y1222968*
+X1882238Y1221249*
+X1878801Y1219531*
+X1849582Y1264218D2*
+X1851301Y1259062D1*
+X1856457Y1255624*
+X1865051Y1253906*
+X1870207*
+X1878801Y1255624*
+X1883957Y1259062*
+X1885676Y1264218*
+Y1267656*
+X1883957Y1272812*
+X1878801Y1276249*
+X1870207Y1277968*
+X1865051*
+X1856457Y1276249*
+X1851301Y1272812*
+X1849582Y1267656*
+Y1264218*
+X1856457Y1276249D2*
+X1878801Y1255624D1*
+D2*
+G54D48*
+X1377250Y1572500*
+X1750000D1*
+X302019Y724926D2*
+X365519D1*
+X450000Y820000D2*
+X434612Y807224D1*
+X365519Y724926*
+D2*
+G54D10*
+X437231Y809470*
+X437446D1*
+X437451Y809725D2*
+X437882D1*
+X437671Y809979D2*
+X438318D1*
+X437892Y810234D2*
+X438754D1*
+X438112Y810489D2*
+X439190D1*
+X438333Y810743D2*
+X439626D1*
+X438553Y810998D2*
+X440062D1*
+X438774Y811252D2*
+X440497D1*
+X438994Y811507D2*
+X440933D1*
+X439215Y811762D2*
+X441369D1*
+X439435Y812016D2*
+X441805D1*
+X439655Y812271D2*
+X442241D1*
+X439876Y812525D2*
+X442677D1*
+X440096Y812780D2*
+X443113D1*
+X440317Y813035D2*
+X443549D1*
+X440537Y813289D2*
+X443985D1*
+X440758Y813544D2*
+X444421D1*
+X440978Y813798D2*
+X444857D1*
+X441199Y814053D2*
+X445293D1*
+X441419Y814308D2*
+X445728D1*
+X441639Y814562D2*
+X446164D1*
+X441860Y814817D2*
+X446600D1*
+X442080Y815071D2*
+X447036D1*
+X442301Y815326D2*
+X447472D1*
+X442521Y815581D2*
+X447908D1*
+X442742Y815835D2*
+X448344D1*
+X442962Y816090D2*
+X448780D1*
+X443183Y816344D2*
+X449216D1*
+X443403Y816599D2*
+X449652D1*
+X443623Y816854D2*
+X450088D1*
+X443844Y817108D2*
+X450524D1*
+X444064Y817363D2*
+X450960D1*
+X444285Y817617D2*
+X451395D1*
+X444505Y817872D2*
+X451831D1*
+X444726Y818127D2*
+X452267D1*
+X444946Y818381D2*
+X452703D1*
+X445167Y818636D2*
+X453139D1*
+X445387Y818890D2*
+X453575D1*
+X445607Y819145D2*
+X454011D1*
+X445828Y819400D2*
+X454447D1*
+X446048Y819654D2*
+X454883D1*
+X446269Y819909D2*
+X455319D1*
+X446489Y820163D2*
+X455755D1*
+X446710Y820418D2*
+X456191D1*
+X446930Y820673D2*
+X456626D1*
+X447151Y820927D2*
+X457062D1*
+X447371Y821182D2*
+X457498D1*
+X447591Y821436D2*
+X457934D1*
+X447812Y821691D2*
+X458370D1*
+X448032Y821946D2*
+X458806D1*
+X448253Y822200D2*
+X459242D1*
+X448473Y822455D2*
+X459678D1*
+X448694Y822709D2*
+X460114D1*
+X448914Y822964D2*
+X460550D1*
+X449135Y823219D2*
+X460986D1*
+X449355Y823473D2*
+X461422D1*
+X449575Y823728D2*
+X461858D1*
+X449796Y823982D2*
+X462293D1*
+X450016Y824237D2*
+X462729D1*
+X450237Y824492D2*
+X463165D1*
+X450457Y824746D2*
+X463601D1*
+X450678Y825001D2*
+X464037D1*
+X450898Y825255D2*
+X464473D1*
+X451119Y825510D2*
+X464909D1*
+X451339Y825765D2*
+X465345D1*
+X451559Y826019D2*
+X465781D1*
+X451780Y826274D2*
+X466217D1*
+X452000Y826528D2*
+X466653D1*
+X452221Y826783D2*
+X467089D1*
+X452441Y827038D2*
+X467524D1*
+X452662Y827292D2*
+X467960D1*
+X452882Y827547D2*
+X468396D1*
+X453103Y827801D2*
+X468832D1*
+X453323Y828056D2*
+X469268D1*
+X453543Y828311D2*
+X469704D1*
+X453764Y828565D2*
+X470140D1*
+X453984Y828820D2*
+X470576D1*
+X454205Y829074D2*
+X471012D1*
+X454425Y829329D2*
+X471448D1*
+X454646Y829584D2*
+X471884D1*
+X454866Y829838D2*
+X472320D1*
+X455087Y830093D2*
+X472756D1*
+X455307Y830347D2*
+X473191D1*
+X455527Y830602D2*
+X473627D1*
+X455748Y830857D2*
+X474063D1*
+X455968Y831111D2*
+X474499D1*
+X456189Y831366D2*
+X474935D1*
+X456409Y831620D2*
+X475371D1*
+X456630Y831875D2*
+X475217D1*
+X456850Y832130D2*
+X475006D1*
+X457071Y832384D2*
+X474795D1*
+X457291Y832639D2*
+X474583D1*
+X457511Y832893D2*
+X474372D1*
+X457732Y833148D2*
+X474161D1*
+X457952Y833403D2*
+X473949D1*
+X458173Y833657D2*
+X473738D1*
+X458393Y833912D2*
+X473526D1*
+X458614Y834166D2*
+X473315D1*
+X458834Y834421D2*
+X473104D1*
+X459055Y834676D2*
+X472892D1*
+X459275Y834930D2*
+X472681D1*
+X459495Y835185D2*
+X472470D1*
+X459716Y835439D2*
+X472258D1*
+X459936Y835694D2*
+X472047D1*
+X460157Y835949D2*
+X471835D1*
+X460377Y836203D2*
+X471624D1*
+X460598Y836458D2*
+X471413D1*
+X460818Y836712D2*
+X471201D1*
+X461039Y836967D2*
+X470990D1*
+X461259Y837222D2*
+X470779D1*
+X461479Y837476D2*
+X470567D1*
+X461700Y837731D2*
+X470356D1*
+X461920Y837985D2*
+X470144D1*
+X462141Y838240D2*
+X469933D1*
+X462361Y838495D2*
+X469722D1*
+X462582Y838749D2*
+X469510D1*
+X462802Y839004D2*
+X469299D1*
+X463023Y839258D2*
+X469088D1*
+X463243Y839513D2*
+X468876D1*
+X463463Y839768D2*
+X468665D1*
+X463684Y840022D2*
+X468454D1*
+X463904Y840277D2*
+X468242D1*
+X464125Y840531D2*
+X468031D1*
+X464345Y840786D2*
+X467819D1*
+X464566Y841041D2*
+X467608D1*
+X464786Y841295D2*
+X467397D1*
+X465007Y841550D2*
+X467185D1*
+X465227Y841804D2*
+X466974D1*
+X465447Y842059D2*
+X466763D1*
+X465668Y842314D2*
+X466551D1*
+X465888Y842568D2*
+X466340D1*
+X466109Y842823D2*
+X466128D1*
+X466123Y843228D2*
+X435811Y808220D1*
+X475798Y831575*
+X466123Y843228*
+D2*
+G54D34*
+X88332Y724926*
+X103801D1*
+X108957Y726645*
+X110676Y728364*
+X112394Y731801*
+Y735239*
+X110676Y738676*
+X108957Y740395*
+X103801Y742114*
+X88332*
+Y706020*
+X100363Y724926D2*
+X112394Y706020D1*
+X146769Y733520D2*
+Y735239D1*
+X148488Y738676*
+X150207Y740395*
+X153644Y742114*
+X160519*
+X163957Y740395*
+X165676Y738676*
+X167394Y735239*
+Y731801*
+X165676Y728364*
+X162238Y723207*
+X145051Y706020*
+X169113*
+X182863Y709457D2*
+X181144Y707739D1*
+X182863Y706020*
+X184582Y707739*
+X182863Y709457*
+X206926Y742114D2*
+X201769Y740395D1*
+X198332Y735239*
+X196613Y726645*
+Y721489*
+X198332Y712895*
+X201769Y707739*
+X206926Y706020*
+X210363*
+X215519Y707739*
+X218957Y712895*
+X220676Y721489*
+Y726645*
+X218957Y735239*
+X215519Y740395*
+X210363Y742114*
+X206926*
+X218957Y735239D2*
+X198332Y712895D1*
+X241301Y742114D2*
+X236144Y740395D1*
+X232707Y735239*
+X230988Y726645*
+Y721489*
+X232707Y712895*
+X236144Y707739*
+X241301Y706020*
+X244738*
+X249894Y707739*
+X253332Y712895*
+X255051Y721489*
+Y726645*
+X253332Y735239*
+X249894Y740395*
+X244738Y742114*
+X241301*
+X253332Y735239D2*
+X232707Y712895D1*
+X275676Y742114D2*
+X270519Y740395D1*
+X267082Y735239*
+X265363Y726645*
+Y721489*
+X267082Y712895*
+X270519Y707739*
+X275676Y706020*
+X279113*
+X284269Y707739*
+X287707Y712895*
+X289426Y721489*
+Y726645*
+X287707Y735239*
+X284269Y740395*
+X279113Y742114*
+X275676*
+X287707Y735239D2*
+X267082Y712895D1*
+D2*
+G54D48*
+X1377250Y1640779*
+X1478850D1*
+D2*
+G54D10*
+X1422726Y1633757*
+X1424238D1*
+X1421214Y1634007D2*
+X1424238D1*
+X1419702Y1634258D2*
+X1424238D1*
+X1418191Y1634509D2*
+X1424238D1*
+X1416679Y1634759D2*
+X1424238D1*
+X1415167Y1635010D2*
+X1424238D1*
+X1413656Y1635260D2*
+X1424238D1*
+X1412144Y1635511D2*
+X1424238D1*
+X1410632Y1635762D2*
+X1424238D1*
+X1409121Y1636012D2*
+X1424238D1*
+X1407609Y1636263D2*
+X1424238D1*
+X1406097Y1636513D2*
+X1424238D1*
+X1404585Y1636764D2*
+X1424238D1*
+X1403074Y1637015D2*
+X1424238D1*
+X1401562Y1637265D2*
+X1424238D1*
+X1400050Y1637516D2*
+X1424238D1*
+X1398539Y1637766D2*
+X1424238D1*
+X1397027Y1638017D2*
+X1424238D1*
+X1395515Y1638268D2*
+X1424238D1*
+X1394004Y1638518D2*
+X1424238D1*
+X1392492Y1638769D2*
+X1424238D1*
+X1390980Y1639019D2*
+X1424238D1*
+X1389468Y1639270D2*
+X1424238D1*
+X1387957Y1639521D2*
+X1424238D1*
+X1386445Y1639771D2*
+X1424238D1*
+X1384933Y1640022D2*
+X1424238D1*
+X1383422Y1640272D2*
+X1424238D1*
+X1381910Y1640523D2*
+X1424238D1*
+X1380398Y1640774D2*
+X1424238D1*
+X1381847Y1641024D2*
+X1424238D1*
+X1383359Y1641275D2*
+X1424238D1*
+X1384871Y1641525D2*
+X1424238D1*
+X1386382Y1641776D2*
+X1424238D1*
+X1387894Y1642027D2*
+X1424238D1*
+X1389406Y1642277D2*
+X1424238D1*
+X1390917Y1642528D2*
+X1424238D1*
+X1392429Y1642778D2*
+X1424238D1*
+X1393941Y1643029D2*
+X1424238D1*
+X1395453Y1643280D2*
+X1424238D1*
+X1396964Y1643530D2*
+X1424238D1*
+X1398476Y1643781D2*
+X1424238D1*
+X1399988Y1644031D2*
+X1424238D1*
+X1401499Y1644282D2*
+X1424238D1*
+X1403011Y1644533D2*
+X1424238D1*
+X1404523Y1644783D2*
+X1424238D1*
+X1406034Y1645034D2*
+X1424238D1*
+X1407546Y1645284D2*
+X1424238D1*
+X1409058Y1645535D2*
+X1424238D1*
+X1410569Y1645786D2*
+X1424238D1*
+X1412081Y1646036D2*
+X1424238D1*
+X1413593Y1646287D2*
+X1424238D1*
+X1415105Y1646537D2*
+X1424238D1*
+X1416616Y1646788D2*
+X1424238D1*
+X1418128Y1647039D2*
+X1424238D1*
+X1419640Y1647289D2*
+X1424238D1*
+X1421151Y1647540D2*
+X1424238D1*
+X1422663Y1647790D2*
+X1424238D1*
+X1424175Y1648041D2*
+X1424238D1*
+X1424493Y1648352D2*
+X1378808Y1640779D1*
+X1424493Y1633205*
+Y1648352*
+D2*
+G54D48*
+X1355000Y1640779*
+X1253400D1*
+D2*
+G54D10*
+X1308012Y1633757*
+X1309523D1*
+X1308012Y1634007D2*
+X1311035D1*
+X1308012Y1634258D2*
+X1312547D1*
+X1308012Y1634509D2*
+X1314058D1*
+X1308012Y1634759D2*
+X1315570D1*
+X1308012Y1635010D2*
+X1317082D1*
+X1308012Y1635260D2*
+X1318593D1*
+X1308012Y1635511D2*
+X1320105D1*
+X1308012Y1635762D2*
+X1321617D1*
+X1308012Y1636012D2*
+X1323128D1*
+X1308012Y1636263D2*
+X1324640D1*
+X1308012Y1636513D2*
+X1326152D1*
+X1308012Y1636764D2*
+X1327664D1*
+X1308012Y1637015D2*
+X1329175D1*
+X1308012Y1637265D2*
+X1330687D1*
+X1308012Y1637516D2*
+X1332199D1*
+X1308012Y1637766D2*
+X1333710D1*
+X1308012Y1638017D2*
+X1335222D1*
+X1308012Y1638268D2*
+X1336734D1*
+X1308012Y1638518D2*
+X1338245D1*
+X1308012Y1638769D2*
+X1339757D1*
+X1308012Y1639019D2*
+X1341269D1*
+X1308012Y1639270D2*
+X1342781D1*
+X1308012Y1639521D2*
+X1344292D1*
+X1308012Y1639771D2*
+X1345804D1*
+X1308012Y1640022D2*
+X1347316D1*
+X1308012Y1640272D2*
+X1348827D1*
+X1308012Y1640523D2*
+X1350339D1*
+X1308012Y1640774D2*
+X1351851D1*
+X1308012Y1641024D2*
+X1350402D1*
+X1308012Y1641275D2*
+X1348890D1*
+X1308012Y1641525D2*
+X1347378D1*
+X1308012Y1641776D2*
+X1345867D1*
+X1308012Y1642027D2*
+X1344355D1*
+X1308012Y1642277D2*
+X1342843D1*
+X1308012Y1642528D2*
+X1341332D1*
+X1308012Y1642778D2*
+X1339820D1*
+X1308012Y1643029D2*
+X1338308D1*
+X1308012Y1643280D2*
+X1336796D1*
+X1308012Y1643530D2*
+X1335285D1*
+X1308012Y1643781D2*
+X1333773D1*
+X1308012Y1644031D2*
+X1332261D1*
+X1308012Y1644282D2*
+X1330750D1*
+X1308012Y1644533D2*
+X1329238D1*
+X1308012Y1644783D2*
+X1327726D1*
+X1308012Y1645034D2*
+X1326215D1*
+X1308012Y1645284D2*
+X1324703D1*
+X1308012Y1645535D2*
+X1323191D1*
+X1308012Y1645786D2*
+X1321680D1*
+X1308012Y1646036D2*
+X1320168D1*
+X1308012Y1646287D2*
+X1318656D1*
+X1308012Y1646537D2*
+X1317144D1*
+X1308012Y1646788D2*
+X1315633D1*
+X1308012Y1647039D2*
+X1314121D1*
+X1308012Y1647289D2*
+X1312609D1*
+X1308012Y1647540D2*
+X1311098D1*
+X1308012Y1647790D2*
+X1309586D1*
+X1308012Y1648041D2*
+X1308074D1*
+X1307757Y1648352D2*
+Y1633205D1*
+X1353441Y1640779*
+X1307757Y1648352*
+D2*
+G54D48*
+X1355000Y1587740*
+Y1668279D1*
+X1377250Y1587740D2*
+Y1668279D1*
+D2*
+G54D34*
+X1101296Y1649372*
+Y1651091D1*
+X1103014Y1654529*
+X1104733Y1656247*
+X1108171Y1657966*
+X1115046*
+X1118483Y1656247*
+X1120202Y1654529*
+X1121921Y1651091*
+Y1647654*
+X1120202Y1644216*
+X1116764Y1639060*
+X1099577Y1621872*
+X1123639*
+X1137389Y1625310D2*
+X1135671Y1623591D1*
+X1137389Y1621872*
+X1139108Y1623591*
+X1137389Y1625310*
+X1152858Y1649372D2*
+Y1651091D1*
+X1154577Y1654529*
+X1156296Y1656247*
+X1159733Y1657966*
+X1166608*
+X1170046Y1656247*
+X1171764Y1654529*
+X1173483Y1651091*
+Y1647654*
+X1171764Y1644216*
+X1168327Y1639060*
+X1151139Y1621872*
+X1175202*
+X1187233Y1649372D2*
+Y1651091D1*
+X1188952Y1654529*
+X1190671Y1656247*
+X1194108Y1657966*
+X1200983*
+X1204421Y1656247*
+X1206139Y1654529*
+X1207858Y1651091*
+Y1647654*
+X1206139Y1644216*
+X1202702Y1639060*
+X1185514Y1621872*
+X1209577*
+X1240514Y1657966D2*
+X1223327D1*
+X1221608Y1642497*
+X1223327Y1644216*
+X1228483Y1645935*
+X1233639*
+X1238796Y1644216*
+X1242233Y1640779*
+X1243952Y1635622*
+Y1632185*
+X1242233Y1627029*
+X1238796Y1623591*
+X1233639Y1621872*
+X1228483*
+X1223327Y1623591*
+X1221608Y1625310*
+X1219889Y1628747*
+D2*
+G54D48*
+X234060Y1748119*
+X297560D1*
+X450000Y1552500D2*
+X436157Y1566935D1*
+X297560Y1748119*
+D2*
+G54D10*
+X463256Y1528242*
+X463696D1*
+X463081Y1528496D2*
+X463962D1*
+X462907Y1528751D2*
+X464227D1*
+X462733Y1529006D2*
+X464493D1*
+X462558Y1529261D2*
+X464759D1*
+X462384Y1529516D2*
+X465024D1*
+X462209Y1529770D2*
+X465290D1*
+X462035Y1530025D2*
+X465556D1*
+X461861Y1530280D2*
+X465821D1*
+X461686Y1530535D2*
+X466087D1*
+X461512Y1530790D2*
+X466353D1*
+X461338Y1531044D2*
+X466619D1*
+X461163Y1531299D2*
+X466884D1*
+X460989Y1531554D2*
+X467150D1*
+X460814Y1531809D2*
+X467416D1*
+X460640Y1532064D2*
+X467681D1*
+X460466Y1532318D2*
+X467947D1*
+X460291Y1532573D2*
+X468213D1*
+X460117Y1532828D2*
+X468478D1*
+X459942Y1533083D2*
+X468744D1*
+X459768Y1533338D2*
+X469010D1*
+X459594Y1533592D2*
+X469276D1*
+X459419Y1533847D2*
+X469541D1*
+X459245Y1534102D2*
+X469807D1*
+X459071Y1534357D2*
+X470073D1*
+X458896Y1534612D2*
+X470338D1*
+X458722Y1534866D2*
+X470604D1*
+X458547Y1535121D2*
+X470870D1*
+X458373Y1535376D2*
+X471135D1*
+X458199Y1535631D2*
+X471401D1*
+X458024Y1535886D2*
+X471667D1*
+X457850Y1536140D2*
+X471933D1*
+X457675Y1536395D2*
+X472198D1*
+X457501Y1536650D2*
+X472464D1*
+X457327Y1536905D2*
+X472730D1*
+X457152Y1537160D2*
+X472995D1*
+X456978Y1537414D2*
+X473261D1*
+X456804Y1537669D2*
+X473527D1*
+X456629Y1537924D2*
+X473793D1*
+X456455Y1538179D2*
+X473762D1*
+X456280Y1538434D2*
+X473421D1*
+X456106Y1538688D2*
+X473080D1*
+X455932Y1538943D2*
+X472740D1*
+X455757Y1539198D2*
+X472399D1*
+X455583Y1539453D2*
+X472058D1*
+X455408Y1539708D2*
+X471717D1*
+X455234Y1539962D2*
+X471377D1*
+X455060Y1540217D2*
+X471036D1*
+X454885Y1540472D2*
+X470695D1*
+X454711Y1540727D2*
+X470354D1*
+X454537Y1540982D2*
+X470014D1*
+X454362Y1541236D2*
+X469673D1*
+X454188Y1541491D2*
+X469332D1*
+X454013Y1541746D2*
+X468991D1*
+X453839Y1542001D2*
+X468651D1*
+X453665Y1542256D2*
+X468310D1*
+X453490Y1542510D2*
+X467969D1*
+X453316Y1542765D2*
+X467628D1*
+X453142Y1543020D2*
+X467288D1*
+X452967Y1543275D2*
+X466947D1*
+X452793Y1543530D2*
+X466606D1*
+X452618Y1543784D2*
+X466265D1*
+X452444Y1544039D2*
+X465925D1*
+X452270Y1544294D2*
+X465584D1*
+X452095Y1544549D2*
+X465243D1*
+X451921Y1544804D2*
+X464902D1*
+X451746Y1545058D2*
+X464562D1*
+X451572Y1545313D2*
+X464221D1*
+X451398Y1545568D2*
+X463880D1*
+X451223Y1545823D2*
+X463539D1*
+X451049Y1546078D2*
+X463198D1*
+X450875Y1546332D2*
+X462858D1*
+X450700Y1546587D2*
+X462517D1*
+X450526Y1546842D2*
+X462176D1*
+X450351Y1547097D2*
+X461835D1*
+X450177Y1547352D2*
+X461495D1*
+X450003Y1547606D2*
+X461154D1*
+X449828Y1547861D2*
+X460813D1*
+X449654Y1548116D2*
+X460472D1*
+X449479Y1548371D2*
+X460132D1*
+X449305Y1548626D2*
+X459791D1*
+X449131Y1548880D2*
+X459450D1*
+X448956Y1549135D2*
+X459109D1*
+X448782Y1549390D2*
+X458769D1*
+X448608Y1549645D2*
+X458428D1*
+X448433Y1549900D2*
+X458087D1*
+X448259Y1550154D2*
+X457746D1*
+X448084Y1550409D2*
+X457406D1*
+X447910Y1550664D2*
+X457065D1*
+X447736Y1550919D2*
+X456724D1*
+X447561Y1551174D2*
+X456383D1*
+X447387Y1551428D2*
+X456043D1*
+X447213Y1551683D2*
+X455702D1*
+X447038Y1551938D2*
+X455361D1*
+X446864Y1552193D2*
+X455020D1*
+X446689Y1552448D2*
+X454680D1*
+X446515Y1552702D2*
+X454339D1*
+X446341Y1552957D2*
+X453998D1*
+X446166Y1553212D2*
+X453657D1*
+X445992Y1553467D2*
+X453317D1*
+X445817Y1553722D2*
+X452976D1*
+X445643Y1553976D2*
+X452635D1*
+X445469Y1554231D2*
+X452294D1*
+X445294Y1554486D2*
+X451954D1*
+X445120Y1554741D2*
+X451613D1*
+X444946Y1554996D2*
+X451272D1*
+X444771Y1555250D2*
+X450931D1*
+X444597Y1555505D2*
+X450591D1*
+X444422Y1555760D2*
+X450250D1*
+X444248Y1556015D2*
+X449909D1*
+X444074Y1556270D2*
+X449568D1*
+X443899Y1556524D2*
+X449228D1*
+X443725Y1556779D2*
+X448887D1*
+X443550Y1557034D2*
+X448546D1*
+X443376Y1557289D2*
+X448205D1*
+X443202Y1557544D2*
+X447865D1*
+X443027Y1557798D2*
+X447524D1*
+X442853Y1558053D2*
+X447183D1*
+X442679Y1558308D2*
+X446842D1*
+X442504Y1558563D2*
+X446501D1*
+X442330Y1558818D2*
+X446161D1*
+X442155Y1559072D2*
+X445820D1*
+X441981Y1559327D2*
+X445479D1*
+X441807Y1559582D2*
+X445138D1*
+X441632Y1559837D2*
+X444798D1*
+X441458Y1560092D2*
+X444457D1*
+X441283Y1560346D2*
+X444116D1*
+X441109Y1560601D2*
+X443775D1*
+X440935Y1560856D2*
+X443435D1*
+X440760Y1561111D2*
+X443094D1*
+X440586Y1561366D2*
+X442753D1*
+X440412Y1561620D2*
+X442412D1*
+X440237Y1561875D2*
+X442072D1*
+X440063Y1562130D2*
+X441731D1*
+X439888Y1562385D2*
+X441390D1*
+X439714Y1562640D2*
+X441049D1*
+X439540Y1562894D2*
+X440709D1*
+X439365Y1563149D2*
+X440368D1*
+X439191Y1563404D2*
+X440027D1*
+X439017Y1563659D2*
+X439686D1*
+X438842Y1563914D2*
+X439346D1*
+X438668Y1564168D2*
+X439005D1*
+X438493Y1564423D2*
+X438664D1*
+X438319Y1564678D2*
+X438323D1*
+X474322Y1538078D2*
+X437236Y1565810D1*
+X463390Y1527595*
+X474322Y1538078*
+D2*
+G54D34*
+X20373Y1748119*
+X35842D1*
+X40998Y1749838*
+X42717Y1751557*
+X44435Y1754994*
+Y1758432*
+X42717Y1761869*
+X40998Y1763588*
+X35842Y1765307*
+X20373*
+Y1729213*
+X32404Y1748119D2*
+X44435Y1729213D1*
+X78810Y1756713D2*
+Y1758432D1*
+X80529Y1761869*
+X82248Y1763588*
+X85685Y1765307*
+X92560*
+X95998Y1763588*
+X97717Y1761869*
+X99435Y1758432*
+Y1754994*
+X97717Y1751557*
+X94279Y1746401*
+X77092Y1729213*
+X101154*
+X114904Y1732651D2*
+X113185Y1730932D1*
+X114904Y1729213*
+X116623Y1730932*
+X114904Y1732651*
+X138967Y1765307D2*
+X133810Y1763588D1*
+X130373Y1758432*
+X128654Y1749838*
+Y1744682*
+X130373Y1736088*
+X133810Y1730932*
+X138967Y1729213*
+X142404*
+X147560Y1730932*
+X150998Y1736088*
+X152717Y1744682*
+Y1749838*
+X150998Y1758432*
+X147560Y1763588*
+X142404Y1765307*
+X138967*
+X150998Y1758432D2*
+X130373Y1736088D1*
+X173342Y1765307D2*
+X168185Y1763588D1*
+X164748Y1758432*
+X163029Y1749838*
+Y1744682*
+X164748Y1736088*
+X168185Y1730932*
+X173342Y1729213*
+X176779*
+X181935Y1730932*
+X185373Y1736088*
+X187092Y1744682*
+Y1749838*
+X185373Y1758432*
+X181935Y1763588*
+X176779Y1765307*
+X173342*
+X185373Y1758432D2*
+X164748Y1736088D1*
+X207717Y1765307D2*
+X202560Y1763588D1*
+X199123Y1758432*
+X197404Y1749838*
+Y1744682*
+X199123Y1736088*
+X202560Y1730932*
+X207717Y1729213*
+X211154*
+X216310Y1730932*
+X219748Y1736088*
+X221467Y1744682*
+Y1749838*
+X219748Y1758432*
+X216310Y1763588*
+X211154Y1765307*
+X207717*
+X219748Y1758432D2*
+X199123Y1736088D1*
+D2*
+G54D48*
+X651500Y800000*
+X1750000D1*
+D2*
+G54D51*
+X430000Y1728008*
+X973271D1*
+D2*
+G54D10*
+X475476Y1720986*
+X476988D1*
+X473964Y1721237D2*
+X476988D1*
+X472452Y1721488D2*
+X476988D1*
+X470941Y1721738D2*
+X476988D1*
+X469429Y1721989D2*
+X476988D1*
+X467917Y1722239D2*
+X476988D1*
+X466406Y1722490D2*
+X476988D1*
+X464894Y1722741D2*
+X476988D1*
+X463382Y1722991D2*
+X476988D1*
+X461871Y1723242D2*
+X476988D1*
+X460359Y1723492D2*
+X476988D1*
+X458847Y1723743D2*
+X476988D1*
+X457335Y1723994D2*
+X476988D1*
+X455824Y1724244D2*
+X476988D1*
+X454312Y1724495D2*
+X476988D1*
+X452800Y1724745D2*
+X476988D1*
+X451289Y1724996D2*
+X476988D1*
+X449777Y1725247D2*
+X476988D1*
+X448265Y1725497D2*
+X476988D1*
+X446754Y1725748D2*
+X476988D1*
+X445242Y1725998D2*
+X476988D1*
+X443730Y1726249D2*
+X476988D1*
+X442218Y1726500D2*
+X476988D1*
+X440707Y1726750D2*
+X476988D1*
+X439195Y1727001D2*
+X476988D1*
+X437683Y1727251D2*
+X476988D1*
+X436172Y1727502D2*
+X476988D1*
+X434660Y1727753D2*
+X476988D1*
+X433148Y1728003D2*
+X476988D1*
+X434597Y1728254D2*
+X476988D1*
+X436109Y1728504D2*
+X476988D1*
+X437621Y1728755D2*
+X476988D1*
+X439132Y1729006D2*
+X476988D1*
+X440644Y1729256D2*
+X476988D1*
+X442156Y1729507D2*
+X476988D1*
+X443667Y1729757D2*
+X476988D1*
+X445179Y1730008D2*
+X476988D1*
+X446691Y1730259D2*
+X476988D1*
+X448203Y1730509D2*
+X476988D1*
+X449714Y1730760D2*
+X476988D1*
+X451226Y1731010D2*
+X476988D1*
+X452738Y1731261D2*
+X476988D1*
+X454249Y1731512D2*
+X476988D1*
+X455761Y1731762D2*
+X476988D1*
+X457273Y1732013D2*
+X476988D1*
+X458784Y1732263D2*
+X476988D1*
+X460296Y1732514D2*
+X476988D1*
+X461808Y1732765D2*
+X476988D1*
+X463319Y1733015D2*
+X476988D1*
+X464831Y1733266D2*
+X476988D1*
+X466343Y1733516D2*
+X476988D1*
+X467855Y1733767D2*
+X476988D1*
+X469366Y1734018D2*
+X476988D1*
+X470878Y1734268D2*
+X476988D1*
+X472390Y1734519D2*
+X476988D1*
+X473901Y1734769D2*
+X476988D1*
+X475413Y1735020D2*
+X476988D1*
+X476925Y1735271D2*
+X476988D1*
+X477243Y1735582D2*
+X431558Y1728008D1*
+X477243Y1720435*
+Y1735582*
+D2*
+G54D51*
+X1770000Y1728008*
+X1216663D1*
+D2*
+G54D10*
+X1723012Y1720986*
+X1724523D1*
+X1723012Y1721237D2*
+X1726035D1*
+X1723012Y1721488D2*
+X1727547D1*
+X1723012Y1721738D2*
+X1729058D1*
+X1723012Y1721989D2*
+X1730570D1*
+X1723012Y1722239D2*
+X1732082D1*
+X1723012Y1722490D2*
+X1733593D1*
+X1723012Y1722741D2*
+X1735105D1*
+X1723012Y1722991D2*
+X1736617D1*
+X1723012Y1723242D2*
+X1738128D1*
+X1723012Y1723492D2*
+X1739640D1*
+X1723012Y1723743D2*
+X1741152D1*
+X1723012Y1723994D2*
+X1742664D1*
+X1723012Y1724244D2*
+X1744175D1*
+X1723012Y1724495D2*
+X1745687D1*
+X1723012Y1724745D2*
+X1747199D1*
+X1723012Y1724996D2*
+X1748710D1*
+X1723012Y1725247D2*
+X1750222D1*
+X1723012Y1725497D2*
+X1751734D1*
+X1723012Y1725748D2*
+X1753245D1*
+X1723012Y1725998D2*
+X1754757D1*
+X1723012Y1726249D2*
+X1756269D1*
+X1723012Y1726500D2*
+X1757781D1*
+X1723012Y1726750D2*
+X1759292D1*
+X1723012Y1727001D2*
+X1760804D1*
+X1723012Y1727251D2*
+X1762316D1*
+X1723012Y1727502D2*
+X1763827D1*
+X1723012Y1727753D2*
+X1765339D1*
+X1723012Y1728003D2*
+X1766851D1*
+X1723012Y1728254D2*
+X1765402D1*
+X1723012Y1728504D2*
+X1763890D1*
+X1723012Y1728755D2*
+X1762378D1*
+X1723012Y1729006D2*
+X1760867D1*
+X1723012Y1729256D2*
+X1759355D1*
+X1723012Y1729507D2*
+X1757843D1*
+X1723012Y1729757D2*
+X1756332D1*
+X1723012Y1730008D2*
+X1754820D1*
+X1723012Y1730259D2*
+X1753308D1*
+X1723012Y1730509D2*
+X1751796D1*
+X1723012Y1730760D2*
+X1750285D1*
+X1723012Y1731010D2*
+X1748773D1*
+X1723012Y1731261D2*
+X1747261D1*
+X1723012Y1731512D2*
+X1745750D1*
+X1723012Y1731762D2*
+X1744238D1*
+X1723012Y1732013D2*
+X1742726D1*
+X1723012Y1732263D2*
+X1741215D1*
+X1723012Y1732514D2*
+X1739703D1*
+X1723012Y1732765D2*
+X1738191D1*
+X1723012Y1733015D2*
+X1736680D1*
+X1723012Y1733266D2*
+X1735168D1*
+X1723012Y1733516D2*
+X1733656D1*
+X1723012Y1733767D2*
+X1732144D1*
+X1723012Y1734018D2*
+X1730633D1*
+X1723012Y1734268D2*
+X1729121D1*
+X1723012Y1734519D2*
+X1727609D1*
+X1723012Y1734769D2*
+X1726098D1*
+X1723012Y1735020D2*
+X1724586D1*
+X1723012Y1735271D2*
+X1723074D1*
+X1722757Y1735582D2*
+Y1720435D1*
+X1768441Y1728008*
+X1722757Y1735582*
+D2*
+G54D51*
+X430000Y1567740*
+Y1755508D1*
+X1770000Y1567740D2*
+Y1755508D1*
+D2*
+G54D34*
+X993561Y1738321*
+X996998Y1740040D1*
+X1002155Y1745196*
+Y1709102*
+X1026217Y1745196D2*
+X1045123D1*
+X1034811Y1731446*
+X1039967*
+X1043405Y1729727*
+X1045123Y1728008*
+X1046842Y1722852*
+Y1719415*
+X1045123Y1714258*
+X1041686Y1710821*
+X1036530Y1709102*
+X1031373*
+X1026217Y1710821*
+X1024498Y1712540*
+X1022780Y1715977*
+X1074342Y1709102D2*
+Y1745196D1*
+X1057155Y1721133*
+X1082936*
+X1094967Y1712540D2*
+X1093248Y1710821D1*
+X1094967Y1709102*
+X1096686Y1710821*
+X1094967Y1712540*
+X1119030Y1745196D2*
+X1113873Y1743477D1*
+X1110436Y1738321*
+X1108717Y1729727*
+Y1724571*
+X1110436Y1715977*
+X1113873Y1710821*
+X1119030Y1709102*
+X1122467*
+X1127623Y1710821*
+X1131061Y1715977*
+X1132780Y1724571*
+Y1729727*
+X1131061Y1738321*
+X1127623Y1743477*
+X1122467Y1745196*
+X1119030*
+X1131061Y1738321D2*
+X1110436Y1715977D1*
+X1153405Y1745196D2*
+X1148248Y1743477D1*
+X1144811Y1738321*
+X1143092Y1729727*
+Y1724571*
+X1144811Y1715977*
+X1148248Y1710821*
+X1153405Y1709102*
+X1156842*
+X1161998Y1710821*
+X1165436Y1715977*
+X1167155Y1724571*
+Y1729727*
+X1165436Y1738321*
+X1161998Y1743477*
+X1156842Y1745196*
+X1153405*
+X1165436Y1738321D2*
+X1144811Y1715977D1*
+X1187780Y1745196D2*
+X1182623Y1743477D1*
+X1179186Y1738321*
+X1177467Y1729727*
+Y1724571*
+X1179186Y1715977*
+X1182623Y1710821*
+X1187780Y1709102*
+X1191217*
+X1196373Y1710821*
+X1199811Y1715977*
+X1201530Y1724571*
+Y1729727*
+X1199811Y1738321*
+X1196373Y1743477*
+X1191217Y1745196*
+X1187780*
+X1199811Y1738321D2*
+X1179186Y1715977D1*
+D02M02*
