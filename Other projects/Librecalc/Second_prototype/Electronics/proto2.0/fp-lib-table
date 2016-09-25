@@ -1,7 +1,0 @@
-(fp_lib_table
-  (lib (name xtal)(type Legacy)(uri /home/pparent/calculator/proto2.0/xtal24mhz.mod)(options "")(descr ""))
-  (lib (name xtal2)(type Legacy)(uri /home/pparent/calculator/proto2.0/xtal32768.mod)(options "")(descr ""))
-  (lib (name opendous)(type Legacy)(uri /home/pparent/calculator/proto2.0/lib/modules/opendous.mod)(options "")(descr ""))
-  (lib (name fpc10)(type Legacy)(uri /home/pparent/calculator/proto2.0/FPC10.mod)(options "")(descr ""))
-  (lib (name fpc37)(type Legacy)(uri /home/pparent/calculator/proto2.0/FPC37.mod)(options "")(descr ""))
-)
