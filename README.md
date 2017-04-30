@@ -1,64 +1,53 @@
-This page contains the software used in the open hardware smartphone (libresmartphone) and other projects files and documentation that can be useful to develop it. In the future it will have the mechanical (Freecad) and Electronical (Kicad) designs to make it. Visit http://libresmartphone.com for more information.
+Libre Smartphone - Open hardware phone
+======================================
 
-# Objective
+This page contains the software used in the open hardware smartphone, related projects files and documentation. Mechanical ([Freecad](http://freecadweb.org/)) and PCB schematic ([Kicad](http://kicad-pcb.org/)) designs will be added here in the future. Visit [libresmartphone.com](http://libresmartphone.com/open-hardware-smartphone/) or our [YouTube channel](https://www.youtube.com/channel/UC1UttFNKDiN2uA525Pe3ijA) for more information.
 
-Libresmartphone is a smartphone that can be connected to a bigger screen and be used as a desktop computer to edit documents, watch videos, listen to music, edit images, videos and much more.
+## Objective
 
-When it is finished it will have a 6 inch screen, hdmi output, cameras, bluetooth, wifi, GPS, 4G or better and GSM. It will also have two or more microusb that will allow you to connect your printer and other gadgets/peripherials.
+Libresmartphone is a smartphone that can be connected to a bigger screen and used as a desktop computer to edit documents, watch videos, listen to music, edit images, videos and much more.
 
-It will be open software and open hardware, designed with free software (Kicad) to let other users study, change and improve the software and the hardware.
+Our goal is to have a 6" screen, HDMI output, cameras, Bluetooth, WiFi, GPS, 4G or better and GSM. It will also have two or more micro-usb ports that will allow you to connect a printer or other peripherals.
 
-If you are concerned by the mass surveillance the goverment makes you will be able to modify the smartphone to put hardware kill switches to the camera, GPS, 4G, GSM... easily.
+It will be [Open Software](https://en.wikipedia.org/wiki/Open-source_software) and [Open Hardware](https://en.wikipedia.org/wiki/Open-source_hardware), designed with free software (Kicad) to let other users study, change and improve both the software and the hardware.
 
-# Roadmap 
+The design will allow one to add hardware kill switches for the camera, GPS, 4G, GSM.  This offers security & privacy for those who want full control over their devices.
 
-* 1) Make a raspberry pi prototype work as desired (Estimated time: 3 months – 1 year)(Estimated cost: <500€):
+## Roadmap
 
-· Software to make calls, send/receive SMS (with the adafruit 3G Fona or similar), import contacts (csv) and take photos in any GNU/linux or BSD OS.
+1. Make a [Raspberry Pi](https://www.raspberrypi.org/) prototype work as desired (Estimated time: 3 months – 1 year)(Estimated cost: <500€):
+   * Software to make calls, send/receive SMS (with the [Adafruit 3G Fona](https://www.adafruit.com/product/2696) or similar), import contacts (csv) and take photos in any GNU/linux or BSD OS.
+   * GPS navigation with navit.
+   * Easy to make case (MDF) / CAD files to 3d print the case.
+   * 7" capacitive screen from the Raspberry Pi foundation.
+   * Make a manual so every user with a Raspberry Pi can achieve a working prototype easily.
 
-· GPS navigation with navit.
+   *The Raspberry Pi prototype will attract a larger user base for the project (currently there are 8 million Raspberry Pi in the market and a lot of their users are DIY enthusiast). Many of them are not willing to pay for an open source smartphone but would love to make calls with the Raspberry Pi, send SMS for their projects, build an simple GPS unit for their car, etc.*
 
-· Easy to make case (MDF) / CAD files to 3d print the case.
+2. Make a prototype with the components more open (Estimated time: 6 months – 4 years)(Estimated cost: 500-40.000€):
+   * Use a more open HW board (A64 OLinuXino or similar) instead of the Raspberry Pi.
+   * Use a more open HW screen (Manga Screen or similar) or design a 6" capacitive screen if there isn't any open hardware option available at that time (initiate a crowdfunding campaign to let others interested contribute).
+   * Use a more open HW modem breakout if there is one available instead of the Adafruit 3G or design a LTE (PLS8-E) or better modem breakout (try to make a crowdfunding campaign to let others interested contribute).
 
-· 7'' capacitive screen from the raspberry pi foundation.
+   *The prototype will have replaceable parts if better / smaller alternatives appear in the market.*
 
-Make a manual so every user with a raspberry pi can achieve a working prototype easily.
+   *If no suitable screens or modem breakout are found, a crowdfunding campaign will be made. The reason to make it that way is because there are other people that could want these parts for a different project and help to make it possible faster. Even if there is not enough people willing to support a crowdfunding campaign, the current people interested in making libresmartphone are able to pay Elias Bakken, Nikolaus Schaller or others to make them.*
 
-*The raspberry pi prototype will be made to have a bigger user base for the project, currently there are 8 million raspberry pi in the market and a lot of their users are DIY enthusiats. Many of them are not willing to pay for an open source smartphone but would love to make calls with the raspberry, send SMS for their projects, make an easy to make GPS for their car, etc.*
+*When the prototype has the size and requirements desired, libresmartphone development will start part 3.*
 
-* 2) Make a prototype with the components more open (Estimated time: 6 months – 4 years)(Estimated cost: 500-40.000€):
+3. Libresmartphone final design (Estimated time: <2 years)(Estimated cost: 50.000-200.000€).
+   * Design a pcb that has the CPU, GPU, RAM, modem, WiFi, etc in the same board taking in consideration all the designs used in part 2 of the development.
+   * Design a case to fit all the components inside that is easy to 3D print. If there are enough people interested an injection case could be made.
 
-· Use a more open HW board (A64 OLinuXino or similar) instead of the raspberry pi.
+## Want to help?
 
-· Use a more open HW screen (Manga Screen or similar) or design a 6'' capacitive screen if there isn't any open hardware one available at that time (try to make a crowdfunding campaing to let others interested contribute).
+1. Tell to your friends, family or the Internet (reddit, forums...) about this project.
+2. Improve the software or help with the smartphone design.
+3. Donate money (any quantity, even $5, means a lot to us) or materials for the development of libresmartphone.
+4. Stay up-to-date by checking our website: [libresmartphone.com](http://libresmartphone.com/open-hardware-smartphone/) and [YouTube channel](https://www.youtube.com/channel/UC1UttFNKDiN2uA525Pe3ijA)
 
-· Use a more open HW modem breakout if there is one available instead of the Adafruit 3G or design a LTE (PLS8-E) or better modem breakout (try to make a crowdfunding campaing to let others interested contribute).
-
-*The prototype with separate parts will be made to replace them if better / smaller alternatives appear in the market.*
-
-*If there aren't suitable screens or modem breakout a crowdfunding campaing will be made. The reason to make it that way is because there are other people that could want this parts for a different project and help to make it possible faster. Even if there is not enough people willing to support a crowdfunding campaing, the current people interested in making libresmartphone are able to pay Elias Bakken, Nikolaus Schaller or others to make them.*
-
-*When the prototype has the size and requirements desired libresmartphone development will start part 3.*
-
-* 3) Libresmartphone final design (Estimated time: <2 years)(Estimated cost: 50.000-200.000€).
-
-·Design a pcb that has the CPU, GPU, RAM, modem, WiFi, etc in the same board taking in consideration all the designs used in part 2 of the development.
-
-·Design a case to fit all the components inside that is easy to 3d print. If there are enough people interested an injection case could be made.
-
-# Want to help?
-
-1) Tell to your friends, family or the internet (reddit, forums...) about this project.
-
-2) Try to program the software or help with the smartphone design.
-
-3) Donate money (any quantity, even $ 5, means a lot to us) or materials for the development of libresmartphone.
-
-4) Keep informed with our website http://libresmartphone.com .
-
-
-Please we would love if you could subscribe to our website http://libresmartphone.com ! We would also love to know your opinion and any suggestions are appreciated.
-
-Thank you and keep informed!
+Please [subscribe to the newsletter](http://libresmartphone.com) – feedback and suggestions are appreciated!
 
 Sincerely,
+
+Gerard Arnau and the supporters of Libresmartphone
