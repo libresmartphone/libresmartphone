@@ -53,7 +53,7 @@ The design will allow one to add hardware kill switches for the camera, GPS, 4G,
     
     -BIC: INGDESMMXXX
     
-    You can contact us to u1902342 at campus.udg.edu
+4. If you want to contact us you can do so writing and e-mail to u1902342 at campus.udg.edu
     
   
 4. Stay up-to-date by checking our website: [libresmartphone.com](http://libresmartphone.com/open-hardware-smartphone/) and [YouTube channel](https://www.youtube.com/channel/UC1UttFNKDiN2uA525Pe3ijA)
