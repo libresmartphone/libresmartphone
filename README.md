@@ -46,8 +46,10 @@ The design will allow one to add hardware kill switches for the camera, GPS, 4G,
 3. Donate money (any quantity, even $5, means a lot to us) or materials for the development of libresmartphone.
     
     You can donate to the following bank account:
-    -Gerard Arnau Codina
+    -Gerard Arnau Codina.
+    
     -IBAN:ES42 1465 0100 98 1713351932
+    
     -BIC: INGDESMMXXX
     
     You can contact us to u1902342 at campus.udg.edu
