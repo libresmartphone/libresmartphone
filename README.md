@@ -45,7 +45,7 @@ The design will allow one to add hardware kill switches for the camera, GPS, 4G,
 2. Improve the software or help with the smartphone design.
 3. Donate money (any quantity, even $5, means a lot to us) or materials for the development of libresmartphone.
     
-    You can donate to the following bank account:
+    You can donate to the following bank account (Thanks for doing so!):
     
     -Gerard Arnau Codina.
     
