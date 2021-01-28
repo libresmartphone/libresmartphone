@@ -39,27 +39,4 @@ The design will allow one to add hardware kill switches for the camera, GPS, 4G,
    * Design a pcb that has the CPU, GPU, RAM, modem, WiFi, etc in the same board taking in consideration all the designs used in part 2 of the development.
    * Design a case to fit all the components inside that is easy to 3D print. If there are enough people interested an injection case could be made.
 
-## Want to help?
 
-1. Tell to your friends, family or the Internet (reddit, forums...) about this project.
-2. Improve the software or help with the smartphone design.
-3. Donate money (any quantity, even $5, means a lot to us) or materials for the development of libresmartphone.
-    
-    You can donate to the following bank account (Thanks for doing so!):
-    
-    -Gerard Arnau Codina.
-    
-    -IBAN:ES42 1465 0100 98 1713351932
-    
-    -BIC: INGDESMMXXX
-    
-4. If you want to contact us you can do so writing an e-mail to u1902342 at campus.udg.edu
-    
-  
-4. Stay up-to-date by checking our website: [libresmartphone.com](http://libresmartphone.com/open-hardware-smartphone/) and [YouTube channel](https://www.youtube.com/channel/UC1UttFNKDiN2uA525Pe3ijA)
-
-Please [subscribe to the newsletter](http://libresmartphone.com) – feedback and suggestions are appreciated!
-
-Sincerely,
-
-Gerard Arnau and the supporters of Libresmartphone
